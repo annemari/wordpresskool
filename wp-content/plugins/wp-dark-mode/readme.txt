@@ -4,7 +4,7 @@ Tags: dark, dark mode, night mode, gutenberg blocks, dark theme
 Requires at least: 5.0
 Tested up to: 5.6
 Requires PHP: 5.6
-Stable tag: 1.3.1
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,7 @@ WP Dark Mode supports all major operating systems including iOS, Android, macOS,
 
 === Honest Review of WP Dark Mode - You're missing out ===
 
-[youtube https://youtu.be/Z2miWQCHGr4]
+[youtube https://www.youtube.com/watch?v=6OB34ikfhh8]
 
 === WP Dark Mode Features ===
 
@@ -42,6 +42,7 @@ WP Dark Mode supports all major operating systems including iOS, Android, macOS,
 1. **Remember Dark Mode** – The dark mode remains saved once you activated the dark mode.
 1. **Themes Compatible** – The plugin is compatible with most of the themes without any issues.
 1. **Revolution Slider Compatible** - This plugin compatible with revolution slider.
+1. **Low Image Brightness** - Decrease the brightness and contrast of images in the dark mode.
 
 
 === 💰 WP Dark Mode Pro Features ===
@@ -64,7 +65,7 @@ WP Dark Mode supports all major operating systems including iOS, Android, macOS,
 === 💰 WP Dark Mode Ultimate Features ===
 1. **All Pro Features**
 1. **Custom Colors** – You can customize the dark mode background. text and links color as you want/
-1. **Presets Color Schema** – 11 exclusive presets color schema available to quickly change the dark mode color from the predefined presets.
+1. **Presets Color Schema** – 13 exclusive presets color schema available to quickly change the dark mode color from the predefined presets.
 1. **Dark Mode Based Image Supports** – You can replace light mode images with the different images you want in the dark mode.
 1. **Custom CSS** – You can use custom CSS only for dark mode.
 1. **Custom Switch Icon** – You can customize the dark mode switch icon in the light/ dark mode.
@@ -145,6 +146,25 @@ No. WP Dark Mode is a very user-friendly and simple plugin. Just download and us
 10. Dark mode switch elementor widget
 
 == Changelog ==
+
+= 1.3.5 =
+* New: Added Facebook & Twitter color scheme
+* Fix: Hide Darkmode Switch in Printing
+
+= 1.3.4 =
+* Fix: Fixed Show/ Hide Floating Switch
+* Update: Add minimal christmas offer banner
+
+= 1.3.3 =
+* Update: Change Low Image Brightness to OFF By default
+* Fix: Fixed PHP8 Compatibility Issue
+* Fix: WP Darkmode Switch Widget Style Choose
+* Fix: Fixed Admin Dashboard Dark Mode Color
+* Fix: Exclude Darkmode from elementor editor
+* Fix: Fixed Excludes Images From Dark Mode
+
+= 1.3.2 =
+* New: Add Low Image Brightness Settings
 
 = 1.3.1 =
 * New: Added NextGen Gallery Plugin Compatibility

@@ -16,7 +16,6 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 		 * WP_Dark_Mode_Hooks constructor.
 		 */
 		public function __construct() {
-			add_action( 'rest_api_init', array( $this, 'rest_api' ) );
 
 			add_action( 'wp_head', [ $this, 'dark_styles' ] );
 
@@ -30,6 +29,7 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 
 			add_action( 'wsa_form_bottom_wp_dark_mode_display', [ $this, 'pro_promo' ] );
 			add_action( 'wsa_form_bottom_wp_dark_mode_display', [ $this, 'ultimate_promo' ] );
+
 			add_action( 'wsa_form_bottom_wp_dark_mode_style', [ $this, 'ultimate_promo' ] );
 			add_action( 'wsa_form_bottom_wp_dark_mode_style', [ $this, 'pro_promo' ] );
 			add_action( 'wsa_form_bottom_wp_dark_mode_image_settings', [ $this, 'ultimate_promo' ] );
@@ -49,7 +49,7 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 			//add_action( 'admin_init', [ $this, 'display_notice' ] );
 
 			/** hide black friday notice */
-			//add_action( 'wp_ajax_hide_black_friday_notice', [ $this, 'hide_black_friday_notice' ] );
+			//add_action( 'wp_ajax_hide_christmas_notice', [ $this, 'hide_christmas_notice' ] );
 
             add_action('admin_footer', [$this, 'display_promo']);
 
@@ -66,28 +66,30 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 		    }
         }
 
-//		public function hide_black_friday_notice() {
-//			update_option( 'wp_dark_mode_hide_black_friday_notice', true );
-//			update_option( sanitize_key( 'wp_dark_mode_notices' ), [] );
-//			die();
-//		}
+		public function hide_christmas_notice() {
+			update_option( 'wp_dark_mode_hide_christmas_notice', true );
+			update_option( sanitize_key( 'wp_dark_mode_notices' ), [] );
+			die();
+		}
 
-//		public function display_notice() {
-//
-//			if ( get_option( 'wp_dark_mode_hide_black_friday_notice' ) ) {
-//				return;
-//			}
-//
-//			/** display the black-friday notice if the pro version is not activated */
-//			if ( wp_dark_mode()->is_pro_active() || wp_dark_mode()->is_ultimate_active() ) {
-//				return;
-//			}
-//
-//			$message = '<h4>Enjoy upto 75% OFF on WP Dark Mode. Get Your Black Friday <a href="https://wppool.dev/wp-dark-mode" target="_blank">Deals Now</a></h4>';
-//
-//			wp_dark_mode()->add_notice( 'info is-dismissible', $message );
-//
-//		}
+		public function display_notice() {
+
+			if ( get_option( 'wp_dark_mode_hide_christmas_notice' ) ) {
+				return;
+			}
+
+			/** display the black-friday notice if the pro version is not activated */
+			if ( wp_dark_mode()->is_pro_active() || wp_dark_mode()->is_ultimate_active() ) {
+				return;
+			}
+
+			ob_start();
+			wp_dark_mode()->get_template( 'admin/christmas-notice' );
+			$message = ob_get_clean();
+
+			wp_dark_mode()->add_notice( 'info is-dismissible christmas_notice', $message );
+
+		}
 
 		/**
 		 * Exclude elements
@@ -188,9 +190,11 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 		public function display_widget() {
 			global $post;
 
+
 			if ( ! wp_dark_mode_enabled() ) {
 				return false;
 			}
+
 
 			if ( isset( $post->ID ) && in_array( $post->ID, wp_dark_mode_exclude_pages() ) ) {
 				return;
@@ -219,7 +223,8 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 
 			$args = [];
 
-			if ( ! empty( $section ) && in_array( $section['id'], [ 'wp_dark_mode_display', 'wp_dark_mode_style' ] ) ) {
+			if ( ! empty( $section )
+			     && in_array( $section['id'], [ 'wp_dark_mode_advanced', 'wp_dark_mode_display', 'wp_dark_mode_style' ] ) ) {
 				$args['is_hidden']    = true;
 				$args['is_pro_promo'] = true;
 			}
@@ -238,7 +243,9 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 				return;
 			}
 
-			$args = [];
+			$args = [
+				'class' => 'ultimate_promo',
+			];
 
 			if ( ! empty( $section ) && in_array( $section['id'], [ 'wp_dark_mode_advanced', 'wp_dark_mode_display', 'wp_dark_mode_style' ] ) ) {
 				$args['is_hidden'] = true;
@@ -251,6 +258,10 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 		 * Dark style scripts
 		 */
 		public function dark_styles() {
+
+			if ( wp_dark_mode_is_elementor_editor() ) {
+				return false;
+			}
 
 			if ( ! is_admin() && ! wp_dark_mode_enabled() ) {
 				return false;
@@ -307,7 +318,10 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
 			     background-color: var(--wp-dark-mode-bg) !important;
 			     color: var(--wp-dark-mode-text) !important;
                  border-color: var(--wp-dark-mode-border) !important;
-			}}', $base_selector, apply_filters( 'wp_dark_mode/not', '' ) );
+                 
+                 %3$s
+                 
+			}}', $base_selector, apply_filters( 'wp_dark_mode/not', '' ), apply_filters( 'wp_dark_mode/custom_css', '' ) );
 
 			printf( '%1$s {
                 a,
@@ -323,6 +337,15 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
                     }
                 }
 			}', $base_selector );
+
+
+
+			/** Image Opacity */
+			if ( 'on' == wp_dark_mode_get_settings( 'wp_dark_mode_advanced', 'low_image', 'off' ) ) {
+				printf( 'html.wp-dark-mode-active img {
+                  filter: brightness(.8) contrast(2);
+			}' );
+			}
 
 			if ( ! is_admin() ) {
 				printf( '%1$s {
@@ -493,36 +516,6 @@ if ( ! class_exists( 'WP_Dark_Mode_Hooks' ) ) {
             </style>
 
 			<?php
-		}
-
-		/**
-		 * register rest api route for gutenberg editor switch style choose
-		 */
-		public function rest_api() {
-			$namespace = 'wp-dark-mode/v1';
-
-			register_rest_route( $namespace, '/switch/(?P<switch>\d+)', array(
-				array(
-					'methods'             => 'GET',
-					'callback'            => array( $this, 'rest_api_get_switch_preview' ),
-					'permission_callback' => '__return_true',
-				),
-			) );
-		}
-
-		/**
-		 * Get the rest api switch preview
-		 *
-		 * @param $data
-		 */
-		public function rest_api_get_switch_preview( $data ) {
-			$style = isset( $data['switch'] ) ? $data['switch'] : false;
-
-			if ( $style === false ) {
-				$style = 1;
-			}
-
-			wp_send_json_success( do_shortcode( '[wp_dark_mode style="' . $style . '"]' ) );
 		}
 
 		/**

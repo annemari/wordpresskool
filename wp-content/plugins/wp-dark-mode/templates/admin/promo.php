@@ -6,13 +6,8 @@ $is_pro    = isset( $is_pro_promo ) && $is_pro_promo;
 $data_transient_key = 'wp_dark_mode_promo_data';
 
 $data = [
-	'pro_title'       => 'Unlock the PRO features',
-	'ultimate_title'  => 'Unlock all the features',
-	'discount_text'   => '50% OFF',
-	'pro_text'        => 'GET PRO',
-	'ultimate_text'   => 'GET ULTIMATE',
-	'countdown_time'  => '2020-11-27-20-00-00',
-	'is_black_friday' => 'no',
+	'discount_text' => '50% OFF',
+	'is_christmas'  => 'no',
 ];
 
 $countdown_time = get_transient( 'wp_darkmode_promo_time' );
@@ -36,12 +31,7 @@ if ( !$countdown_time ) {
 }
 
 //if ( ! $data = get_transient( $data_transient_key ) ) {
-//	$url = 'https://wppool.dev/wp-dark-mode-promo-data.php';
-//
-//	$url = add_query_arg( [
-//		'version' => wp_dark_mode()->version,
-//		'date'    => date( 'Y-m-d-H-i-s' ),
-//	], $url );
+//	$url = 'https://wppool.dev/wp-dark-mode-promo-data.json';
 //
 //	$res = wp_remote_get( $url );
 //
@@ -53,18 +43,35 @@ if ( !$countdown_time ) {
 //	}
 //}
 
-$title = $is_pro ? $data['pro_title'] : $data['ultimate_title'];
+$pro_title      = 'Unlock the PRO features';
+$ultimate_title = 'Unlock all the features';
+$title          = $is_pro ? $pro_title : $ultimate_title;
 
 ?>
 
-<div class="wp-dark-mode-promo <?php echo $is_hidden ? 'hidden' : ''; ?>">
-    <div class="wp-dark-mode-promo-inner">
+<div class="wp-dark-mode-promo <?php echo $class ?? ''; ?> <?php echo $is_hidden ? 'hidden' : ''; ?>">
+    <div class="wp-dark-mode-promo-inner <?php echo $data['is_christmas'] == 'yes' ? 'black-friday' : ''; ?>">
 
 		<?php if ( $is_hidden ) { ?>
             <span class="close-promo">&times;</span>
 		<?php } ?>
 
         <img src="<?php echo wp_dark_mode()->plugin_url( 'assets/images/gift-box.svg' ) ?>" class="promo-img">
+
+		<?php if ( $data['is_christmas'] == 'yes' ) { ?>
+            <div class="black-friday-wrap">
+                <h3><img src="<?php echo wp_dark_mode()->plugin_url( 'assets/images/holiday-gifts.svg' ) ?>" alt=""></h3>
+
+                <div class="ribbon">
+                    <div class="ribbon-content">
+                        <div class="ribbon-stitches-top"></div>
+                        <img src="<?php echo wp_dark_mode()->plugin_url( 'assets/images/merry-christmas.svg' ) ?>" alt="">
+                        <div class="ribbon-stitches-bottom"></div>
+                    </div>
+                </div>
+
+            </div>
+		<?php } ?>
 
 		<?php
 
@@ -78,15 +85,13 @@ $title = $is_pro ? $data['pro_title'] : $data['ultimate_title'];
 
 
 		if ( ! empty( $countdown_time ) ) {
-			//if ( $data['countdown_time'] > date( 'Y-m-d-H-i' ) ) {
-				echo '<div class="simple_timer"></div>';
-			//}
+			echo '<div class="simple_timer"></div>';
 		}
 
 		?>
 
         <a href="https://wppool.dev/wp-dark-mode"
-           target="_blank"><?php echo $is_pro ? $data['pro_text'] : $data['ultimate_text']; ?></a>
+                target="_blank"><?php echo $is_pro ? 'GET PRO' : 'GET ULTIMATE'; ?></a>
 
     </div>
 
@@ -132,7 +137,12 @@ $title = $is_pro ? $data['pro_title'] : $data['ultimate_title'];
                 $(document).on('click', '.image-choose-opt.disabled, .form-table tr.disabled', function (e) {
                     e.preventDefault();
 
-                    $(this).closest('table').next('.wp-dark-mode-promo.hidden').removeClass('hidden');
+                    if($(this).closest('tr').hasClass('specific_category')){
+                        $(this).closest('form').find('.wp-dark-mode-promo.ultimate_promo').removeClass('hidden');
+                    }else{
+                        $(this).closest('table').next('.wp-dark-mode-promo').removeClass('hidden');
+                    }
+
                 });
 
                 //close promo
@@ -140,19 +150,18 @@ $title = $is_pro ? $data['pro_title'] : $data['ultimate_title'];
                     $(this).closest('.wp-dark-mode-promo').addClass('hidden');
                 });
 
+                //close promo
+                $(document).on('click', '.wp-dark-mode-promo', function (e) {
+
+                    if (e.target !== this) {
+                        return;
+                    }
+
+                    $(this).addClass('hidden');
+                });
+
 				<?php
 				if ( ! empty( $countdown_time ) ) {
-
-//				$date_parts = explode( '-', $date );
-//
-//				$countdown_time = [
-//					'year'   => $date_parts[0],
-//					'month'  => $date_parts[1],
-//					'day'    => $date_parts[2],
-//					'hour'   => $date_parts[3],
-//					'minute' => $date_parts[4],
-//					'second' => $date_parts[5],
-//				];
 
 				?>
 
