@@ -1185,8 +1185,12 @@ ul.tab_3_icns li .radio {
     width: 73px;
     margin: 2px 0 0;
 }
-.sfsi_Sicons .fb_iframe_widget[data-layout="button_count"]{
-    min-width:125px;
+
+.sfsi_Sicons .sfsi_socialwpr .fb-like.fb_iframe_widget[data-layout="button_count"] {
+    min-width: 125px;
+    width: 73px !important;
+    margin-left: 17px;
+    margin-right: 24px;
 }
 
 .sfsi_pop_up .button a:hover {
@@ -2839,9 +2843,9 @@ ul.cstmskin_iconlist {
     margin-left: 0px;
     margin-top: 0px;
     padding: 1px 0;
-    /*position: absolute;*/
+    position: absolute;
     text-align: center;
-    top: -8px;
+    top: 33px;
     white-space: pre;
     width: 33px;
     height: 24px;
@@ -2884,7 +2888,7 @@ a.sficn {
 .disabled_checkbox .sfsi_right_info:before {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 500px;
     height: 60px;
     display: inline-block;
     z-index: 99;
@@ -2895,12 +2899,7 @@ a.sficn {
 
 .disabled_checkbox .sfsi_right_info.sfsi_Woocommerce_disable:before {
     margin-left: -49px !important;
-    width: 100%;
-}
-
-.disabled_checkbox .sfsi_right_info.sfsi_Woocommerce_disable:before {
-    margin-left: -49px !important;
-    width: 100%;
+    width: 400px;
 }
 
 #sfsi_floater .fb_tool_bdr .sfsi_inside .icon2 {
@@ -3534,16 +3533,16 @@ ul.sfsi_icn_listing8 li .tb_4_ck{
     background: rgba(0, 0, 0, 0) url(images/count_left_arow.png) no-repeat scroll 0 0 / 27px auto;
     font-size: 12px !important;
     left: 67px;
-    line-height: 22px !important;
+    line-height: 19px !important;
     margin-left: 0;
     padding: 1px 3px;
     text-align: center;
     white-space: pre;
     width: 35px;
-    height: 31px;
+    height: 29px;
     z-index: 9;
     display: inline-block;
-    vertical-align: text-top;
+    vertical-align: bottom;
 }
 
 .sfsi_icons_container>a {

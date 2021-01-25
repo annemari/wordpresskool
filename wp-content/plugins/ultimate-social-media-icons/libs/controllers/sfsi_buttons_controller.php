@@ -63,7 +63,7 @@ function sfsi_new_intro_banner_hide()
         echo  json_encode(array("wrong_nonce"));
         exit;
     }
-    $up_hide_option =array(
+    $up_hide_option = array(
         'sfsi_display_section' => true,
         'sfsi_display_section2' => true,
     );
@@ -80,7 +80,7 @@ function sfsi_new_intro_banner_show()
         echo  json_encode(array("wrong_nonce"));
         exit;
     }
-    $up_hide_option =array(
+    $up_hide_option = array(
         'sfsi_display_section' => $_POST["sfsi_display_section"],
         'sfsi_display_section2' => true,
     );
@@ -583,7 +583,7 @@ function sfsi_options_updater5()
         'sfsi_icons_sharing_and_traffic_tips'    => sanitize_text_field($sfsi_icons_sharing_and_traffic_tips),
         'sfsi_whatsappIcon_order'         => intval($sfsi_whatsappIcon_order),
 
-        
+
     );
 
     if ("yes" == $sfsi_icons_suppress_errors) {
@@ -958,7 +958,7 @@ function sfsi_getCounts($for_resposive = false)
         'wechat_count'  => '',
         'share_count'   => '',
         'whatsapp_count' => ''
-        
+
     );
 
     /* get rss count */
@@ -1208,7 +1208,7 @@ function sfsi_bannerOption()
         // Get all themes data which incudes nobrainer 
         $themeDataArr = $objThemeCheck->sfsi_plus_get_themeData();
         $matchFound = false;
-
+        $sfsi_icons_url = " https://www.ultimatelysocial.com/";
         foreach ($themeDataArr as $themeDataObj) {
 
             if (isset($themeDataObj->themeName) && strlen($themeDataObj->themeName) > 0) {
@@ -1222,18 +1222,19 @@ function sfsi_bannerOption()
                     $matchFound = true;
 
                     $themeName = strtolower($themeName);
+                    $themeUrl = $sfsi_icons_url . $themeName;
                     if (get_option("show_new_notification") == "yes") {
                         $objThemeCheck->sfsi_plus_bannereHtml(
                             $themeDataObj->headline,
-                            $themeName,
+                            $themeUrl,
                             SFSI_PLUGURL . 'images/website_theme/' . $themeName . '.png',
                             $themeDataObj->bottomtext
                         );
                     }
 
                     $objThemeCheck->sfsi_plus_bannereHtml_main(
-                        $themeDataObj->headline,
                         $themeName,
+                        $themeUrl,
                         SFSI_PLUGURL . 'images/website_theme/' . $themeName . '.png',
                         $themeDataObj->bottomtext
                     );
@@ -1257,17 +1258,18 @@ function sfsi_bannerOption()
                         $matchFound = true;
 
                         $themeName = strtolower($themeName);
+                        $themeUrl = $sfsi_icons_url . $themeName;
                         if (get_option("show_new_notification") == "yes") {
                             $objThemeCheck->sfsi_plus_bannereHtml(
                                 $themeDataObj->headline,
-                                $themeName,
+                                $themeUrl,
                                 SFSI_PLUGURL . 'images/website_theme/' . $themeName . '.png',
                                 $themeDataObj->bottomtext
                             );
                         }
                         $objThemeCheck->sfsi_plus_bannereHtml_main(
-                            $themeDataObj->headline,
                             $themeName,
+                            $themeUrl,
                             SFSI_PLUGURL . 'images/website_theme/' . $themeName . '.png',
                             $themeDataObj->bottomtext
                         );
@@ -1291,17 +1293,18 @@ function sfsi_bannerOption()
                         $matchFound = true;
 
                         $themeName = strtolower($themeName);
+                        $themeUrl = $sfsi_icons_url . $themeName;
                         if (get_option("show_new_notification") == "yes") {
                             $objThemeCheck->sfsi_plus_bannereHtml(
                                 $themeDataObj->headline,
-                                $themeName,
+                                $themeUrl,
                                 SFSI_PLUGURL . 'images/website_theme/' . $themeName . '.png',
                                 $themeDataObj->bottomtext
                             );
                         }
                         $objThemeCheck->sfsi_plus_bannereHtml_main(
-                            $themeDataObj->headline,
                             $themeName,
+                            $themeUrl,
                             SFSI_PLUGURL . 'images/website_theme/' . $themeName . '.png',
                             $themeDataObj->bottomtext
                         );
@@ -1325,17 +1328,18 @@ function sfsi_bannerOption()
                         $matchFound = true;
 
                         $themeName = strtolower($themeName);
+                        $themeUrl = $sfsi_icons_url . $themeName;
                         if (get_option("show_new_notification") == "yes") {
                             $objThemeCheck->sfsi_plus_bannereHtml(
                                 $themeDataObj->headline,
-                                $themeName,
+                                $themeUrl,
                                 SFSI_PLUGURL . 'images/website_theme/' . $themeName . '.png',
                                 $themeDataObj->bottomtext
                             );
                         }
                         $objThemeCheck->sfsi_plus_bannereHtml_main(
-                            $themeDataObj->headline,
                             $themeName,
+                            $themeUrl,
                             SFSI_PLUGURL . 'images/website_theme/' . $themeName . '.png',
                             $themeDataObj->bottomtext
                         );

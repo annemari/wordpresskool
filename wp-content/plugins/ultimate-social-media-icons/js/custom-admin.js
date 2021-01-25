@@ -1598,7 +1598,7 @@ function sfsi_validator(element, valType) {
             else return true;
             break;
         case "checked":
-            if (!element.attr('checked') === true) return false;
+            if (!element.prop('checked') === true) return false;
             else return true;
             break;
         case "activte":

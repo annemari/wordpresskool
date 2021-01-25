@@ -261,13 +261,14 @@ $hide = "display:none;";
 
     <!-- show/hide counts for all icons section  START -->
 
-    <div class="count_sections" style="display:none">
+    <div class="count_sections" style="display:none;">
         <?php
         $socialObj = new sfsi_SocialHelper();
         $current_url = site_url();
-        $fb_data = $socialObj->sfsi_banner_get_fb($current_url);
-        $check_fb_count_more_than_one = $fb_data > 0 || $socialObj->sfsi_get_pinterest($current_url) > 0;
         $sfsi_fb_count =  get_option('sfsi_fb_count', false);
+        $fb_data = $socialObj->sfsi_banner_get_fb($current_url);
+
+        $check_fb_count_more_than_one = $fb_data > 0 || $socialObj->sfsi_get_pinterest($current_url) > 0;
         if ($check_fb_count_more_than_one > $sfsi_fb_count || $sfsi_fb_count == "") {
             update_option('sfsi_fb_count', ($check_fb_count_more_than_one));
         }

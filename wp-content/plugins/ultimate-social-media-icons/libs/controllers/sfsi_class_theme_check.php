@@ -515,8 +515,9 @@ class sfsi_ThemeCheck
 	{
 		echo '<script type="text/javascript">
 		SFSI(".sfsi_webtheme").show();
+		SFSI(".sfsi_webtheme a").attr("href", "'.$siteLink.'");
 		SFSI(".icns_tab_3.sfsi_premium_ad span ").css("background-image", \'url('.$bannerImage.')\');
-		SFSI(".sfsi_premium_ad_lable").text(\''.$siteLink.'\');
+		SFSI(".sfsi_premium_ad_lable").text(\''.$title.'\');
 		</script>';
 	}		
 

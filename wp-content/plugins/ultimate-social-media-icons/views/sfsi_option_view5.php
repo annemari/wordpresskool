@@ -406,7 +406,7 @@ here what text will be displayed if a user moves his mouse over the icon:
 		    </div>
 		</div>
 		<div class="clear">
-			<div class="mouseover_field wechat_section">
+			<div class="mouseover_field whatsapp_section">
 				<label>WhatsApp:</label>
 				<input name="sfsi_whatsapp_MouseOverText" value="<?php echo ($option5['sfsi_whatsapp_MouseOverText']!='') ?  $option5['sfsi_whatsapp_MouseOverText'] : '' ;?>" type="text" />
 	    	</div>

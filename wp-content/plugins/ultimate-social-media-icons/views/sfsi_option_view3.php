@@ -72,11 +72,18 @@ $mouseover_other_icons_transition_effect = (isset($option3['mouseover_other_icon
 
 
             <li class="sfsi_webtheme" style='display:none'>
+            <a href="#" target="_blank">
                 <span class="radio" style="opacity: 0.5;"></span>    
                 <label class="sfsi_premium_ad_lable" style="text-transform: capitalize;">Default</label>
-                <div class="icns_tab_3 sfsi_premium_ad"><span class="premium_col_1 rss_section"></span><span class="premium_col_2 email_section"></span><span class="premium_col_3 facebook_section"></span><span class="premium_col_4 twitter_section"></span><div class="sfis_premium_ad_name">(Premium)</div>
+                <div class="icns_tab_3 sfsi_premium_ad">
+                    <span class="premium_col_1 rss_section"></span>
+                    <span class="premium_col_2 email_section"></span>
+                    <span class="premium_col_3 facebook_section"></span>
+                    <span class="premium_col_4 twitter_section"></span>
+                    <div class="sfis_premium_ad_name">(Premium)</div>
                     <!--<span class="row_1_11 sf_section"></span>-->
                 </div>
+                </a>
             </li>
 
             <li><input name="sfsi_actvite_theme" <?php echo ($option3['sfsi_actvite_theme'] == 'flat') ?  'checked="true"' : ''; ?> type="radio" value="flat" class="styled" /><label>Flat</label>

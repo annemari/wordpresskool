@@ -3,7 +3,7 @@ Contributors: socialdude, socialtech
 Tags: share, pop up, share icons, share buttons, social media, social, social widget, sharing icons, sharing buttons, social share, sharing, social sharing
 Requires at least: 3.5
 Tested up to: 5.6
-Stable tag: 2.6.2
+Stable tag: 2.6.3
 License: GPLv2 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -274,6 +274,14 @@ You cannot use the same plugin twice, however you can install both the USM as we
 
 
 == Changelog ==
+= 2.6.3 =
+* Fixed responsive icons issue with table of contents
+* Fixed Shuffle option not saving
+* Fixed Facebook original icons share to new tab
+* Updated Youtube icons
+* Fixed Mobile icons not working when shuffle is selected
+* Whatsapp mouse hover text corrected
+
 = 2.6.2 =
 * Updated to Wordpress 5.6 compatibility
 * Updated to PHP 8 compatibility
@@ -962,5 +970,5 @@ You cannot use the same plugin twice, however you can install both the USM as we
 
 == Upgrade Notice ==
 
-= 2.6.2 =
+= 2.6.3 =
 Please upgrade

@@ -87,18 +87,6 @@
     $sfsi_current_date = strtotime(date('Y-m-d h:i:s'));
     $sfsi_intro_time_in_minutes = ceil(($sfsi_max_show_time - strtotime(date('Y-m-d h:i:s'))) / 60);
     $sfsi_intro_time_in_minutes = $sfsi_intro_time_in_minutes - 1;
-    // $sfsi_intro_hours  = floor($sfsi_intro_time_in_minutes / 60);
-    // $sfsi_intro_minutes  = $sfsi_intro_time_in_minutes - floor($sfsi_intro_time_in_minutes / 60) * 60;
-    // $sfsi_intro_seconds  = ((($sfsi_intro_time_in_minutes) * 60) % 60);
-    // var_dump($checked ,floor((($checked % ( 60 * 60)) / ( 60))));
-    // var_dump((floor((($checked % ( 60 * 60 * 24)) / ( 60 * 60))/12)));
-    $sfsi_intro_year = substr($sfsi_install_date_time, 0, 4);
-    $sfsi_intro_month =  substr($sfsi_install_date_time, 5, 2) - 1;
-    $sfsi_intro_day =  substr($sfsi_install_date_time, 8, 2);
-    $sfsi_intro_hours = substr($sfsi_install_date_time, 11, 2);
-    $sfsi_intro_minutes = substr($sfsi_install_date_time, 14, 2);
-    $sfsi_intro_seconds = substr($sfsi_install_date_time, 17, 2);
-
     ?>
     <!-- Top content area of plugin -->
     <div class="main_contant">
@@ -305,7 +293,7 @@
                                                     <div>
                                                         <a target="_blank" href="http://bit.ly/USM_SUPPORT_FORUM" class="btn btn-success sfsi_intro_btn_question">Open a support thread</a>
                                                     </div>
-                                                    <a href="#" class="sfsi_intro_tooltip" title="Your account on Wordpress.org (where you can give your review) is a different to the one you login to your WordPress dashboard (where you are now). If you don’t have a WordPress.org account yet, please sign up at the top right on the Support Forum page, and then scroll down on that page. It only takes a minute :) Thank you!" style="font-size: 13px;text-decoration: none;color:#414951;font-family: 'montserrat-regular';opacity: 0.7;">Trouble logging in there?</a>
+                                                    <a href="#" class="sfsi_intro_tooltip" custom-title="Your account on Wordpress.org (where you can give your review) is different to the one you login to your WordPress dashboard (where you are now). If you don’t have a WordPress.org account yet, please sign up at the top right on the Support Forum page, and then scroll down on that page. It only takes a minute :) Thank you!" style="font-size: 13px;text-decoration: none;color:#414951;font-family: 'montserrat-regular';opacity: 0.7;">Trouble logging in there?</a>
                                                 </div>
                                             </div>
                                         </div>

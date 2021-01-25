@@ -39,7 +39,7 @@ function sfsi_update_plugin()
         update_option("sfsi_custom_icons", "yes");
     }
     //Install version
-    update_option("sfsi_pluginVersion", "2.62");
+    update_option("sfsi_pluginVersion", "2.63");
 
     if (!get_option('sfsi_serverphpVersionnotification')) {
         add_option("sfsi_serverphpVersionnotification", "yes");
@@ -620,7 +620,7 @@ function sfsi_update_plugin()
         if (!isset($option5['sfsi_wechat_MouseOverText'])) {
             $option5['sfsi_wechat_MouseOverText']    = 'WeChat';
         }
-        if (!isset($option5['sfsi_whatsapp_MouseOverText'])) {
+        if (!isset($option5['sfsi_whatsapp_MouseOverText']) || $option5['sfsi_whatsapp_MouseOverText'] == 'WhatsaApp') {
             $option5['sfsi_whatsapp_MouseOverText']    = 'WhatsApp';
         }
         if (isset($option5['sfsi_googleIcon_order'])) {
@@ -1045,7 +1045,7 @@ function sfsi_activate_plugin()
             'sfsi_ok_MouseOverText'  => 'OK',
             'sfsi_weibo_MouseOverText'  => 'Weibo',
             'sfsi_wechat_MouseOverText'  => 'WeChat',
-            'sfsi_whatsapp_MouseOverText'  => 'WhatsaApp',
+            'sfsi_whatsapp_MouseOverText'  => 'WhatsApp',
             'sfsi_custom_MouseOverTexts'  => '',
             'sfsi_custom_social_hide'       => 'no'
         );

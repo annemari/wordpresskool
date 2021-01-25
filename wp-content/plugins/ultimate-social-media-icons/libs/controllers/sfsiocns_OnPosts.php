@@ -15,128 +15,129 @@ function sfsi_social_buttons_below($content)
 			$content =   $content . sfsi_social_responsive_buttons(null, $sfsi_section6);
 		}
 	} else {
-		//checking for standard icons
-		if (!isset($sfsi_section6['sfsi_rectsub'])) {
-			$sfsi_section6['sfsi_rectsub'] = 'no';
-		}
-		if (!isset($sfsi_section6['sfsi_rectfb'])) {
-			$sfsi_section6['sfsi_rectfb'] = 'yes';
-		}
-		if (!isset($sfsi_section6['sfsi_rectshr'])) {
-			$sfsi_section6['sfsi_rectshr'] = 'yes';
-		}
-		if (!isset($sfsi_section6['sfsi_recttwtr'])) {
-			$sfsi_section6['sfsi_recttwtr'] = 'no';
-		}
-		if (!isset($sfsi_section6['sfsi_rectpinit'])) {
-			$sfsi_section6['sfsi_rectpinit'] = 'no';
-		}
-		if (!isset($sfsi_section6['sfsi_rectfbshare'])) {
-			$sfsi_section6['sfsi_rectfbshare'] = 'no';
-		}
-		//checking for standard icons
-		/* check if option activated in admin or not */
-
-		if ($sfsi_section9["sfsi_show_via_afterposts"] == "yes" && $sfsi_section6["sfsi_display_button_type"] == "standard_buttons") {
-			$permalink =  add_query_arg($_GET ? $_GET : array(), get_permalink($post->ID));
-			$title = get_the_title();
-			$sfsiLikeWith = "45px;";
-			/* check for counter display */
-			if ($sfsi_section4['sfsi_display_counts'] == "yes" && $sfsi_section4['sfsi_original_counts'] == "yes") {
-				$show_count = 1;
-				$sfsiLikeWith = "125px;";
-			} else {
-				$show_count = 0;
+		if (is_single()) {
+			//checking for standard icons
+			if (!isset($sfsi_section6['sfsi_rectsub'])) {
+				$sfsi_section6['sfsi_rectsub'] = 'no';
 			}
-			$txt	= (isset($sfsi_section6['sfsi_textBefor_icons'])) ? $sfsi_section6['sfsi_textBefor_icons'] : "Please follow and like us:";
-			$float	= $sfsi_section6['sfsi_icons_alignment'];
-			if ( ($sfsi_section6['sfsi_rectsub'] == 'yes' || $sfsi_section6['sfsi_rectfb'] == 'yes' || $sfsi_section6['sfsi_rectshr'] == 'yes' || $sfsi_section6['sfsi_recttwtr'] == 'yes' || $sfsi_section6['sfsi_rectpinit'] == 'yes' || $sfsi_section6['sfsi_rectfbshare'] == 'yes')) {
-				$icons = "<div class='sfsi_Sicons' style='width: 100%; display: inline-block; vertical-align: middle; text-align:" . $float . "'><div style='margin:0px 8px 0px 0px; line-height: 24px'><span>" . $txt . "</span></div>";
-			} else {
-				$icons = "<div  style='margin:0'>";
+			if (!isset($sfsi_section6['sfsi_rectfb'])) {
+				$sfsi_section6['sfsi_rectfb'] = 'yes';
 			}
-			//adding wrapper div
-			$icons .= "<div class='sfsi_socialwpr'>";
-			if ($sfsi_section6['sfsi_rectsub'] == 'yes' ) {
-
-				$icons .= "<div class='sf_subscrbe sf_icon' style='text-align:left;vertical-align: middle;float:left;width:auto'>" . sfsi_Subscribelike($permalink, $show_count) . "</div>";
+			if (!isset($sfsi_section6['sfsi_rectshr'])) {
+				$sfsi_section6['sfsi_rectshr'] = 'yes';
 			}
-			if ( $sfsi_section6['sfsi_rectfb'] == 'yes') {
-
-				$icons .= "<div class='sf_fb sf_icon' style='text-align:left;vertical-align: middle;'>" . sfsi_FBlike($permalink, $show_count) . "</div>";
+			if (!isset($sfsi_section6['sfsi_recttwtr'])) {
+				$sfsi_section6['sfsi_recttwtr'] = 'no';
 			}
-			if ($sfsi_section6['sfsi_rectfbshare'] == 'yes') {
-				$sfsi_section4	= unserialize(get_option('sfsi_section4_options', false));
-				$socialObj = new sfsi_SocialHelper();
-				$count_html = "";
-				if ($show_count > 0) {
-					if ($sfsi_section4['sfsi_facebook_countsDisplay'] == "yes" && $sfsi_section4['sfsi_display_counts'] == "yes") {
+			if (!isset($sfsi_section6['sfsi_rectpinit'])) {
+				$sfsi_section6['sfsi_rectpinit'] = 'no';
+			}
+			if (!isset($sfsi_section6['sfsi_rectfbshare'])) {
+				$sfsi_section6['sfsi_rectfbshare'] = 'no';
+			}
+			//checking for standard icons
+			/* check if option activated in admin or not */
+			if ($sfsi_section9["sfsi_show_via_afterposts"] == "yes" && $sfsi_section6["sfsi_display_button_type"] == "standard_buttons") {
+				$permalink =  add_query_arg($_GET ? $_GET : array(), get_permalink($post->ID));
+				$title = get_the_title();
+				$sfsiLikeWith = "45px;";
+				/* check for counter display */
+				if ($sfsi_section4['sfsi_display_counts'] == "yes" && $sfsi_section4['sfsi_original_counts'] == "yes") {
+					$show_count = 1;
+					$sfsiLikeWith = "125px;";
+				} else {
+					$show_count = 0;
+				}
+				$txt	= (isset($sfsi_section6['sfsi_textBefor_icons'])) ? $sfsi_section6['sfsi_textBefor_icons'] : "Please follow and like us:";
+				$float	= $sfsi_section6['sfsi_icons_alignment'];
+				if (($sfsi_section6['sfsi_rectsub'] == 'yes' || $sfsi_section6['sfsi_rectfb'] == 'yes' || $sfsi_section6['sfsi_rectshr'] == 'yes' || $sfsi_section6['sfsi_recttwtr'] == 'yes' || $sfsi_section6['sfsi_rectpinit'] == 'yes' || $sfsi_section6['sfsi_rectfbshare'] == 'yes')) {
+					$icons = "<div class='sfsi_Sicons' style='width: 100%; display: inline-block; vertical-align: middle; text-align:" . $float . "'><div style='margin:0px 8px 0px 0px; line-height: 24px'><span>" . $txt . "</span></div>";
+				} else {
+					$icons = "<div  style='margin:0'>";
+				}
+				//adding wrapper div
+				$icons .= "<div class='sfsi_socialwpr'>";
+				if ($sfsi_section6['sfsi_rectsub'] == 'yes') {
 
-						if ($sfsi_section4['sfsi_facebook_countsFrom'] == "manual") {
-							$counts = $sfsi_section4['sfsi_facebook_manualCounts'];
-						} else if ($sfsi_section4['sfsi_facebook_countsFrom'] == "likes") {
-							$counts = $socialObj->sfsi_get_fb($permalink);
-						} else if ($sfsi_section4['sfsi_facebook_countsFrom'] == "followers") {
-							$counts = $socialObj->sfsi_get_fb($permalink);
-						} else if ($sfsi_section4['sfsi_facebook_countsFrom'] == "mypage") {
-							$current_url = $sfsi_section4['sfsi_facebook_mypageCounts'];
-							$counts      = $socialObj->sfsi_get_fb_pagelike($current_url);
+					$icons .= "<div class='sf_subscrbe sf_icon' style='text-align:left;vertical-align: middle;float:left;width:auto'>" . sfsi_Subscribelike($permalink, $show_count) . "</div>";
+				}
+				if ($sfsi_section6['sfsi_rectfb'] == 'yes') {
+
+					$icons .= "<div class='sf_fb sf_icon' style='text-align:left;vertical-align: middle;'>" . sfsi_FBlike($permalink, $show_count) . "</div>";
+				}
+				if ($sfsi_section6['sfsi_rectfbshare'] == 'yes') {
+					$sfsi_section4	= unserialize(get_option('sfsi_section4_options', false));
+					$socialObj = new sfsi_SocialHelper();
+					$count_html = "";
+					if ($show_count > 0) {
+						if ($sfsi_section4['sfsi_facebook_countsDisplay'] == "yes" && $sfsi_section4['sfsi_display_counts'] == "yes") {
+
+							if ($sfsi_section4['sfsi_facebook_countsFrom'] == "manual") {
+								$counts = $sfsi_section4['sfsi_facebook_manualCounts'];
+							} else if ($sfsi_section4['sfsi_facebook_countsFrom'] == "likes") {
+								$counts = $socialObj->sfsi_get_fb($permalink);
+							} else if ($sfsi_section4['sfsi_facebook_countsFrom'] == "followers") {
+								$counts = $socialObj->sfsi_get_fb($permalink);
+							} else if ($sfsi_section4['sfsi_facebook_countsFrom'] == "mypage") {
+								$current_url = $sfsi_section4['sfsi_facebook_mypageCounts'];
+								$counts      = $socialObj->sfsi_get_fb_pagelike($current_url);
+							}
+							$count_html = '<span class="bot_no">' . $counts . '</span>';
 						}
-						$count_html = '<span class="bot_no">' . $counts . '</span>';
 					}
+					$icons .= "<div class='sf_fb_share sf_icon' style='text-align:left;vertical-align: middle;'>" . sfsiFB_Share_Custom($permalink, $show_count) . $count_html . "</div>";
 				}
-				$icons .= "<div class='sf_fb_share sf_icon' style='text-align:left;vertical-align: middle;'>" . sfsiFB_Share_Custom($permalink, $show_count) . $count_html . "</div>";
-			}
-			if (($sfsi_section6['sfsi_recttwtr'] == "yes")) {
-				// if ($show_count ) {
-				// 	/* get twitter counts */
-				// 	if ($sfsi_section4['sfsi_twitter_countsFrom'] == "source") {
-				// 		$option2	= unserialize(get_option('sfsi_section2_options', false));
+				if (($sfsi_section6['sfsi_recttwtr'] == "yes")) {
+					// if ($show_count ) {
+					// 	/* get twitter counts */
+					// 	if ($sfsi_section4['sfsi_twitter_countsFrom'] == "source") {
+					// 		$option2	= unserialize(get_option('sfsi_section2_options', false));
 
-				// 		$twitter_user = $option2['sfsi_twitter_followUserName'];
-				// 		$tw_settings = array(
-				// 			'tw_consumer_key' => $sfsi_section4['tw_consumer_key'],
-				// 			'tw_consumer_secret' => $sfsi_section4['tw_consumer_secret'],
-				// 			'tw_oauth_access_token' => $sfsi_section4['tw_oauth_access_token'],
-				// 			'tw_oauth_access_token_secret' => $sfsi_section4['tw_oauth_access_token_secret']
-				// 		);
+					// 		$twitter_user = $option2['sfsi_twitter_followUserName'];
+					// 		$tw_settings = array(
+					// 			'tw_consumer_key' => $sfsi_section4['tw_consumer_key'],
+					// 			'tw_consumer_secret' => $sfsi_section4['tw_consumer_secret'],
+					// 			'tw_oauth_access_token' => $sfsi_section4['tw_oauth_access_token'],
+					// 			'tw_oauth_access_token_secret' => $sfsi_section4['tw_oauth_access_token_secret']
+					// 		);
 
-				// 		$followers = $socialObj->sfsi_get_tweets($twitter_user, $tw_settings);
-				// 		$counts = $socialObj->format_num($followers);
-				// 	} else {
-				// 		$counts = $socialObj->format_num($sfsi_section4['sfsi_twitter_manualCounts']);
+					// 		$followers = $socialObj->sfsi_get_tweets($twitter_user, $tw_settings);
+					// 		$counts = $socialObj->format_num($followers);
+					// 	} else {
+					// 		$counts = $socialObj->format_num($sfsi_section4['sfsi_twitter_manualCounts']);
 
-				// 	}
-				// 	if($counts>0){
-				// 		$count_html = '<span class="bot_no">'.$counts.'</span>';
-				// 	}
-				// }
-				$icons .= sfsi_twitterlike($permalink, $show_count, true);
-				// $icons .= "<div class='sf_twiter' style='text-align:left;float:left;vertical-align: middle;width:auto'>" . . "</div>";
-			}
-
-			if ( $sfsi_section6['sfsi_rectpinit'] == 'yes') {
-				$count_html = "";
-				if ($show_count) {
-					/* get Pinterest counts */
-					if ($sfsi_section4['sfsi_pinterest_countsFrom'] == "pins") {
-						$url = home_url();
-						$pins = $socialObj->sfsi_get_pinterest($url);
-						$counts = $socialObj->format_num($pins);
-					} else {
-						$counts = $sfsi_section4['sfsi_pinterest_manualCounts'];
-					}
-					if ($counts > 0) {
-						$count_html = '<span class="bot_no">' . $counts . '</span>';
-					}
+					// 	}
+					// 	if($counts>0){
+					// 		$count_html = '<span class="bot_no">'.$counts.'</span>';
+					// 	}
+					// }
+					$icons .= sfsi_twitterlike($permalink, $show_count, true);
+					// $icons .= "<div class='sf_twiter' style='text-align:left;float:left;vertical-align: middle;width:auto'>" . . "</div>";
 				}
-				$icons .= "<div class='sf_pinit sf_icon' style='text-align:left;vertical-align: middle;float:left;line-height: 33px;width:auto;margin: 0 -2px;'>" . sfsi_pinterest_Customs($permalink, $show_count) . $count_html . "</div>";
-			}
-			$icons .= "</div>";
-			//closing wrapper div
-			$icons .= "</div>";
-			if (!is_feed() && !is_home() && !is_page()) {
-				$content =   $content . $icons;
+
+				if ($sfsi_section6['sfsi_rectpinit'] == 'yes') {
+					$count_html = "";
+					if ($show_count) {
+						/* get Pinterest counts */
+						if ($sfsi_section4['sfsi_pinterest_countsFrom'] == "pins") {
+							$url = home_url();
+							$pins = $socialObj->sfsi_get_pinterest($url);
+							$counts = $socialObj->format_num($pins);
+						} else {
+							$counts = $sfsi_section4['sfsi_pinterest_manualCounts'];
+						}
+						if ($counts > 0) {
+							$count_html = '<span class="bot_no">' . $counts . '</span>';
+						}
+					}
+					$icons .= "<div class='sf_pinit sf_icon' style='text-align:left;vertical-align: middle;float:left;line-height: 33px;width:auto;margin: 0 -2px;'>" . sfsi_pinterest_Customs($permalink, $show_count) . $count_html . "</div>";
+				}
+				$icons .= "</div>";
+				//closing wrapper div
+				$icons .= "</div>";
+				if (!is_feed() && !is_home() && !is_page()) {
+					$content =   $content . $icons;
+				}
 			}
 		}
 	}
@@ -241,7 +242,7 @@ function sfsi_pinterest_Customs($permalink = '', $show_count = false)
 
 /* create fb like button */
 function sfsi_FBlike($permalink, $show_count)
-{
+{ 
 	$send = 'false';
 	$fb_like_html = '';
 
@@ -263,7 +264,7 @@ function sfsiFB_Share_Custom($permalink, $show_count = false)
 	$shareurl = "https://www.facebook.com/sharer/sharer.php?u=";
 	$shareurl = $shareurl . urlencode(urldecode($permalink));
 
-	$fb_share_html = "<a href='" . $shareurl . "' style='display:inline-block;'  > <img class='sfsi_wicon'  data-pin-nopin='true' width='auto' height='auto' alt='fb-share-icon' title='Facebook Share' src='" . SFSI_PLUGURL . "images/visit_icons/fbshare_bck.png" . "'  /></a>";
+	$fb_share_html = "<a  ".sfsi_checkNewWindow()." href='" . $shareurl . "' style='display:inline-block;'  > <img class='sfsi_wicon'  data-pin-nopin='true' width='auto' height='auto' alt='fb-share-icon' title='Facebook Share' src='" . SFSI_PLUGURL . "images/visit_icons/fbshare_bck.png" . "'  /></a>";
 	return $fb_share_html;
 }
 
@@ -467,10 +468,14 @@ function sfsi_footer_script()
 			}
 
 			ob_start(); ?>
-		<div class="sfsi_responsive_icons_count sfsi_<?php echo ($icon_width_type == "Fully responsive" ? 'responsive' : 'fixed'); ?>_count_container sfsi_<?php echo strtolower($sfsi_responsive_icons['settings']['icon_size']); ?>_button" style='display:<?php echo $couter_display; ?>;text-align:center; background-color:<?php echo $sfsi_responsive_icons['settings']['counter_bg_color']; ?>;color:<?php echo $sfsi_responsive_icons['settings']['counter_color']; ?>; <?php echo $sfsi_anchor_div_style; ?>;'>
-			<h3 style="color:<?php echo $sfsi_responsive_icons['settings']['counter_color']; ?>; "><?php echo $count; ?></h3>
-			<h6 style="color:<?php echo $sfsi_responsive_icons['settings']['counter_color']; ?>;"><?php echo $sfsi_responsive_icons['settings']["share_count_text"]; ?></h6>
-		</div>
+
+		<?php
+				if ($couter_display != "none") { ?>
+			<div class="sfsi_responsive_icons_count sfsi_<?php echo ($icon_width_type == "Fully responsive" ? 'responsive' : 'fixed'); ?>_count_container sfsi_<?php echo strtolower($sfsi_responsive_icons['settings']['icon_size']); ?>_button" style='display:<?php echo $couter_display; ?>;text-align:center; background-color:<?php echo $sfsi_responsive_icons['settings']['counter_bg_color']; ?>;color:<?php echo $sfsi_responsive_icons['settings']['counter_color']; ?>; <?php echo $sfsi_anchor_div_style; ?>;'>
+				<h3 style="color:<?php echo $sfsi_responsive_icons['settings']['counter_color']; ?>; "><?php echo $count; ?></h3>
+				<h6 style="color:<?php echo $sfsi_responsive_icons['settings']['counter_color']; ?>;"><?php echo $sfsi_responsive_icons['settings']["share_count_text"]; ?></h6>
+			</div>
+		<?php } ?>
 	<?php
 			$icons .= ob_get_contents();
 			ob_end_clean();
@@ -512,7 +517,7 @@ function sfsi_footer_script()
 				}
 				$icons .= "\t\t" . "<a " . sfsi_checkNewWindow() . " href='" . ($icon_config['url'] == "" ? $share_url : $icon_config['url']) . "' style='" . ($icon_config['active'] == 'yes' ? ($sfsi_responsive_icons['settings']['icon_width_type'] === "Fixed icon width" ? 'display:inline-flex' : 'display:block') : 'display:none') . ";" . $sfsi_anchor_style . "' class=" . ($sfsi_responsive_icons['settings']['icon_width_type'] === "Fixed icon width" ? 'sfsi_responsive_fixed_width' : 'sfsi_responsive_fluid') . " >" . "\n";
 				$icons .= "\t\t\t<div class='sfsi_responsive_icon_item_container sfsi_responsive_icon_" . strtolower($icon) . "_container sfsi_" . strtolower($sfsi_responsive_icons['settings']['icon_size']) . "_button " . ($sfsi_responsive_icons['settings']['style'] == "Gradient" ? 'sfsi_responsive_icon_gradient' : '') . (" sfsi_" . (strtolower($sfsi_responsive_icons['settings']['text_align']) == "centered" ? 'centered' : 'left-align') . "_icon") . "' style='" . $sfsi_anchor_div_style . " ' >" . "\n";
-				$icons .= "\t\t\t\t<img style='max-height: 25px;display:unset;margin:0' class='sfsi_wicon' alt='".$icon."' src='" . SFSI_PLUGURL . "images/responsive-icon/" . $icon . ('Follow' === $icon ? '.png' : '.svg') . "'>" . "\n";
+				$icons .= "\t\t\t\t<img style='max-height: 25px;display:unset;margin:0' class='sfsi_wicon' alt='" . $icon . "' src='" . SFSI_PLUGURL . "images/responsive-icon/" . $icon . ('Follow' === $icon ? '.png' : '.svg') . "'>" . "\n";
 				$icons .= "\t\t\t\t<span style='color:#fff' >" . ($icon_config["text"]) . "</span>" . "\n";
 				$icons .= "\t\t\t</div>" . "\n";
 				$icons .= "\t\t</a>" . "\n\n";

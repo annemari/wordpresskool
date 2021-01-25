@@ -4708,7 +4708,7 @@ input[type="number"] {
 .sfsi-top-banner-higligted-text{
     border: 1px solid green;
     border-radius: 10px;
-    padding: 14px!important;
+    padding: 15px!important;
     padding-bottom: 5px !important;
     background: white;
     margin: 0!important;
@@ -4940,7 +4940,7 @@ text-decoration:none!important;
     background: #444;
     border-radius: 8px;
     color: #fff;
-    content: attr(title);
+    content: attr(custom-title);
     margin: -230px auto 0;
     font-size: 12px;
     padding: 13px;
@@ -4999,3 +4999,6 @@ text-decoration:none!important;
     }
 }
 
+div#analyst-install-modal * {
+    box-sizing: unset;
+}

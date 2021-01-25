@@ -225,14 +225,14 @@ class Sfsi_Widget extends WP_Widget
  
 			$extra = 0;
 			if ($sfsi_section3['sfsi_shuffle_icons'] == "yes") {
-				if ($sfsi_section3['sfsi_shuffle_Firstload'] == "yes" && $sfsi_section3['sfsi_shuffle_interval'] == "yes") {
+				if ($sfsi_section3['sfsi_shuffle_Firstload'] == "yes" && $sfsi_section3['sfsi_shuffle_interval'] == "yes") { 
 					$shuffle_time = (isset($sfsi_section3['sfsi_shuffle_intervalTime'])) ? $sfsi_section3['sfsi_shuffle_intervalTime'] : 3;
 					$shuffle_time = $shuffle_time * 1000;
-					$jquery .= "window.addEventListener('sfsi_functions_loaded',function(){  jQuery('.sfsi_wDiv').each(function(){ new window.Manipulator( jQuery(this)); });  setTimeout(function(){  jQuery('#sfsi_wDiv').each(function(){ jQuery(this).click(); })},2000);  setInterval(function(){  jQuery('#sfsi_wDiv').each(function(){ jQuery(this).click(); })}," . $shuffle_time . "); });";
+					$jquery .= "jQuery( document ).ready(function( $ ) {  jQuery('.sfsi_wDiv').each(function(){ new window.Manipulator( jQuery(this)); });  setTimeout(function(){sfsi_shuffle();  jQuery('#sfsi_wDiv').each(function(){ jQuery(this).click(); })},2000);  setInterval(function(){  jQuery('#sfsi_wDiv').each(function(){ jQuery(this).click(); })}," . $shuffle_time . "); });";
 				} else if ($sfsi_section3['sfsi_shuffle_Firstload'] == "no" && $sfsi_section3['sfsi_shuffle_interval'] == "yes") {
 					$shuffle_time = (isset($sfsi_section3['sfsi_shuffle_intervalTime'])) ? $sfsi_section3['sfsi_shuffle_intervalTime'] : 3;
 					$shuffle_time = $shuffle_time * 1000;
-					$jquery .= "window.addEventListener('sfsi_functions_loaded',function(){  jQuery('.sfsi_wDiv').each(function(){ new window.Manipulator( jQuery(this)); });  setInterval(function(){  jQuery('#sfsi_wDiv').each(function(){ jQuery(this).click(); })}," . $shuffle_time . "); });";
+					$jquery .= "jQuery( document ).ready(function( $ ) {  jQuery('.sfsi_wDiv').each(function(){ new window.Manipulator( jQuery(this)); });  setInterval(function(){sfsi_shuffle();  jQuery('#sfsi_wDiv').each(function(){ jQuery(this).click(); })}," . $shuffle_time . "); });";
 				} else {
 					$jquery .= "jQuery( document ).ready(function( $ ) {  jQuery('.sfsi_wDiv').each(function(){ new window.Manipulator( jQuery(this)); });  setTimeout(function(){sfsi_shuffle();  jQuery('#sfsi_wDiv').each(function(){ jQuery(this).click(); })},2000); });";
 				}
