@@ -79,7 +79,8 @@ if (!is_page_template('page-templates/freesiaempire-corporate.php') ){
 			if ( is_active_sidebar( 'freesiaempire_footer_options' ) ) :
 				dynamic_sidebar( 'freesiaempire_footer_options' );
 			else:
-				echo '<div class="copyright">' .'&copy; ' . date('Y') .' '; ?>
+				echo '<div class="copyright">';?>
+					<?php  echo '&copy; ' . date_i18n(__('Y','freesia-empire')) ; ?>
 				<a title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" target="_blank" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_bloginfo( 'name', 'display' ); ?></a> | 
 								<?php _e('Designed by:','freesia-empire'); ?> <a title="<?php echo esc_attr__( 'Themefreesia', 'freesia-empire' ); ?>" target="_blank" href="<?php echo esc_url( 'https://themefreesia.com' ); ?>"><?php _e('Theme Freesia','freesia-empire');?></a> | 
 								<?php _e('Powered by:','freesia-empire'); ?> <a title="<?php echo esc_attr__( 'WordPress', 'freesia-empire' );?>" target="_blank" href="<?php echo esc_url( 'http://wordpress.org' );?>"><?php _e('WordPress','freesia-empire'); ?></a>
@@ -91,7 +92,7 @@ if (!is_page_template('page-templates/freesiaempire-corporate.php') ){
 	<?php
 		$disable_scroll = $freesiaempire_settings['freesiaempire_scroll'];
 		if($disable_scroll == 0):?>
-	<div class="go-to-top"><a title="<?php _e('Go to Top','freesia-empire');?>" href="#masthead"></a></div> <!-- end .go-to-top -->
+	<div class="go-to-top"><a title="<?php esc_attr_e('Go to Top','freesia-empire');?>" href="#masthead"></a></div> <!-- end .go-to-top -->
 	<?php endif; ?>
 </footer> <!-- end #colophon -->
 </div> <!-- end #page -->

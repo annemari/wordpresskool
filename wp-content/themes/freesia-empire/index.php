@@ -32,7 +32,7 @@ get_header();
 			}
 		}
 		else { ?>
-		<h2 class="entry-title"> <?php _e( 'No Posts Found.', 'freesia-empire' ); ?> </h2>
+		<h2 class="entry-title"> <?php esc_html_e( 'No Posts Found.', 'freesia-empire' ); ?> </h2>
 		<?php } ?>
 	</main> <!-- #main -->
 	<?php get_template_part( 'navigation', 'none' ); ?>

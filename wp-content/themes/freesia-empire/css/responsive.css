@@ -286,6 +286,34 @@
 	.toggled-on .menu {
 		display: block;
 	}
+	.sub-menu-toggle {
+		background-color: #777;
+		border: none;
+		color: #fff;
+		float: right;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		margin: 6px;
+		cursor: pointer;
+		position: relative;
+		z-index: 9;
+	}
+
+	.sub-menu-toggle:hover,
+	.sub-menu-toggle:focus {
+		background-color: #999;
+	}
+	.plus-ico {
+		font-size: 20px;
+		font-style: normal;
+	}
+	.plus-ico.back-ico {
+		display: block;
+		transform: rotate(45deg);
+		transition: all .40s ease;
+	}
 	.main-navigation {
 		float: none;
 	}
@@ -319,6 +347,7 @@
 	  	visibility:visible;
 	  	position: static;
 	  	box-shadow: none;
+	  	transition: none;
 	}
 	.main-navigation ul li ul li {
 		float: none;

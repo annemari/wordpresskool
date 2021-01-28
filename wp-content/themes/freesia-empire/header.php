@@ -36,11 +36,11 @@ $freesiaempire_settings = freesiaempire_get_theme_options(); ?>
 						<div class="container clearfix">';
 						do_action('freesiaempire_site_branding');
 
-						echo '<div class="menu-toggle">      
+						echo '<button class="menu-toggle" type="button">      
 								<div class="line-one"></div>
 								<div class="line-two"></div>
 								<div class="line-three"></div>
-							</div>';
+							</button>';
 
 						echo '<div class="header-info clearfix">';
 							if(has_nav_menu('social-link') && $freesiaempire_settings['freesiaempire_top_social_icons'] == 0):

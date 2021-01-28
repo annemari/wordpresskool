@@ -21,20 +21,20 @@ class freesiaempire_widget_testimonial extends WP_Widget {
 		?>
 		<p>
 		<label for="<?php echo $this->get_field_id('image'); ?>">
-			<?php _e( 'Upload Testimonial Background Image', 'freesia-empire' ); ?>
+			<?php esc_html_e( 'Upload Testimonial Background Image', 'freesia-empire' ); ?>
 		</label>
 			<input type="text" class="upload1" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name('image'); ?>" value="<?php echo esc_url($image); ?>"/>
-  <input type="button" class="button  custom_media_button"name="<?php echo $this->get_field_name('image'); ?>" id="custom_testimonial" value="<?php _e('Upload Image','freesia-empire');?>" onclick="mediaupload.uploader( '<?php echo $this->get_field_id( 'image' ); ?>' ); return false;"/>
+  <input type="button" class="button  custom_media_button"name="<?php echo $this->get_field_name('image'); ?>" id="custom_testimonial" value="<?php esc_attr_e('Upload Image','freesia-empire');?>" onclick="mediaupload.uploader( '<?php echo $this->get_field_id( 'image' ); ?>' ); return false;"/>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php _e( 'Select category', 'freesia-empire' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'category' ); ?>"><?php esc_html_e( 'Select category', 'freesia-empire' ); ?>:</label>
 			<?php wp_dropdown_categories( array( 'show_option_none' =>' ','name' => $this->get_field_name( 'category' ), 'selected' => $category ) ); ?>
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id('number'); ?>">
-			<?php _e( 'Number of Testimonial:', 'freesia-empire' ); ?>
+			<?php esc_html_e( 'Number of Testimonial:', 'freesia-empire' ); ?>
 			</label>
-			<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" />
+			<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo absint($number); ?>" size="3" />
 		</p>
 	<?php }
 	function update($new_instance, $old_instance) {

@@ -86,24 +86,24 @@ class freesiaempire_contact_widgets extends WP_Widget {
 		$skype_id1 = empty( $instance['skype_id1'] ) ? '' : $instance['skype_id1'];
 		echo '<!-- Contact Us ============================================= -->' .$before_widget;
 		if(!empty($title)): ?>
-		<h3 class="widget-title"><?php echo esc_attr($title); ?></h3> <!-- end .widget-title -->
+		<h3 class="widget-title"><?php echo esc_html($title); ?></h3> <!-- end .widget-title -->
 		<?php endif;
 		if(!empty($address1) || !empty($phone_no1) || !empty($phone_no2) || !empty($email_1) || !empty($skype_id1)): ?>
 		<ul>
 			<?php if(!empty($address1)): ?>
-			<li class="address"><a href="<?php if(!empty($address_link1)) echo esc_url($address_link1); ?>" title="<?php echo esc_attr($address1); ?>" target="_blank"><?php echo esc_attr($address1); ?></a></li>
+			<li class="address"><a href="<?php echo esc_url($address_link1); ?>" title="<?php echo esc_attr($address1); ?>" target="_blank"><?php echo esc_html($address1); ?></a></li>
 			<?php endif;
 			if(!empty($phone_no1)): ?>
-			<li class="phone-number"><a href="tel:<?php echo preg_replace("/[^0-9+]/",'',$phone_no1); ?>" title="<?php echo esc_attr($phone_no1); ?>"><?php echo esc_attr($phone_no1); ?></a></li>
+			<li class="phone-number"><a href="tel:<?php echo preg_replace("/[^0-9+]/",'',$phone_no1); ?>" title="<?php echo esc_attr($phone_no1); ?>"><?php echo esc_html($phone_no1); ?></a></li>
 			<?php endif;
 			if(!empty($phone_no2)): ?>
-			<li class="phone-number"><a href="tel:<?php echo preg_replace("/[^0-9+]/",'',$phone_no2); ?>" title="<?php echo esc_attr($phone_no2); ?>"><?php echo esc_attr($phone_no2); ?></a></li>
+			<li class="phone-number"><a href="tel:<?php echo preg_replace("/[^0-9+]/",'',$phone_no2); ?>" title="<?php echo esc_attr($phone_no2); ?>"><?php echo esc_html($phone_no2); ?></a></li>
 			<?php endif;
 			if(!empty($email_1)): ?>
-			<li class="email"><a href="mailto:<?php echo is_email($email_1); ?>" title="<?php is_email($email_1); ?>"><?php echo is_email($email_1); ?></a></li>
+			<li class="email"><a href="mailto:<?php echo esc_attr($email_1); ?>" title="<?php esc_attr($email_1); ?>"><?php echo esc_html($email_1); ?></a></li>
 			<?php endif;
 			if(!empty($skype_id1)): ?>
-			<li class="skype"><a href="skype:<?php echo esc_attr($skype_id1); ?>?chat" title="<?php echo esc_attr($skype_id1); ?>"><?php echo esc_attr($skype_id1); ?></a></li>
+			<li class="skype"><a href="skype:<?php echo esc_attr($skype_id1); ?>?chat" title="<?php echo esc_attr($skype_id1); ?>"><?php echo esc_html($skype_id1); ?></a></li>
 			<?php endif; ?>
 		</ul>
 	<?php endif;

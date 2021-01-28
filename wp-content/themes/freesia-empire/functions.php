@@ -142,19 +142,19 @@ if(!class_exists('Freesia_Empire_Plus_Features') && !class_exists('Freesia_Busin
 	class freesiaempire_upgrade extends WP_Customize_Control {
 		public function render_content() { ?>
 			<a title="<?php esc_attr_e( 'Review Freesia Empire', 'freesia-empire' ); ?>" href="<?php echo esc_url( 'https://wordpress.org/support/view/theme-reviews/freesia-empire/' ); ?>" target="_blank" id="about_freesiaempire">
-			<?php _e( 'Review Freesia Empire', 'freesia-empire' ); ?>
+			<?php esc_html_e( 'Review Freesia Empire', 'freesia-empire' ); ?>
 			</a><br/>
 			<a href="<?php echo esc_url( 'https://themefreesia.com/theme-instruction/freesia-empire/' ); ?>" title="<?php esc_attr_e( 'Theme Instructions', 'freesia-empire' ); ?>" target="_blank" id="about_freesiaempire">
-			<?php _e( 'Theme Instructions', 'freesia-empire' ); ?>
+			<?php esc_html_e( 'Theme Instructions', 'freesia-empire' ); ?>
 			</a><br/>
 			<a href="<?php echo esc_url( 'https://tickets.themefreesia.com/' ); ?>" title="<?php esc_attr_e( 'Support Ticket', 'freesia-empire' ); ?>" target="_blank" id="about_freesiaempire">
-			<?php _e( 'Forum', 'freesia-empire' ); ?>
+			<?php esc_html_e( 'Forum', 'freesia-empire' ); ?>
 			</a><br/>
 			<a href="<?php echo esc_url( 'https://demo.themefreesia.com/freesia-empire/' ); ?>" title="<?php esc_attr_e( 'View Demo', 'freesia-empire' ); ?>" target="_blank" id="about_freesiaempire">
-			<?php _e( 'View Demo', 'freesia-empire' ); ?>
+			<?php esc_html_e( 'View Demo', 'freesia-empire' ); ?>
 			</a><br/>
 			<a href="<?php echo esc_url(home_url('/')).'wp-admin/theme-install.php?search=author:themefreesia'; ?>" title="<?php esc_attr_e( 'View ThemeFreesia Themes', 'freesia-empire' ); ?>" target="_blank" id="about_freesiaempire">
-			<?php _e( 'View ThemeFreesia Themes', 'freesia-empire' ); ?>
+			<?php esc_html_e( 'View ThemeFreesia Themes', 'freesia-empire' ); ?>
 			</a><br/>
 		<?php
 		}
@@ -227,20 +227,24 @@ function freesiaempire_header_display(){
 	if ($header_display == 'header_logo' || $header_display == 'header_text' || $header_display == 'show_both')	{
 		echo '<div id="site-branding">';
 			if($header_display != 'header_text'){ ?>
-				<a href="<?php echo esc_url(home_url('/'));?>" title="<?php echo esc_attr(get_bloginfo('name', 'display'));?>" rel="home"> <img src="<?php echo esc_url($header_logo);?>" id="site-logo" alt="<?php echo esc_attr(get_bloginfo('name', 'display'));?>"></a> 
-			<?php }
-				if (is_home() || is_front_page()){ ?>
-				<h1 id="site-title"> <?php }else{?> <h2 id="site-title"> <?php } ?>
-				<a href="<?php echo esc_url(home_url('/'));?>" title="<?php echo esc_html(get_bloginfo('name', 'display'));?>" rel="home"> <?php bloginfo('name');?> </a>
-				<?php if(is_home() || is_front_page()){ ?>
-				</h1>  <!-- end .site-title -->
-				<?php } else { ?> </h2> <!-- end .site-title --> <?php }
+				<a class="custom-logo-link" href="<?php echo esc_url(home_url('/'));?>" title="<?php echo esc_attr(get_bloginfo('name', 'display'));?>" rel="home"> <img src="<?php echo esc_url($header_logo);?>" id="site-logo" alt="<?php echo esc_attr(get_bloginfo('name', 'display'));?>"></a> 
+			<?php } ?>
+			<div id="site-detail">
+			
+				<?php if (is_home() || is_front_page()){ ?>
+					
+						<h1 id="site-title"> <?php }else{ ?> <h2 id="site-title"> <?php } ?>
+						<a href="<?php echo esc_url(home_url('/'));?>" title="<?php echo esc_html(get_bloginfo('name', 'display'));?>" rel="home"> <?php bloginfo('name');?> </a>
+						<?php if(is_home() || is_front_page()){ ?>
+						</h1>  <!-- end .site-title -->
+						<?php } else { ?> </h2> <!-- end .site-title --> <?php }
 
-				$site_description = get_bloginfo( 'description', 'display' );
-				if ($site_description){?>
-					<div id="site-description"> <?php bloginfo('description');?> </div> <!-- end #site-description -->
-		<?php }
-		echo '</div>'; // end #site-branding
-	}
+						$site_description = get_bloginfo( 'description', 'display' );
+						if ($site_description){ ?>
+							<div id="site-description"> <?php bloginfo('description');?> </div> <!-- end #site-description -->
+						<?php } ?>
+			</div>
+		</div> <!-- end #site-branding -->	
+	<?php }
 }
 add_action('freesiaempire_site_branding','freesiaempire_header_display');

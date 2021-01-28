@@ -24,27 +24,27 @@ class freesiaempire_portfolio_widget extends WP_Widget {
 		} ?>
 <p>
   <label for="<?php echo $this->get_field_id('number'); ?>">
-  <?php _e( 'Number of Works:', 'freesia-empire' ); ?>
+  <?php esc_html_e( 'Number of Works:', 'freesia-empire' ); ?>
   </label>
-  <input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" />
+  <input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo absint($number); ?>" size="3" />
 </p>
 <p>
   <label for="<?php echo $this->get_field_id('title');?>">
-  <?php _e('Title:', 'freesia-empire');?>
+  <?php esc_html_e('Title:', 'freesia-empire');?>
   </label>
   <input id="<?php echo $this->get_field_id('title');?>" name="<?php echo $this->get_field_name('title');?>" type="text" value="<?php echo esc_attr($title);?>" />
 </p>
-<?php _e('Description', 'freesia-empire');?>
-<textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id('text');?>" name="<?php echo $this->get_field_name('text');?>"><?php echo esc_attr($text); ?></textarea>
+<?php esc_html_e('Description', 'freesia-empire');?>
+<textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id('text');?>" name="<?php echo $this->get_field_name('text');?>"><?php echo esc_html($text); ?></textarea>
 <p>
   <label for="<?php echo $this->get_field_id('button_text');?>">
-  <?php _e('Button Text:', 'freesia-empire');?>
+  <?php esc_html_e('Button Text:', 'freesia-empire');?>
   </label>
   <input id="<?php echo $this->get_field_id('button_text');?>" name="<?php echo $this->get_field_name('button_text');?>" type="text" value="<?php echo esc_attr($button_text);?>" />
 </p>
 <p>
   <label for="<?php echo $this->get_field_id('button_url');?>">
-  <?php _e('Button Url:', 'freesia-empire');?>
+  <?php esc_html_e('Button Url:', 'freesia-empire');?>
   </label>
   <input id="<?php echo $this->get_field_id('button_url');?>" name="<?php echo $this->get_field_name('button_url');?>" type="text" value="<?php echo esc_url($button_url);?>" />
 </p>
@@ -53,7 +53,7 @@ class freesiaempire_portfolio_widget extends WP_Widget {
 			?>
 <p>
   <label for="<?php echo $this->get_field_id(key($defaults));?>">
-  <?php _e('Page', 'freesia-empire');?>
+  <?php esc_html_e('Page', 'freesia-empire');?>
   :</label>
   <?php wp_dropdown_pages(array('show_option_none' => ' ', 'name' => $this->get_field_name(key($defaults)), 'selected' => $instance[key($defaults)]));?>
 </p>
@@ -104,12 +104,12 @@ class freesiaempire_portfolio_widget extends WP_Widget {
 		echo '<!-- Portfolio Widget ============================================= -->' .$before_widget;
 		echo '<div class="portfolio-container clearfix">'; ?>
 <div class="four-column-full-width freesia-animation zoomIn" data-wow-delay="0.3s">
-	<?php if (!empty($title)) { echo $before_title . esc_attr($title) . $after_title; }
+	<?php if (!empty($title)) { echo $before_title . esc_html($title) . $after_title; }
 			if(!empty($text)){ ?>
-	<p class="widget-highlighted-sub-title wow fadeInUp"><?php echo esc_attr($text); ?></p>
+	<p class="widget-highlighted-sub-title wow fadeInUp"><?php echo esc_html($text); ?></p>
 	<?php }
 	if(!empty($button_text)){ ?>
-	<a title="<?php echo esc_attr($button_text);?>" href="<?php echo esc_url($button_url);?>" class="btn-default light-color"><?php echo esc_attr($button_text);?></a>
+	<a title="<?php echo esc_attr($button_text);?>" href="<?php echo esc_url($button_url);?>" class="btn-default light-color"><?php echo esc_html($button_text);?></a>
 	<?php } ?>
 </div>
 	<?php
@@ -120,7 +120,7 @@ class freesiaempire_portfolio_widget extends WP_Widget {
  <?php echo get_the_post_thumbnail($post->ID, 'post-thumbnails');
 				} ?>
   <div class="portfolio-content">
-    <h3><a href="<?php the_permalink();?>" title="<?php echo esc_attr($page_title); ?>"><?php echo esc_attr($page_title); ?></a></h3>
+    <h3><a href="<?php the_permalink();?>" title="<?php echo esc_attr($page_title); ?>"><?php echo esc_html($page_title); ?></a></h3>
     <?php if(get_the_excerpt() != ''): ?>
     <p>
     <?php if($freesiaempire_settings['freesiaempire_crop_excerpt_length'] ==1){ 
@@ -142,9 +142,9 @@ class freesiaempire_portfolio_widget extends WP_Widget {
     <p><a class="more-link" title="<?php the_title_attribute();?>" href="<?php the_permalink();?>">
       <?php
 							if($freesiaempire_tag_text == 'Read More' || $freesiaempire_tag_text == ''):
-								_e('Read More', 'freesia-empire');
+								esc_html_e('Read More', 'freesia-empire');
 							else:
-								echo esc_attr($freesiaempire_tag_text);
+								echo esc_html($freesiaempire_tag_text);
 							endif;?>
       </a></p>
     <?php } ?>

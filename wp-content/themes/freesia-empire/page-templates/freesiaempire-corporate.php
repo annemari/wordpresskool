@@ -29,16 +29,16 @@ $freesiaempire_settings = freesiaempire_get_theme_options();
 						<div class="container clearfix">
 							<div class="container_container">';
 								$get_featured_posts 		= new WP_Query(array(
-								'posts_per_page'      	=> $freesiaempire_settings['freesiaempire_total_features'],
+								'posts_per_page'      	=> absint($freesiaempire_settings['freesiaempire_total_features']),
 								'post_type'           	=> array('page'),
 								'post__in'            	=> $freesiaempire_list_page,
 								'orderby'             	=> 'post__in',
 							));
 				if($freesiaempire_settings['freesiaempire_features_title'] != ''){
-					$freesiaempire_features .= '<h2 class="freesia-animation fadeInUp">'. esc_attr($freesiaempire_settings['freesiaempire_features_title']).'</h2>';
+					$freesiaempire_features .= '<h2 class="freesia-animation fadeInUp">'. esc_html($freesiaempire_settings['freesiaempire_features_title']).'</h2>';
 				}
 				if($freesiaempire_settings['freesiaempire_features_description'] != ''){
-					$freesiaempire_features .= '<p class="feature-sub-title freesia-animation fadeInUp">'. esc_attr($freesiaempire_settings['freesiaempire_features_description']).'</p>';
+					$freesiaempire_features .= '<p class="feature-sub-title freesia-animation fadeInUp">'. esc_html($freesiaempire_settings['freesiaempire_features_description']).'</p>';
 				}
 					$freesiaempire_features .= '<div class="column clearfix">';
 				$j = 1;
@@ -59,7 +59,7 @@ $freesiaempire_settings = freesiaempire_get_theme_options();
 					$freesiaempire_features .= '<div class="three-column freesia-animation fadeInLeft" data-wow-delay="'.$delay_value .'">
 					<div class="feature-content">';
 					if ($image_attributes) {
-						$freesiaempire_features 	.= '<a class="feature-icon" href="'.esc_url(get_permalink()).'" title="'.the_title('', '', false).'"' .' alt="'.esc_url(get_permalink()).'">'.get_the_post_thumbnail($post->ID, 'thumbnail').'</a>';
+						$freesiaempire_features 	.= '<a class="feature-icon" href="'.esc_url(get_permalink()).'" title="'.the_title('', '', false).'"' .' alt="'.the_title('', '', false).'">'.get_the_post_thumbnail($post->ID, 'thumbnail').'</a>';
 					}
 					$freesiaempire_features 	.= '<article>';
 					if ($title_attribute != '') {
@@ -82,7 +82,7 @@ $freesiaempire_settings = freesiaempire_get_theme_options();
 						if($excerpt_text == '' || $excerpt_text == 'Read More') :
 							$freesiaempire_features 	.= '<a title='.'"'.get_the_title(). '"'. ' '.'href="'.esc_url(get_permalink()).'"'.' class="more-link">'.__('Read More', 'freesia-empire').'</a>';
 						else:
-						$freesiaempire_features 	.= '<a title='.'"'.get_the_title(). '"'. ' '.'href="'.esc_url(get_permalink()).'"'.' class="more-link">'.esc_attr($freesiaempire_settings[ 'freesiaempire_tag_text' ]).'</a>';
+						$freesiaempire_features 	.= '<a title='.'"'.get_the_title(). '"'. ' '.'href="'.esc_url(get_permalink()).'"'.' class="more-link">'.esc_html($freesiaempire_settings[ 'freesiaempire_tag_text' ]).'</a>';
 						endif;
 					}
 					$freesiaempire_features 	.='</div> <!-- end .feature-content -->

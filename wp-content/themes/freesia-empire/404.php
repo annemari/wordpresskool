@@ -28,10 +28,10 @@ if( 'default' == $layout ) { //Settings from customizer
 		else:?>
 		<section class="error-404 not-found">
 			<header class="page-header">
-				<h2 class="page-title"> <?php _e( 'Oops! That page can&rsquo;t be found.', 'freesia-empire' ); ?> </h2>
+				<h2 class="page-title"> <?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'freesia-empire' ); ?> </h2>
 			</header> <!-- .page-header -->
 			<div class="page-content">
-				<p> <?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'freesia-empire' ); ?> </p>
+				<p> <?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'freesia-empire' ); ?> </p>
 					<?php get_search_form(); ?>
 			</div> <!-- .page-content -->
 		</section> <!-- .error-404 -->

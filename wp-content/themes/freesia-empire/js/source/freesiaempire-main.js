@@ -46,6 +46,26 @@ jQuery( function() {
 				togglenav.toggleClass( 'toggled-on' );
 			} );
 		} )();
+
+		jQuery( function() {
+			if(jQuery( window ).width() < 768){
+				//responsive sub menu toggle
+                jQuery('#site-navigation .menu-item-has-children, #site-navigation .page_item_has_children').prepend('<button class="sub-menu-toggle"> <i class="plus-ico">+</i> </button>');
+				jQuery(".main-navigation .menu-item-has-children ul, .main-navigation .page_item_has_children ul").hide();
+				jQuery(".main-navigation .menu-item-has-children > .sub-menu-toggle, .main-navigation .page_item_has_children > .sub-menu-toggle").on('click', function () {
+					jQuery(this).parent(".main-navigation .menu-item-has-children, .main-navigation .page_item_has_children").children('ul').first().slideToggle();
+					jQuery(this).children('.plus-ico').first().toggleClass('back-ico');
+					
+				});
+			}
+		});
+
+		// For Wow Effect
+	    wow = new WOW({
+	            boxClass: 'freesia-animation'
+	        }
+	    );
+	    wow.init();
 	    
 		// Mini Slider 
 		 /*The code is pretty simple, we animate the ul with a -220px margin left. Then we find the first li and put it last to get the infinite animation.*/
