@@ -6,7 +6,7 @@
 
 <!-- javascript error loader  -->
 <div class="error" id="sfsi_onload_errors" style="margin-left: 60px;display: none;">
-    <p>We found errors in your javascript which may cause the plugin to not work properly. Please fix the error:</p>
+<p><?php _e("We found errors in your javascript which may cause the plugin to not work properly. Please fix the error:",'ultimate-social-media-icons') ?></p>
     <p id="sfsi_jerrors"></p>
 </div> <!-- END javascript error loader  -->
 
@@ -98,15 +98,15 @@
                 <div>
                     <div class="px-2 py-5 sfsi_intro_bg_white sfsi_intro_section">
                         <div class="text-center">
-                            <h1 style="color:#8A4983;font-family: montserrat-regular; "><b>Welcome to the </b><b style="font-family: montserrat-extrabold ">Ultimate Social Media Plugin!</b></h1>
+                            <h1 style="color:#8A4983;font-family: montserrat-regular; "><b><?php _e("Welcome to the",'ultimate-social-media-icons') ?></b><b style="font-family: montserrat-extrabold "><?php _e("Ultimate Social Media Plugin!",'ultimate-social-media-icons') ?></b></h1>
                         </div>
                         <div class="row py-3">
                             <div class="col-12 col-md-2 col-lg-2 col-xxl-2 d-lg-flex justify-content-lg-end align-items-center pr-lg-0">
                                 <img src="<?php echo SFSI_PLUGURL . "images/new_intro_icons/get_started.png"; ?>" class="sfsi_intro_images" alt="get started" />
                             </div>
                             <div class="col-12 col-md-10 col-lg-10 col-xxl-10 py-lg-2 sfsi_intro_text_section px-sm-4 pl-lg-0">
-                                <div class="font-weight-bold sfsi_intro_sub_heading">Get started:</div>
-                                <div class="sfsi_intro_sub_text">Simply answer the questions below (at least the first 3) - that's it!</div>
+                                <div class="font-weight-bold sfsi_intro_sub_heading"><?php _e("Get started:",'ultimate-social-media-icons') ?></div>
+                                <div class="sfsi_intro_sub_text"><?php _e("Simply answer the questions below (at least the first 3) - that's it!",'ultimate-social-media-icons') ?></div>
                             </div>
                         </div>
                         <?php
@@ -119,38 +119,38 @@
                                     <img src="<?php echo SFSI_PLUGURL . "images/new_intro_icons/discount.png"; ?>" class="sfsi_intro_images" alt="discount" />
                                 </div>
                                 <div class="col-12 col-md-10 col-lg-10 col-xxl-10 py-lg-2 sfsi_intro_text_section px-sm-4 pl-lg-0 pr-xl-0 pr-xl-3">
-                                    <div class="font-weight-bold sfsi_intro_sub_heading">Special discount:</div>
+                                    <div class="font-weight-bold sfsi_intro_sub_heading"><?php _e("Special discount:",'ultimate-social-media-icons') ?></div>
                                     <div class="d-lg-flex justify-content-lg-between align-items-lg-start justify-content-xl-between">
                                         <div class="sfsi_intro_sub_text pb-sm-3">
-                                            <div>For newbies we offer a cool <strong class="font-weight-bold sfsi_into_text_bold" style="font-size: 20px;color:black;">30% discount</strong></div>
-                                            <div>for the premium plugin which will expire in....</div>
+                                            <div><?php _e("For newbies we offer a cool ",'ultimate-social-media-icons') ?><strong class="font-weight-bold sfsi_into_text_bold" style="font-size: 20px;color:black;"><?php _e("30% discount",'ultimate-social-media-icons') ?></strong></div>
+                                            <div><?php _e("for the premium plugin which will expire in....",'ultimate-social-media-icons') ?></div>
                                         </div>
                                         <div class="d-flex sfsi_into_time_text_bottom pb-sm-3 pl-xl-3">
                                             <div class="sfsi_into_time_text_bottom_counter">
                                                 <div class="sfsi_intro_premium_counter_hours">
 
                                                 </div>
-                                                <span style="margin-left: 4px;">Hours</span>
+                                                <span style="margin-left: 4px;"><?php _e("Hours",'ultimate-social-media-icons') ?></span>
                                             </div>
                                             <div class="sfsi_into_time_text_bottom_counter">
                                                 <div class="sfsi_intro_premium_counter_min">
 
                                                 </div>
-                                                <span>Minutes</span>
+                                                <span><?php _e("Minutes",'ultimate-social-media-icons') ?></span>
                                             </div>
 
                                             <div>
                                                 <div class="sfsi_intro_premium_counter_sec">
 
                                                 </div>
-                                                <span>Seconds</span>
+                                                <span><?php _e("Seconds",'ultimate-social-media-icons') ?></span>
                                             </div>
 
                                         </div>
 
                                         <div>
                                             <div class="sfsi_intro_button ml-xl-3" style="margin-right: -8px;">
-                                                <a class="btn btn-sm" href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=NEWINSTALL&utm_source=usmi_global&utm_campaign=new_installs&utm_medium=banner" target="_blank">Get it now >></a>
+                                                <a class="btn btn-sm" href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=NEWINSTALL&utm_source=usmi_global&utm_campaign=new_installs&utm_medium=banner" target="_blank"><?php _e("Get it now >>",'ultimate-social-media-icons') ?></a>
                                             </div>
                                         </div>
                                     </div>
@@ -164,15 +164,15 @@
                                 <img src="<?php echo SFSI_PLUGURL . "images/new_intro_icons/popup.png"; ?>" class="sfsi_intro_images" alt="popup" />
                             </div>
                             <div class="col-12 col-md-10 col-lg-10 col-xxl-10 py-lg-2 sfsi_intro_text_section px-sm-4 pl-lg-0 pr-xl-0 pr-xl-2">
-                                <div class="font-weight-bold sfsi_intro_sub_heading">Pop-ups:</div>
+                                <div class="font-weight-bold sfsi_intro_sub_heading"><?php _e("Pop-ups:",'ultimate-social-media-icons') ?></div>
                                 <div class="d-lg-flex justify-content-lg-between justify-content-xl-between">
                                     <div class="sfsi_intro_sub_text pb-sm-3">
-                                        <div>For all your pop-up needs (to get subscribers, show discount </div>
-                                        <div>codes, cookie notices etc.) we now have a separate service for it:</div>
+                                        <div><?php _e("For all your pop-up needs (to get subscribers, show discount ",'ultimate-social-media-icons') ?></div>
+                                        <div><?php _e("codes, cookie notices etc.) we now have a separate service for it:",'ultimate-social-media-icons') ?></div>
                                     </div>
                                     <div>
                                         <div class="sfsi_intro_button ml-xl-3">
-                                            <a class="btn btn-lg" href="https://sellcodes.com/s/3NmlIE" target="_blank">Check out MyPopUps >></a>
+                                            <a class="btn btn-lg" href="https://sellcodes.com/s/3NmlIE" target="_blank"><?php _e("Check out MyPopUps >>",'ultimate-social-media-icons') ?></a>
                                         </div>
                                     </div>
                                 </div>
@@ -181,7 +181,7 @@
                         <div class="text-center mt-3">
                             <h4>
                                 <?php $nonce1 = wp_create_nonce("show_intro"); ?>
-                                <span style="font-weight: 600;cursor: pointer;" data-nonce="<?php echo $nonce1; ?>" id="sfsi_intro_btn_ok_got_it_id" class="sfsi_intro_btn_ok_got_it">Ok, Got it</span>
+                                <span style="font-weight: 600;cursor: pointer;" data-nonce="<?php echo $nonce1; ?>" id="sfsi_intro_btn_ok_got_it_id" class="sfsi_intro_btn_ok_got_it"><?php _e("Ok, Got it",'ultimate-social-media-icons') ?></span>
                             </h4>
                         </div>
                     </div>
@@ -195,8 +195,11 @@
             }
             window.countDownDate = <?php echo ($sfsi_max_show_time * 1000) ?>;
             window.difference = <?php echo (($sfsi_max_show_time  - $sfsi_current_date)*1000) ?>;
-            console.log(window.difference)
+            //console.log(window.difference)
             if( window.difference <= 0){
+                if(!window.SFSI){
+                    window.SFSI=jQuery;
+                }
                     SFSI(".sfsi_intro_special_discount").hide();
             }else{
                 window.countDownStopDate = new Date().getTime() + window.difference;
@@ -235,9 +238,9 @@
         </script>
         <div class="row">
             <div class="col-12 col-md-9 col-lg-12 sfsi_intro_section2" style="<?php echo ($sfsi_new_intro_banner_hide_option['sfsi_display_section2'] == "true") ?  'display:block !important;' : 'display:none!important;'; ?>">
-                <h1 class="d-inline-block">Ultimate Social Media plugin</h1>
+                <h1 class="d-inline-block"><?php _e("Ultimate Social Media plugin",'ultimate-social-media-icons') ?></h1>
                 <?php $nonce = wp_create_nonce("hide_intro"); ?>
-                <span class="sfsi_intro_btn_show_intro text-success-new pl-2" id="sfsi_intro_btn_show_intro_id" data-nonce="<?php echo $nonce; ?>" style="<?php echo ($sfsi_new_intro_banner_hide_option['sfsi_display_section'] == "true") ?  'display:none!important;' : 'display:inline-block !important;'; ?>">Show intro</span>
+                <span class="sfsi_intro_btn_show_intro text-success-new pl-2" id="sfsi_intro_btn_show_intro_id" data-nonce="<?php echo $nonce; ?>" style="<?php echo ($sfsi_new_intro_banner_hide_option['sfsi_display_section'] == "true") ?  'display:none!important;' : 'display:inline-block !important;'; ?>"><?php _e("Show intro",'ultimate-social-media-icons') ?></span>
                 <div class="">
                     <div class="row">
                         <div class="d-lg-flex col-12 col-lg-4 col-xxl-3 pr-lg-0 ">
@@ -253,22 +256,22 @@
                             <div class="sfsi_intro_bg_white" style="height: 100%;">
                                 <div class="d-lg-flex align-items-xl-center row" style="height: inherit;">
                                     <div class="col-12 col-xxl-12">
-                                        <p class="sfsi-top-banner-higligted-text pr-2 line-h-30" style="border: 1px solid white;line-height: 23px;font-family: 'montserrat-regular';text-align: justify;min-height: 88px;">If you want
-                                            <span class='font-weight-bold sfsi_intro_sub_heading'>more likes & shares</span>, more placement options, better sharing features (eg: define the text and image that gets shared), optimization for mobile,
-                                            <a target="_blank" href="https://www.ultimatelysocial.com/extra-icon-styles/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class=" text-success-new" style="font-family: 'montserrat-regular';">more icon design styles,</a>
-                                            <a target="_blank" href="https://www.ultimatelysocial.com/animated-social-media-icons/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class=" text-success-new " style="font-family:'montserrat-regular'">animated icons,</a>
-                                            <a target="_blank" href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class=' text-success-new ' style="font-family: 'montserrat-regular';">themed icons,</a> and
-                                            <a href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" target="_blank" class=" text-success-new  " style="font-family: 'montserrat-regular';">much more</a>, then
+                                        <p class="sfsi-top-banner-higligted-text pr-2 line-h-30" style="border: 1px solid white;line-height: 23px;font-family: 'montserrat-regular';text-align: justify;min-height: 88px;"><?php _e("If you want",'ultimate-social-media-icons') ?>
+                                            <span class='font-weight-bold sfsi_intro_sub_heading'><?php _e("more likes & shares",'ultimate-social-media-icons') ?></span><?php _e(", more placement options, better sharing features (eg: define the text and image that gets shared), optimization for mobile,",'ultimate-social-media-icons') ?>
+                                            <a target="_blank" href="https://www.ultimatelysocial.com/extra-icon-styles/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class=" text-success-new" style="font-family: 'montserrat-regular';"><?php _e("more icon design styles,",'ultimate-social-media-icons') ?></a>
+                                            <a target="_blank" href="https://www.ultimatelysocial.com/animated-social-media-icons/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class=" text-success-new " style="font-family:'montserrat-regular'"><?php _e("animated icons,",'ultimate-social-media-icons') ?></a>
+                                            <a target="_blank" href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class=' text-success-new ' style="font-family: 'montserrat-regular';"><?php _e("themed icons,",'ultimate-social-media-icons') ?></a> <?php _e("and",'ultimate-social-media-icons') ?>
+                                            <a href="https://www.ultimatelysocial.com/themed-icons-search/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" target="_blank" class=" text-success-new  " style="font-family: 'montserrat-regular';"><?php _e("much more",'ultimate-social-media-icons') ?></a><?php _e(", then,",'ultimate-social-media-icons') ?>
                                             <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class="sfsi_intro_sub_heading text-success-new" style="cursor:pointer; text-decoration: none !important;font-weight: bold;" target="_blank">
-                                                go premium</a>.</p>
+                                                <?php _e("go premium",'ultimate-social-media-icons') ?></a>.</p>
                                         <div class="col-12 text-center col-xxl-12">
                                             <div class='d-table' style='width:100%;height:100%'>
                                                 <div class='d-table-row'>
                                                     <div class='d-table-cell align-middle'>
                                                         <div>
-                                                            <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class="btn btn-success-new sfsi_intro_btn_go_premium">Go Premium</a>
+                                                            <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" class="btn btn-success-new sfsi_intro_btn_go_premium"><?php _e("Go Premium",'ultimate-social-media-icons') ?></a>
                                                         </div>
-                                                        <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" style="text-decoration: none;color:#414951;font-family: 'montserrat-regular';opacity: 0.7;" target='_blank'>Learn more</a>
+                                                        <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=top_banner&utm_medium=link" style="text-decoration: none;color:#414951;font-family: 'montserrat-regular';opacity: 0.7;" target='_blank'><?php _e("Learn more",'ultimate-social-media-icons') ?></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -280,20 +283,20 @@
                         <div class="col-12 col-lg-3 col-xxl-3 d-lg-flex justify-content-lg-center align-items-lg-center">
                             <div class="d-lg-flex row sfsi_intro_bg_question justify-content-lg-center" style="font-size: 17px;">
                                 <div class="col-12 col-xxl-12" style="min-height: 189px;">
-                                    <div class="font-weight-bold sfsi_intro_sub_heading pt-3">Any Questions?</div>
+                                    <div class="font-weight-bold sfsi_intro_sub_heading pt-3"><?php _e("Any Questions?",'ultimate-social-media-icons') ?></div>
                                     <div style="font-family:montserrat-medium;line-height: 23px;min-height: 88px;">
-                                        <div>Just ask us in the support forum.</div>
-                                        <div class="pr-2">We'll try to respond quickly </div>
-                                        <div class="pr-2 pb-3">& for free! :)</div>
+                                        <div><?php _e("Just ask us in the support forum",'ultimate-social-media-icons') ?>.</div>
+                                        <div class="pr-2"><?php _e("We'll try to respond quickly",'ultimate-social-media-icons') ?> </div>
+                                        <div class="pr-2 pb-3"><?php _e("& for free! :)",'ultimate-social-media-icons') ?></div>
                                     </div>
                                     <div class="col-12 text-center px-0 col-xxl-12">
                                         <div class='d-table' style='width:100%;height:100%'>
                                             <div class='d-table-row'>
                                                 <div class="d-table-cell align-middle">
                                                     <div>
-                                                        <a target="_blank" href="http://bit.ly/USM_SUPPORT_FORUM" class="btn btn-success sfsi_intro_btn_question">Open a support thread</a>
+                                                        <a target="_blank" href="http://bit.ly/USM_SUPPORT_FORUM" class="btn btn-success sfsi_intro_btn_question"><?php _e("Open a support thread",'ultimate-social-media-icons') ?></a>
                                                     </div>
-                                                    <a href="#" class="sfsi_intro_tooltip" custom-title="Your account on Wordpress.org (where you can give your review) is different to the one you login to your WordPress dashboard (where you are now). If you don’t have a WordPress.org account yet, please sign up at the top right on the Support Forum page, and then scroll down on that page. It only takes a minute :) Thank you!" style="font-size: 13px;text-decoration: none;color:#414951;font-family: 'montserrat-regular';opacity: 0.7;">Trouble logging in there?</a>
+                                                    <a href="#" class="sfsi_intro_tooltip" custom-title="Your account on Wordpress.org (where you can give your review) is different to the one you login to your WordPress dashboard (where you are now). If you don’t have a WordPress.org account yet, please sign up at the top right on the Support Forum page, and then scroll down on that page. It only takes a minute :) Thank you!" style="font-size: 13px;text-decoration: none;color:#414951;font-family: 'montserrat-regular';opacity: 0.7;"><?php _e("Trouble logging in there?",'ultimate-social-media-icons') ?></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -310,9 +313,9 @@
             </div> -->
                 <!-- <div class="text-center mt-5">
                 <div class='sfsi-premium-btn'>
-                    <button class="btn btn-success ">Go Premium</button>
+                    <button class="btn btn-success "><?php _e("Go Premium",'ultimate-social-media-icons') ?></button>
                 </div>
-                <span>Learn more</span>
+                <span><?php _e("Learn more",'ultimate-social-media-icons') ?></span>
             </div> -->
             </div>
         </div>
@@ -321,19 +324,19 @@
     <!-- step 1 end  here -->
     <div id="accordion">
 
-        <h3><span>1</span>Which icons do you want to show on your site? </h3>
+        <h3><span>1</span><?php _e("Which icons do you want to show on your site? ",'ultimate-social-media-icons') ?></h3>
         <!-- step 1 end  here -->
-        <?php include(SFSI_DOCROOT . '/views/sfsi_option_view1.php'); ?>
+        <?php  include(SFSI_DOCROOT . '/views/sfsi_option_view1.php'); ?>
         <!-- step 1 end here -->
 
         <!-- step 2 start here -->
-        <h3><span>2</span>What do you want the icons to do? </h3>
-        <?php include(SFSI_DOCROOT . '/views/sfsi_option_view2.php'); ?>
+        <h3><span>2</span><?php _e("What do you want the icons to do?",'ultimate-social-media-icons') ?> </h3>
+        <?php  include(SFSI_DOCROOT . '/views/sfsi_option_view2.php'); ?>
         <!-- step 2 END here -->
 
         <!-- step 3 start here -->
-        <h3><span>3</span>Where shall they be displayed? </h3>
-        <?php include(SFSI_DOCROOT . '/views/sfsi_question3.php'); ?>
+        <h3><span>3</span><?php _e("Where shall they be displayed? ",'ultimate-social-media-icons') ?></h3>
+        <?php  include(SFSI_DOCROOT . '/views/sfsi_question3.php'); ?>
         <!-- step 3 end here -->
 
 
@@ -343,29 +346,32 @@
 
     <div id="accordion1">
 
+        
+
         <!-- step 4 start here -->
-        <h3><span>4</span>What design &amp; animation do you want to give your icons?</h3>
-        <?php include(SFSI_DOCROOT . '/views/sfsi_option_view3.php'); ?>
+        <h3><span>4</span><?php _e("What design  ",'ultimate-social-media-icons') ?>&amp; <?php _e("animation do you want to give your icons?",'ultimate-social-media-icons') ?></h3>
+        <?php  include(SFSI_DOCROOT . '/views/sfsi_option_view3.php'); ?>
         <!-- step 4 END here -->
+        
 
         <!-- step 5 Start here -->
-        <h3><span>5</span>Do you want to display "counts" next to your icons?</h3>
-        <?php include(SFSI_DOCROOT . '/views/sfsi_option_view4.php'); ?>
+        <h3><span>5</span><?php _e("Do you want to display 'counts' next to your icons? ",'ultimate-social-media-icons') ?></h3>
+        <?php  include(SFSI_DOCROOT . '/views/sfsi_option_view4.php'); ?>
         <!-- step 5 END here -->
 
         <!-- step 6 Start here -->
-        <h3><span>6</span>Any other wishes for your main icons?</h3>
-        <?php include(SFSI_DOCROOT . '/views/sfsi_option_view5.php'); ?>
+        <h3><span>6</span><?php _e("Any other wishes for your main icons?",'ultimate-social-media-icons') ?></h3>
+        <?php  include(SFSI_DOCROOT . '/views/sfsi_option_view5.php'); ?>
         <!-- step 6 END here -->
 
         <!-- step 7 Start here -->
-        <h3><span>7</span>Do you want to display a pop-up, asking people to subscribe?</h3>
+        <h3 style="font-size: large!important;"><span>7</span><?php _e("Do you want to display a pop-up, asking people to subscribe?",'ultimate-social-media-icons') ?></h3>
         <?php include(SFSI_DOCROOT . '/views/sfsi_option_view7.php'); ?>
         <!-- step 7 END here -->
-
+       
         <!-- step 8 Start here -->
-        <h3><span>8</span>Do you want to show a subscription form (<b>increases sign ups</b>)?</h3>
-        <?php include(SFSI_DOCROOT . '/views/sfsi_option_view8.php'); ?>
+        <h3 style="font-size: large!important;"><span>8</span><?php _e("Do you want to show a subscription form (",'ultimate-social-media-icons') ?><b><?php _e("increases sign ups",'ultimate-social-media-icons') ?></b>)?</h3>
+        <?php  include(SFSI_DOCROOT . '/views/sfsi_option_view8.php'); ?>
         <!-- step 8 END here -->
 
     </div>
@@ -376,17 +382,17 @@
 
                 <img src="<?php echo SFSI_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" alt="error" />
 
-                <a href="javascript:;" id="save_all_settings" title="Save All Settings">Save All Settings</a>
+                <a href="javascript:;" id="save_all_settings" title="Save All Settings"><?php _e("Save All Settings",'ultimate-social-media-icons') ?></a>
 
             </div>
             <?php $nonce = wp_create_nonce("sfsi_save_export"); ?>
 
             <div class="export_selections">
                 <div class="export" id="sfsi_save_export" data-nonce="<?php echo $nonce; ?>">
-                    Export
+                    <?php _e("Export",'ultimate-social-media-icons') ?>
                 </div>
 
-                <div>selections</div>
+                <div><?php _e("selections",'ultimate-social-media-icons') ?></div>
 
             </div>
         </div>
@@ -399,7 +405,7 @@
         <!--<p class="bldtxtmsg">Need top-notch Wordpress development work at a competitive price? Visit us at <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=footer_credit&utm_medium=banner">ultimatelysocial.com</a></p>-->
     </div>
     <!-- all pops of plugin under sfsi_pop_content.php file -->
-    <?php include(SFSI_DOCROOT . '/views/sfsi_pop_content.php'); ?>
+    <?php  include(SFSI_DOCROOT . '/views/sfsi_pop_content.php'); ?>
 
 </div> <!-- START Admin view for plugin-->
 <?php if (in_array(get_site_url(), array('http://www.managingio.com', 'http://blog-latest.socialshare.com'))) : ?>
@@ -408,7 +414,7 @@
         <input type="text" name="sfsi_domain_input_nonce" value="<?php echo wp_create_nonce('bannerOption'); ?>">
         <div class="save_button">
             <img src="<?php echo SFSI_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" alt="error" />
-            <a href="javascript:;" id="sfsi_check_theme_of_domain_btn" title="Check">Check the Theme</a>
+            <a href="javascript:;" id="sfsi_check_theme_of_domain_btn" title="Check"><?php _e("Check the Theme",'ultimate-social-media-icons') ?></a>
         </div>
         <script type="text/javascript">
             jQuery(document).ready(function($) {

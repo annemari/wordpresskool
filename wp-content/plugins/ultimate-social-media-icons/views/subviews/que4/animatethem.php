@@ -2,7 +2,7 @@
 
 		<div class="sub_row stand sec_new" style="margin-left: 0px;">
 
-			<h4>Animate them</h4>
+			<h4><?php _e("Animate them",'ultimate-social-media-icons') ?></h4>
 
             <div id="animationSection" class="radio_section tab_3_option">
 
@@ -10,7 +10,7 @@
 
                 <label>
 
-                    Mouse-Over effects
+                    <?php _e("Mouse-Over effects",'ultimate-social-media-icons') ?>
 
                 </label>
 
@@ -20,7 +20,7 @@
 
                         <input value="same_icons" name="sfsi_mouseOver_effect_type" <?php echo ( $option3['sfsi_mouseOver_effect_type']=='same_icons') ?  'checked=checked' : '' ;?> type="radio" class="styled"/>
 
-                        <label>Same-icon effects</label>
+                        <label><?php _e("Same-icon effects",'ultimate-social-media-icons') ?></label>
 
                     </div><!-- row closes -->
 
@@ -38,9 +38,9 @@
 
                                 <label>
 
-                                    <span>Fade In</span>
+                                    <span><?php _e("Fade In",'ultimate-social-media-icons') ?></span>
 
-                                    <span>(Icons turn from shadow to full color)</span>
+                                    <span><?php _e("(Icons turn from shadow to full color)",'ultimate-social-media-icons') ?></span>
 
                                 </label>
 
@@ -54,9 +54,9 @@
 
                                 <label>
 
-                                    <span> Scale</span>
+                                    <span> <?php _e("Scale",'ultimate-social-media-icons') ?></span>
 
-                                    <span>(Icons become bigger)</span>
+                                    <span><?php _e("(Icons become bigger)",'ultimate-social-media-icons') ?></span>
 
                                 </label>
 
@@ -76,9 +76,9 @@
 
                                 <label>
 
-                                    <span>Combo</span>
+                                    <span><?php _e("FCombo",'ultimate-social-media-icons') ?></span>
 
-                                    <span>(Both fade in and scale effects)</span>
+                                    <span><?php _e("(Both fade in and scale effects)",'ultimate-social-media-icons') ?></span>
 
                                 </label>
 
@@ -92,9 +92,9 @@
 
                                 <label> 
 
-                                    <span>Fade Out</span>
+                                    <span><?php _e("Fade Out",'ultimate-social-media-icons') ?></span>
 
-                                    <span>(Icons turn from full color to shadow)</span>
+                                    <span><?php _e("(Icons turn from full color to shadow)",'ultimate-social-media-icons') ?></span>
 
                                 </label>
 
@@ -106,9 +106,9 @@
 
                         <div class="row rowmarginleft45 mouseover-premium-notice">
 
-                            <label>Greyed-out options are available in the</label>
+                            <label><?php _e("Greyed-out options are available in the",'ultimate-social-media-icons') ?></label>
 
-                            <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=same_icon_effects&utm_medium=link">Premium Plugin</a>
+                            <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=same_icon_effects&utm_medium=link">Premium Plugin<?php _e("Fade In",'ultimate-social-media-icons') ?></a>
 
                         </div>
 
@@ -118,7 +118,7 @@
 
                         <input value="other_icons" name="sfsi_mouseOver_effect_type" <?php echo ( $option3['sfsi_mouseOver_effect_type']=='other_icons') ?  'checked=checked' : '' ;?> type="radio" class="styled"/>
 
-                        <label>Show other icons on mouse-over (Only applied for Desktop Icons)</label>
+                        <label><?php _e("Show other icons on mouse-over (Only applied for Desktop Icons)",'ultimate-social-media-icons') ?></label>
 
                     </div><!-- row closes -->
 
@@ -172,15 +172,15 @@
 
                             
 
-                            <label>Transition effect to those icons</label>
+                            <label><?php _e("Transition effect to those icons",'ultimate-social-media-icons') ?></label>
 
                             <select name="mouseover_other_icons_transition_effect">
 
                                 
 
-                                <option <?php echo 'noeffect'== $mouseover_other_icons_transition_effect? "selected=selected" : ""; ?> value="noeffect">No effect</option>
+                                <option <?php echo 'noeffect'== $mouseover_other_icons_transition_effect? "selected=selected" : ""; ?> value="noeffect"><?php _e("No effect",'ultimate-social-media-icons') ?></option>
 
-                                <option <?php echo 'flip'== $mouseover_other_icons_transition_effect? "selected=selected" : ""; ?> value="flip">Flip</option>
+                                <option <?php echo 'flip'== $mouseover_other_icons_transition_effect? "selected=selected" : ""; ?> value="flip"><?php _e("Flip",'ultimate-social-media-icons') ?></option>
 
                             </select>
 
@@ -188,9 +188,9 @@
 
                         <div class="row mouseover-premium-notice rowmarginleft25">
 
-                            <label>Above options are available in the</label>
+                            <label><?php _e("Above options are available in the",'ultimate-social-media-icons') ?></label>
 
-                            <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=different_icon_mouseover&utm_medium=link">Premium Plugin</a>
+                            <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=different_icon_mouseover&utm_medium=link"><?php _e("Premium Plugin",'ultimate-social-media-icons') ?></a>
 
                         </div>
 
@@ -204,7 +204,7 @@
 
                 <input name="sfsi_shuffle_icons" <?php echo ( $option3['sfsi_shuffle_icons']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
 
-                <label>Shuffle them automatically</label>
+                <label><?php _e("Shuffle them automatically",'ultimate-social-media-icons') ?></label>
 
                 <div class="sub_sub_box shuffle_sub"  >
 
@@ -212,7 +212,7 @@
 
                         <input name="sfsi_shuffle_Firstload" <?php echo ( $option3['sfsi_shuffle_Firstload']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
 
-                        <label>When the site is first loaded</label>
+                        <label><?php _e("When the site is first loaded",'ultimate-social-media-icons') ?></label>
 
                     </p>
 
@@ -220,9 +220,9 @@
 
                         <input name="sfsi_shuffle_interval" <?php echo ( $option3['sfsi_shuffle_interval']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled"  />
 
-                        <label>Every</label>
+                        <label><?php _e("Every",'ultimate-social-media-icons') ?></label>
 
-                        <input class="smal_inpt" type="text" name="sfsi_shuffle_intervalTime" value="<?php echo ( $option3['sfsi_shuffle_intervalTime']!='') ?   $option3['sfsi_shuffle_intervalTime'] : '' ;?>"><label>seconds</label>
+                        <input class="smal_inpt" type="text" name="sfsi_shuffle_intervalTime" value="<?php echo ( $option3['sfsi_shuffle_intervalTime']!='') ?   $option3['sfsi_shuffle_intervalTime'] : '' ;?>"><label><?php _e("seconds",'ultimate-social-media-icons') ?></label>
 
                     </p>
 

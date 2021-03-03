@@ -21,15 +21,15 @@
 		<div class="sfsi_right_info">
 
 			<p>
-				<span class="sfsi_toglepstpgspn">Place via shortcode</span><br>
+				<span class="sfsi_toglepstpgspn"><?php _e("Place via shortcode",'ultimate-social-media-icons') ?></span><br>
 
 				<div class="kckslctn" <?php echo $label_style; ?>>
 
-					<p>Please use the shortcode <b>[DISPLAY_ULTIMATE_SOCIAL_ICONS]</b> to place the icons anywhere you want.</p>
+					<p><?php _e("Please use the shortcode",'ultimate-social-media-icons') ?> <b>[DISPLAY_ULTIMATE_SOCIAL_ICONS]</b><?php _e(" to place the icons anywhere you want.",'ultimate-social-media-icons') ?></p>
 
-					<p>Or, place the icons directly into our (theme) codes by using <b>&lt;?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?&gt;</b></p>
+					<p><?php _e("Or, place the icons directly into our (theme) codes by using",'ultimate-social-media-icons') ?> <b>&lt;?php echo do_shortcode('[DISPLAY_ULTIMATE_SOCIAL_ICONS]'); ?&gt;</b></p>
 
-					<p>Want to show icons <b>vertically</b> or <b>centralize the icons</b> in the shortcode container? Or need <b>different settings for mobile</b>? Check out the <a href="https://www.ultimatelysocial.com/usm-premium/" target="_blank"><b>Premium Plugin.</b></a></p>
+					<p><?php _e("Want to show icons",'ultimate-social-media-icons') ?> <b><?php _e("vertically",'ultimate-social-media-icons') ?></b><?php _e(" or ",'ultimate-social-media-icons') ?><b><?php _e("centralize the icons",'ultimate-social-media-icons') ?></b><?php _e("in the shortcode container? Or need",'ultimate-social-media-icons') ?><b><?php _e("different settings for mobile",'ultimate-social-media-icons') ?></b><?php _e("? Check out the",'ultimate-social-media-icons') ?> <a href="https://www.ultimatelysocial.com/usm-premium/" target="_blank"><b><?php _e("Premium Plugin.",'ultimate-social-media-icons') ?></b></a></p>
 
 				</div>
 			</p>
@@ -42,16 +42,17 @@
 		</div>
 		<div class="sfsi_right_info">
 			<p style="display: inline-flex;">
-				<span class="sfsi_toglepstpgspn" style="display:inline-block;float:left;">In your theme's header</span>
+				<span class="sfsi_toglepstpgspn" style="display:inline-block;float:left;"><?php _e("In your theme's header",'ultimate-social-media-icons') ?> </span>
 			</p>
 			<div class="kckslctn" style="display: none;">
 				<p>
-					Placing icons in your theme's header can be tricky / technical as CSS & PHP know-how is required (as every theme is different, no "automatic" placement is possible).
+					<?php _e(" Placing icons in your theme's header can be tricky / technical as CSS & PHP know-how is required (as every theme is different, no 'automatic' placement is possible).",'ultimate-social-media-icons') ?>
 				</p>
 				<p>
-					You can try via shortcode (see above), however if you don't want any hassle, check out our <a class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)"><span style="text-decoration: underline;cursor: pointer;color:#5A6570">Premium plugin</span></a> where - as part of our service - we can place the icons for you, making theme adjustments
-					where needed. This ensures the perfect appearance (on all devices) for your icons. <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=theme_header_placement&utm_medium=link" style="cursor:pointer; color: #1a1d20 !important;border-bottom: 1px solid #12a252;text-decoration: none;font-weight: bold;" target="_blank">
-						<b>Get it now</b> </a>
+					<?php _e("You can try via shortcode (see above), however if you don't want any hassle, check out our",'ultimate-social-media-icons') ?> <a class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)"><span style="text-decoration: underline;cursor: pointer;color:#5A6570"><?php _e("Premium plugin",'ultimate-social-media-icons') ?></span></a>
+					<?php _e(" where - as part of our service - we can place the icons for you, making theme adjustments
+					where needed. This ensures the perfect appearance (on all devices) for your icons.",'ultimate-social-media-icons') ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=theme_header_placement&utm_medium=link" style="cursor:pointer; color: #1a1d20 !important;border-bottom: 1px solid #12a252;text-decoration: none;font-weight: bold;" target="_blank">
+						<b><?php _e("Get it now",'ultimate-social-media-icons') ?></b> </a>
 				</p>
 			</div>
 		</div>

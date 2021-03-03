@@ -245,10 +245,10 @@
 </style>
 
 <!-- Footer banner STARTS -->
-<div class="sfsi-footer-pointing-heading">
+<!-- <div class="sfsi-footer-pointing-heading">
     <p>
-        <span class="sfsi-green-heading">Like the free plugin?</span>
-        <span class="sfsi-black-heading">See what the Premium Plugin has to offer...</span>
+        <span class="sfsi-green-heading"><?php _e("Like the free plugin?",'ultimate-social-media-icons') ?></span>
+        <span class="sfsi-black-heading"><?php _e("See what the Premium Plugin has to offer...",'ultimate-social-media-icons') ?></span>
     </p>
 </div>
 
@@ -265,7 +265,7 @@
                                     <img src="<?php echo SFSI_PLUGURL ?>images/footer_banner/more_likes_shares.png" alt='error'>
                                 </span>
                                 <span class="sfsi-li-right-content">
-                                    More Likes & Shares
+                                    <?php _e("More Likes & Shares",'ultimate-social-media-icons') ?>
                                 </span>
                             </li>
                             <li>
@@ -273,7 +273,7 @@
                                     <img src="<?php echo SFSI_PLUGURL ?>images/footer_banner/more_icon_designs.png" alt='error'>
                                 </span>
                                 <span class="sfsi-li-right-content">
-                                    More icon designs
+                                    <?php _e("More icon designs",'ultimate-social-media-icons') ?>
                                 </span>
                             </li>
                             <li>
@@ -281,7 +281,7 @@
                                     <img src="<?php echo SFSI_PLUGURL ?>images/footer_banner/themed_icons.png" alt='error'>
                                 </span>
                                 <span class="sfsi-li-right-content">
-                                    Themed icons
+                                    <?php _e("Themed icons",'ultimate-social-media-icons') ?>
                                 </span>
                             </li>
                             <li>
@@ -289,7 +289,7 @@
                                     <img src="<?php echo SFSI_PLUGURL ?>images/footer_banner/better_icon_placement.png" alt='error'>
                                 </span>
                                 <span class="sfsi-li-right-content">
-                                    Better icon placement
+                                    <?php _e("Better icon placement",'ultimate-social-media-icons') ?>
                                 </span>
                             </li>
                         </ul>
@@ -301,7 +301,7 @@
                                     <img src="<?php echo SFSI_PLUGURL ?>images/footer_banner/mobile_optimization.png" alt='error'>
                                 </span>
                                 <span class="sfsi-li-right-content">
-                                    Mobile optimization
+                                    <?php _e("Mobile optimization",'ultimate-social-media-icons') ?>
                                 </span>
                             </li>
                             <li>
@@ -309,7 +309,7 @@
                                     <img src="<?php echo SFSI_PLUGURL ?>images/footer_banner/faster_loading.png" alt='error'>
                                 </span>
                                 <span class="sfsi-li-right-content">
-                                    Faster loading
+                                    <?php _e("Faster loading",'ultimate-social-media-icons') ?>
                                 </span>
                             </li>
                             <li>
@@ -317,7 +317,7 @@
                                     <img src="<?php echo SFSI_PLUGURL ?>images/footer_banner/friendly_support.png" alt='error'>
                                 </span>
                                 <span class="sfsi-li-right-content">
-                                    Friendly support
+                                    <?php _e("Friendly support",'ultimate-social-media-icons') ?>
                                 </span>
                             </li>
                             <li>
@@ -325,7 +325,7 @@
                                     <img src="<?php echo SFSI_PLUGURL ?>images/footer_banner/more_platforms.png" alt='error'>
                                 </span>
                                 <span class="sfsi-li-right-content">
-                                    More platforms
+                                    <?php _e("More platforms",'ultimate-social-media-icons') ?>
                                 </span>
                             </li>
                         </ul>
@@ -333,7 +333,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="so-much-more">...and <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=new_bottom_banner_to_checkout&utm_medium=banner">so much more</a></p>
+                        <p class="so-much-more"><?php _e("...and ",'ultimate-social-media-icons') ?><a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=new_bottom_banner_to_checkout&utm_medium=banner"><?php _e("so much more",'ultimate-social-media-icons') ?></a></p>
                     </div>
                 </div>
             </div>
@@ -343,7 +343,7 @@
                         <iframe src="https://video.inchev.com/videos/embed/c952d896-34be-45bc-8142-ba14694c1bd0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
                 </span>
-                <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=new_bottom_banner_to_checkout&utm_medium=banner" class="sfsi-checkout-premium-plugin-button">Check out the Premium Plugin >></a>
+                <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=new_bottom_banner_to_checkout&utm_medium=banner" class="sfsi-checkout-premium-plugin-button"><?php _e("Check out the Premium Plugin >>",'ultimate-social-media-icons') ?></a>
             </div>
         </div>
     </div>
@@ -352,7 +352,7 @@
 
 <div class="sfsi-footer-bottom-text">
     <p>..only 29.98 USD (includes support and updates for six months, and after that it will not be deactivated, so you can just keep using it!)</p>
-</div>
+</div> -->
 
 <!-- Footer banner CLOSES -->
 

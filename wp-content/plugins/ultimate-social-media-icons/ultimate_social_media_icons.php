@@ -2,11 +2,13 @@
 /*
 Plugin Name: Social Media and Share Icons (Ultimate Social Media)
 Plugin URI: http://ultimatelysocial.com
-Description: Easy to use and 100% FREE social media plugin which adds social media icons to your website with tons of customization features!. 
+Description: Easy to use and 100% FREE social media plugin which adds social media icons to your website with tons of customization features!.
 
 Author: UltimatelySocial
 Author URI: http://ultimatelysocial.com
-Version: 2.6.3
+Text Domain: ultimate-social-media-icons
+Domain Path: /languages
+Version: 2.6.5
 License: GPLv2 or later
 */
 require_once 'analyst/main.php';
@@ -701,23 +703,23 @@ function sfsi_admin_notice()
 
     // {
 
-    // 	$style = "overflow: hidden;"; 
+    // 	$style = "overflow: hidden;";
 
     // }
-    // $style = "overflow: hidden;"; 
+    // $style = "overflow: hidden;";
     // /**
 
     //  * if wordpress uses other language
 
     //  */
 
-    // if(!empty($language) && isset($_GET['page']) && $_GET['page'] == "sfsi-options" && 
+    // if(!empty($language) && isset($_GET['page']) && $_GET['page'] == "sfsi-options" &&
 
     // 	get_option("sfsi_languageNotice") == "yes")
 
     // {
 
-    // 	
+    //
     ?>
 
     <!-- 	// 	<style type="text/css">
@@ -748,7 +750,7 @@ function sfsi_admin_notice()
 
 	// 	</style>
 
-	// 	<div class="updated" style="<?php //echo $style; 
+	// 	<div class="updated" style="<?php //echo $style;
                                             ?>">
 
 	// 		<div class="alignleft" style="margin: 9px 0;">
@@ -800,7 +802,7 @@ function sfsi_admin_notice()
         // $screen = get_current_screen();
         // if (get_option("show_premium_notification") == "yes" && ($screen->id != "toplevel_page_sfsi-options")) {
 
-        //     
+        //
         ?>
 
 
@@ -871,7 +873,7 @@ function sfsi_admin_notice()
 
                 <div style="margin: 9px 0;">
 
-                    <b>Recently switched to https?</b> If you don’t want to lose the Facebook share & like counts <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=https_share_counts&utm_medium=banner" target="_blank">have a look at our Premium Plugin</a>, we found a fix for that: <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=https_share_counts&utm_medium=banner" target="_blank">Check it out</a>
+                <b><?php _e("Recently switched to https?",'ultimate-social-media-icons') ?></b><?php _e("If you don’t want to lose the Facebook share & like counts",'ultimate-social-media-icons') ?>  <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=https_share_counts&utm_medium=banner" target="_blank"><?php _e("have a look at our Premium Plugin",'ultimate-social-media-icons') ?></a><?php _e(", we found a fix for that:",'ultimate-social-media-icons') ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=https_share_counts&utm_medium=banner" target="_blank"><?php _e("Check it out",'ultimate-social-media-icons') ?></a>
 
                 </div>
 
@@ -944,7 +946,7 @@ function sfsi_admin_notice()
                 }
             </style>
 
-            <!-- <div class="updated sfsi_show_mobile_notification" style="<?php //echo $style; 
+            <!-- <div class="updated sfsi_show_mobile_notification" style="<?php //echo $style;
                                                                                         ?>background-color: #38B54A; color: #fff; font-size: 18px;">
 
 				<div class="alignleft" style="margin: 9px 0;line-height: 24px;width: 95%;">
@@ -1033,15 +1035,13 @@ function sfsi_admin_notice()
 
                 <div style="margin: 9px 0;">
                     <p class="sfsi_show_notifictaionpragraph">
-
-                        We noticed you are running your site on a PHP version older than 5.4. Please upgrade to a more recent
+                        <?php _e(" We noticed you are running your site on a PHP version older than 5.4. Please upgrade to a more recent
                         version. This is not only important for running the Ultimate Social Media Plugin, but also for security
-                        reasons in general.
+                        reasons in general.",'ultimate-social-media-icons') ?>
 
                         <br>
-
-                        If you do not know how to do the upgrade, please ask your server team or hosting company to do it for you.'
-
+                        <?php _e("If you do not know how to do the upgrade, please ask your server team or hosting company to do it for you.",'ultimate-social-media-icons') ?>'
+                
                     </p>
                 </div>
 
@@ -1108,7 +1108,7 @@ function sfsi_admin_notice()
                     //     break;
                     // Dutch, Dutch (Belgium)
 
-                    // case 'nl_NL': case 'nl_BE':                
+                    // case 'nl_NL': case 'nl_BE':
 
                     //     $text = "";
 
@@ -1151,7 +1151,7 @@ function sfsi_admin_notice()
 
 
 
-                    //     $text = ""; 
+                    //     $text = "";
 
                     //     break;
                     // Indonesian
@@ -1180,12 +1180,12 @@ function sfsi_admin_notice()
 
 
                     //     $text = "";
-                    //     break;                       
+                    //     break;
                     // Korean
 
                     // case 'ko_KR ':
-                    //     $text = ""; 
-                    //     break;                       
+                    //     $text = "";
+                    //     break;
                     // Persian, Persian (Afghanistan)
 
                     // case 'fa_IR':case 'fa_AF':
@@ -1196,7 +1196,7 @@ function sfsi_admin_notice()
 
 
 
-                    //     break;                       
+                    //     break;
                     // Polish
                     // case 'pl_PL':
 
@@ -1241,7 +1241,7 @@ function sfsi_admin_notice()
 
                     //     $text = "<a target='_blank' href='https://goo.gl/ZiFsAF#no-topic-0'>Klicka här</a>";
 
-                    //     break;                       
+                    //     break;
                     //  Turkish
                 case 'tr_TR':
 
@@ -1253,7 +1253,7 @@ function sfsi_admin_notice()
 
                     //     $text = "<a target='_blank' href='https://goo.gl/ZiFsAF#no-topic-0'>натисніть тут</a>";
 
-                    //     break;                       
+                    //     break;
                     //  Vietnamese
                 case 'vi':
 
@@ -1540,7 +1540,7 @@ function sfsi_admin_notice()
             //$links[] = '<a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_manage_plugin_page&utm_campaign=check_out_pro_version&utm_medium=banner" id="sfsi_deactivateButton" style="color:#38B54A;"><b>Check out pro version</b></a>';
             /*if(isset($links["edit"]) && !empty($links["edit"])){
 
-		$links[] = @$links["edit"];		
+		$links[] = @$links["edit"];
 
 	}*/
             //$slug = plugin_basename(dirname(__FILE__));
@@ -2387,7 +2387,7 @@ function sfsi_plugin_redirect()
             }
             // return false;
         }
- 
+
         function sfsi_count_media_item()
         {
             $query_img_args = array(
@@ -2516,7 +2516,7 @@ function sfsi_plugin_redirect()
             // die();
         // Handle install
         add_action('wp_ajax_wpse1_6817_install', function () {
-           
+
             if (get_option('_wps18472_now_already', false)) return;
             else update_option('_wps18472_now_already', true);
 
@@ -2573,4 +2573,6 @@ function sfsi_plugin_redirect()
                 echo json_encode(array('status' => 'fail'));
             }
         });
-        ?>
+
+        // Include footer banner
+    		include_once trailingslashit(__DIR__) . '/banner/misc.php';

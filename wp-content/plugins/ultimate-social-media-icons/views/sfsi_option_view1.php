@@ -70,8 +70,9 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
 <div class="tab1">
     <p class="top_txt">
-        In general, <span>the more icons you offer the better</span> because people have different preferences, and more options mean that there’s something for everybody, increasing the chances that you get followed and/or shared.
-
+        <?php _e('In general,','ultimate-social-media-icons') ?>
+        <span><?php _e('the more icons you offer the better','ultimate-social-media-icons') ?></span>
+        <?php _e(' because people have different preferences, and more options mean that there’s something for everybody, increasing the chances that you get followed and/or shared.','ultimate-social-media-icons') ?>
     </p>
     <ul class="icn_listing">
 
@@ -83,15 +84,16 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
             </div>
 
-            <span class="sfsicls_rs_s">RSS</span>
+            <span class="sfsicls_rs_s"><?php _e('RSS','ultimate-social-media-icons') ?></span>
 
             <div class="right_info">
 
-                <p><span>Strongly recommended:</span> RSS is still popular, esp. among the tech-savvy crowd.
+                <p><span><?php _e('Strongly recommended:','ultimate-social-media-icons') ?></span> 
+                    <?php _e('RSS is still popular, esp. among the tech-savvy crowd.','ultimate-social-media-icons') ?>
+                
+                    <label class="expanded-area"><?php _e('RSS stands for Really Simply Syndication and is an easy way for people to read your content. You can learn more about it ','ultimate-social-media-icons') ?><a href="http://en.wikipedia.org/wiki/RSS" target="new" title="Syndication"><?php _e('here','ultimate-social-media-icons') ?></a>. </label></p>
 
-                    <label class="expanded-area">RSS stands for Really Simply Syndication and is an easy way for people to read your content. You can learn more about it <a href="http://en.wikipedia.org/wiki/RSS" target="new" title="Syndication">here</a>. </label></p>
-
-                <a href="javascript:;" class="expand-area">Read more</a>
+                <a href="javascript:;" class="expand-area"><?php _e('Read more','ultimate-social-media-icons') ?></a>
 
             </div>
 
@@ -107,28 +109,28 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
             </div>
 
-            <span class="sfsicls_email">Email</span>
+            <span class="sfsicls_email"><?php _e('Email','ultimate-social-media-icons') ?></span>
 
             <div class="right_info">
 
-                <p><span>Strongly recommended:</span> Email is the most effective tool to build up followership.
+                <p><span><?php _e('Strongly recommended:','ultimate-social-media-icons') ?></span> <?php _e('Email is the most effective tool to build up followership.','ultimate-social-media-icons') ?>
 
                     <span style="float: right;margin-right: 13px; margin-top: -3px;">
 
                         <?php if (get_option('sfsi_footer_sec') == "yes") {
                             $nonce = wp_create_nonce("remove_footer"); ?>
 
-                            <a style="font-size:13px;margin-left:30px;color:#777777;" href="javascript:;" class="sfsi_removeFooter" data-nonce="<?php echo $nonce; ?>">Remove credit link</a>
+                            <a style="font-size:13px;margin-left:30px;color:#777777;" href="javascript:;" class="sfsi_removeFooter" data-nonce="<?php echo $nonce; ?>"><?php _e('Remove credit link','ultimate-social-media-icons') ?></a>
 
                         <?php } ?>
 
                     </span>
 
-                    <label class="expanded-area">Everybody uses email – that’s why it’s <a href="http://www.entrepreneur.com/article/230949" target="new">much more effective than social media </a> to make people follow you. Not offering an email subscription option means losing out on future traffic to your site.</label>
+                    <label class="expanded-area"><?php _e('Everybody uses email – that’s why it’s ','ultimate-social-media-icons') ?><a href="http://www.entrepreneur.com/article/230949" target="new"><?php _e('much more effective than social media','ultimate-social-media-icons') ?> </a><?php _e(' to make people follow you. Not offering an email subscription option means losing out on future traffic to your site.','ultimate-social-media-icons') ?> </label>
 
                 </p>
 
-                <a href="javascript:;" class="expand-area">Read more</a>
+                <a href="javascript:;" class="expand-area"><?php _e('Read more','ultimate-social-media-icons') ?></a>
 
             </div>
 
@@ -141,21 +143,22 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
             <div class="radio_section tb_4_ck"><input name="sfsi_facebook_display" <?php echo ($option1['sfsi_facebook_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_facebook_display" type="checkbox" value="yes" class="styled" /></div>
 
-            <span class="sfsicls_facebook">Facebook</span>
+            <span class="sfsicls_facebook"><?php _e('Facebook','ultimate-social-media-icons') ?></span>
 
             <div class="right_info">
 
-                <p><span>Strongly recommended:</span> Facebook is crucial, esp. for sharing.
+                <p><span><?php _e('Strongly recommended:','ultimate-social-media-icons') ?></span> <?php _e('Facebook is crucial, esp. for sharing.','ultimate-social-media-icons') ?>
 
-                    <label class="expanded-area">Facebook is the giant in the social media world, and even if you don’t have a Facebook account yourself you should display this icon, so that Facebook users can share your site on Facebook. </label>
+                    <label class="expanded-area"><?php _e('Facebook is the giant in the social media world, and even if you don’t have a Facebook account yourself you should display this icon, so that Facebook users can share your site on Facebook. ','ultimate-social-media-icons') ?></label>
 
                 </p>
 
-                <a href="javascript:;" class="expand-area">Read more</a>
+                <a href="javascript:;" class="expand-area"><?php _e('Read more','ultimate-social-media-icons') ?></a>
 
             </div>
 
         </li>
+
 
         <!-- END FACEBOOK ICON -->
         <!-- TWITTER ICON -->
@@ -164,17 +167,17 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
             <div class="radio_section tb_4_ck"><input name="sfsi_twitter_display" <?php echo ($option1['sfsi_twitter_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_twitter_display" type="checkbox" value="yes" class="styled" /></div>
 
-            <span class="sfsicls_twt">Twitter</span>
+            <span class="sfsicls_twt"><?php _e('Twitter','ultimate-social-media-icons') ?></span>
 
             <div class="right_info">
 
-                <p><span>Strongly recommended:</span> Can have a strong promotional effect.
+                <p><span><?php _e('Strongly recommended:','ultimate-social-media-icons') ?></span> <?php _e('Can have a strong promotional effect.','ultimate-social-media-icons') ?>
 
-                    <label class="expanded-area">If you have a Twitter-account then adding this icon is a no-brainer. However, similar as with Facebook, even if you don’t have one you should still show this icon so that Twitter-users can share your site.</label>
+                    <label class="expanded-area"><?php _e('If you have a Twitter-account then adding this icon is a no-brainer. However, similar as with Facebook, even if you don’t have one you should still show this icon so that Twitter-users can share your site.','ultimate-social-media-icons') ?></label>
 
                 </p>
 
-                <a href="javascript:;" class="expand-area">Read more</a>
+                <a href="javascript:;" class="expand-area"><?php _e('Read more','ultimate-social-media-icons') ?></a>
 
             </div>
 
@@ -186,10 +189,10 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
         <li class="sfsi_vertically_center">
             <div>
                 <div class="radio_section tb_4_ck"><input name="sfsi_youtube_display" <?php echo ($option1['sfsi_youtube_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_youtube_display" type="checkbox" value="yes" class="styled" /></div>
-                <span class="sfsicls_utube">Youtube</span>
+                <span class="sfsicls_utube"><?php _e('Youtube','ultimate-social-media-icons') ?></span>
             </div>
             <div class="right_info">
-                <p><span>It depends:</span> Show this icon if you have a youtube account (and you should set up one if you have video content – that can increase your traffic significantly). </p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span> <?php _e('Show this icon if you have a youtube account (and you should set up one if you have video content – that can increase your traffic significantly).','ultimate-social-media-icons') ?> </p>
             </div>
         </li>
 
@@ -200,11 +203,11 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
             <div>
                 <div class="radio_section tb_4_ck"><input name="sfsi_linkedin_display" <?php echo ($option1['sfsi_linkedin_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_linkedin_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_linkdin">LinkedIn</span>
+                <span class="sfsicls_linkdin"><?php _e('LinkedIn','ultimate-social-media-icons') ?></span>
             </div>
             <div class="right_info">
 
-                <p><span>It depends:</span> No.1 network for business purposes. Use this icon if you’re a LinkedInner.</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span><?php _e(' No.1 network for business purposes. Use this icon if you’re a LinkedInner.','ultimate-social-media-icons') ?></p>
 
             </div>
 
@@ -217,13 +220,13 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
             <div>
                 <div class="radio_section tb_4_ck"><input name="sfsi_pinterest_display" <?php echo ($option1['sfsi_pinterest_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_pinterest_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_pinterest">Pinterest</span>
+                <span class="sfsicls_pinterest"><?php _e('Pinterest','ultimate-social-media-icons') ?></span>
 
             </div>
 
             <div class="right_info">
 
-                <p><span>It depends:</span> Show this icon if you have a Pinterest account (and you should set up one if you publish new pictures regularly – that can increase your traffic significantly).</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span><?php _e('Show this icon if you have a Pinterest account (and you should set up one if you publish new pictures regularly – that can increase your traffic significantly).','ultimate-social-media-icons') ?> </p>
 
             </div>
 
@@ -235,28 +238,28 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
             <div>
                 <div class="radio_section tb_4_ck"><input name="sfsi_instagram_display" <?php echo ($option1['sfsi_instagram_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_instagram_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_instagram">Instagram</span>
+                <span class="sfsicls_instagram"><?php _e('Instagram','ultimate-social-media-icons') ?></span>
 
             </div>
 
             <div class="right_info">
 
-                <p><span>It depends:</span> Show this icon if you have an Instagram account.</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span><?php _e('Show this icon if you have an Instagram account.','ultimate-social-media-icons') ?> </p>
 
             </div>
 
         </li>
         <!-- END INSTAGRAM ICON -->
          <!-- WHATSAPP ICON -->
-        <li class="sfsi_vertically_center">
+         <li class="sfsi_vertically_center">
             <div>
                 <div class="radio_section tb_4_ck"><input name="sfsi_whatsapp_display" <?php echo ($option1['sfsi_whatsapp_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_whatsapp_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_whatsapp">WhatsApp</span>
+                <span class="sfsicls_whatsapp"><?php _e('WhatsApp','ultimate-social-media-icons') ?></span>
             </div>
             <div class="right_info">
 
-                <p><span>It depends:</span> Show this icon if you want to allow users to share the page via WhatsApp.</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span><?php _e('Show this icon if you want to allow users to share the page via WhatsApp.','ultimate-social-media-icons') ?> </p>
 
             </div>
 
@@ -267,13 +270,13 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
             <div>
                 <div class="radio_section tb_4_ck"><input name="sfsi_telegram_display" <?php echo ($option1['sfsi_telegram_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_telegram_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_telegram">Telegram</span>
+                <span class="sfsicls_telegram"><?php _e('Telegram','ultimate-social-media-icons') ?></span>
 
             </div>
 
             <div class="right_info">
 
-                <p><span>It depends:</span> Show this icon if you have a Telegram account.</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span><?php _e('Show this icon if you have a Telegram account.','ultimate-social-media-icons') ?> </p>
 
             </div>
 
@@ -285,11 +288,11 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
             <div>
                 <div class="radio_section tb_4_ck"><input name="sfsi_vk_display" <?php echo ($option1['sfsi_vk_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_vk_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_vk">VK</span>
+                <span class="sfsicls_vk"><?php _e('VK','ultimate-social-media-icons') ?></span>
             </div>
             <div class="right_info">
 
-                <p><span>It depends:</span> Show this icon if you have a VK account.</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span> <?php _e('Show this icon if you have a VK account.','ultimate-social-media-icons') ?></p>
 
             </div>
 
@@ -302,13 +305,13 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                 <div class="radio_section tb_4_ck"><input name="sfsi_ok_display" <?php echo ($option1['sfsi_ok_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_ok_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_ok">Ok</span>
+                <span class="sfsicls_ok"><?php _e('Ok','ultimate-social-media-icons') ?></span>
 
             </div>
 
             <div class="right_info">
 
-                <p><span>It depends:</span> Show this icon if you have an OK account.</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span><?php _e('Show this icon if you have an OK account.','ultimate-social-media-icons') ?> </p>
 
             </div>
 
@@ -320,11 +323,11 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
             <div>
                 <div class="radio_section tb_4_ck"><input name="sfsi_wechat_display" <?php echo ($option1['sfsi_wechat_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_wechat_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_wechat">WeChat</span>
+                <span class="sfsicls_wechat"><?php _e('WeChat','ultimate-social-media-icons') ?></span>
             </div>
             <div class="right_info">
 
-                <p><span>It depends:</span> Show this icon if you have a WeChat account.</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span> <?php _e('Show this icon if you have a WeChat account.','ultimate-social-media-icons') ?></p>
 
             </div>
 
@@ -336,13 +339,13 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                 <div class="radio_section tb_4_ck"><input name="sfsi_weibo_display" <?php echo ($option1['sfsi_weibo_display'] == 'yes') ?  'checked="true"' : ''; ?> id="sfsi_weibo_display" type="checkbox" value="yes" class="styled" /></div>
 
-                <span class="sfsicls_weibo">Weibo</span>
+                <span class="sfsicls_weibo"><?php _e('Weibo','ultimate-social-media-icons') ?></span>
 
             </div>
 
             <div class="right_info">
 
-                <p><span>It depends:</span> Show this icon if you have a Weibo account.</p>
+                <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span><?php _e('Show this icon if you have a Weibo account.','ultimate-social-media-icons') ?> </p>
 
             </div>
 
@@ -395,18 +398,18 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="custom custom-txt" style="font-weight:normal;opacity:0.5;margin-left:4px"> Custom Icon </span>
+                        <span class="custom custom-txt" style="font-weight:normal;opacity:0.5;margin-left:4px"><?php _e('Custom Icon ','ultimate-social-media-icons') ?> </span>
 
                     </a>
 
                     <div class="right_info">
                         <p style="padding-top: 2px;">
                             <label style="color: #12a252 !important; font-weight: bold;font-family: unset;">
-                                Premium Feature:
+                            <?php _e('Premium Feature:','ultimate-social-media-icons') ?>
                             </label>
-                            <label>Upload a custom icon if you have other accounts/websites you want to link to -</label>
+                            <label><?php _e('Upload a custom icon if you have other accounts/websites you want to link to -','ultimate-social-media-icons') ?></label>
                             <a class="pop-up" style="cursor:pointer; color: #12a252 !important;border-bottom: 1px solid #12a252;text-decoration: none;font-weight: bold;font-family: unset;" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" target="_blank">
-                                Get it now.
+                            <?php _e('Get it now.','ultimate-social-media-icons') ?>
                             </a>
                         </p>
 
@@ -475,7 +478,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         <div class="right_info">
 
-                            <p><span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to. </p>
+                        <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span> <?php _e('Upload a custom icon if you have other accounts/websites you want to link to.','ultimate-social-media-icons') ?> </p>
                         </div>
 
                     </li>
@@ -501,13 +504,13 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
                             <img src="<?php echo SFSI_PLUGURL . 'images/custom.png'; ?>" id="CImg_<?php echo $new_element; ?> " alt="error" />
 
                         </span>
-                        <span class="custom custom-txt">Custom<?php echo $count; ?> </span>
+                        <span class="custom custom-txt"><?php _e('Custom','ultimate-social-media-icons') ?><?php echo $count; ?> </span>
 
                     </div>
 
                     <div class="right_info">
 
-                        <p><span>It depends:</span> Upload a custom icon if you have other accounts/websites you want to link to. </p>
+                    <p><span><?php _e('It depends:','ultimate-social-media-icons') ?></span><?php _e('Upload a custom icon if you have other accounts/websites you want to link to.','ultimate-social-media-icons') ?>  </p>
 
                     </div>
 
@@ -526,7 +529,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
             <div class="sfsi_prem_icons_added">
 
                 <div class="sf_si_prmium_head">
-                    <h2>New: <span> In our Premium Plugin we added icons for:</span></h2>
+                <h2><?php _e('New:','ultimate-social-media-icons') ?> <span><?php _e('In our Premium Plugin we added icons for:','ultimate-social-media-icons') ?> </span></h2>
                 </div>
 
                 <div class="sfsi_premium_row">
@@ -539,7 +542,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Snapchat</span>
+                        <span class="sfsicls_prem_text"><?php _e('Snapchat','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -563,7 +566,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Yummly</span>
+                        <span class="sfsicls_prem_text"><?php _e('Yummly','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -575,7 +578,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Yelp</span>
+                        <span class="sfsicls_prem_text"><?php _e('Yelp','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -587,7 +590,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Print</span>
+                        <span class="sfsicls_prem_text"><?php _e('Print','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -599,7 +602,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Messenger</span>
+                        <span class="sfsicls_prem_text"><?php _e('Messenger','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -615,7 +618,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Soundcloud</span>
+                        <span class="sfsicls_prem_text"><?php _e('Soundcloud','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -627,7 +630,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Skype</span>
+                        <span class="sfsicls_prem_text"><?php _e('Skype','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -639,7 +642,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Flickr</span>
+                        <span class="sfsicls_prem_text"><?php _e('Flickr','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -651,7 +654,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Buffer</span>
+                        <span class="sfsicls_prem_text"><?php _e('Buffer','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -663,7 +666,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Blogger</span>
+                        <span class="sfsicls_prem_text"><?php _e('Blogger','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -675,7 +678,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Reddit</span>
+                        <span class="sfsicls_prem_text"><?php _e('Reddit','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -691,7 +694,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Vimeo</span>
+                        <span class="sfsicls_prem_text"><?php _e('Vimeo','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -703,7 +706,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Tumblr</span>
+                        <span class="sfsicls_prem_text"><?php _e('Tumblr','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -715,7 +718,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Houzz</span>
+                        <span class="sfsicls_prem_text">Houzz<?php _e('Houzz','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -727,7 +730,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Xing</span>
+                        <span class="sfsicls_prem_text"><?php _e('Xing','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -739,7 +742,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Twitch</span>
+                        <span class="sfsicls_prem_text"><?php _e('Twitch','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -751,7 +754,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Amazon</span>
+                        <span class="sfsicls_prem_text"><?php _e('Amazon','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -767,7 +770,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Angie’s List</span>
+                        <span class="sfsicls_prem_text"><?php _e('Angie’s List','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -779,7 +782,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                         </span>
 
-                        <span class="sfsicls_prem_text">Steam</span>
+                        <span class="sfsicls_prem_text"><?php _e('Steam','ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -793,7 +796,7 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
                 <div class="sfsi_need_another_tell_us" style="padding-top:20px">
 
-                    <a href="https://www.ultimatelysocial.com/all-platforms/" target="_blank">...and many more! See them here</a>
+                <a href="https://www.ultimatelysocial.com/all-platforms/" target="_blank"><?php _e('...and many more! See them here','ultimate-social-media-icons') ?></a>
 
                     <!--<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_platforms&utm_medium=banner" target="_blank">See all features Premium Plugin</a>-->
 
@@ -819,12 +822,10 @@ $option1['sfsi_whatsapp_display']     = (isset($option1['sfsi_whatsapp_display']
 
         <?php $nonce = wp_create_nonce("update_step1"); ?>
 
-        <a href="javascript:;" id="sfsi_save1" title="Save" data-nonce="<?php echo $nonce; ?>">Save</a>
-
+        <a href="javascript:;" id="sfsi_save1" title="Save" data-nonce="<?php echo $nonce; ?>"><?php _e('Save','ultimate-social-media-icons') ?></a>
     </div><!-- END SAVE BUTTON SECTION   -->
 
-    <a class="sfsiColbtn closeSec" href="javascript:;">Collapse area</a>
-
+    <a class="sfsiColbtn closeSec" href="javascript:;"><?php _e('Collapse area','ultimate-social-media-icons') ?></a>
     <!-- ERROR AND SUCCESS MESSAGE AREA-->
 
     <p class="red_txt errorMsg" style="display:none"> </p>

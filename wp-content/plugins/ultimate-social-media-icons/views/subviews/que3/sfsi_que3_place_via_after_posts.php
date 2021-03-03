@@ -14,10 +14,12 @@
 			<div class="radio_section tb_4_ck" onclick="checkforinfoslction_checkbox(this);"><input name="sfsi_show_via_afterposts" <?php echo $checked; ?>  type="checkbox" value="<?php echo $sfsi_show_via_afterposts; ?>" class="styled"  /></div>
 			<div class="sfsi_right_info">
                 <p>
-					<span class="sfsi_toglepstpgspn">Show icons after posts</span>
+					<span class="sfsi_toglepstpgspn"><?php _e("Show icons after posts",'ultimate-social-media-icons') ?></span>
                 </p>
                 <div class="kckslctn" <?php echo $label_style; ?>>
                     <?php include(SFSI_DOCROOT.'/views/sfsi_option_view6.php'); ?>
                 </div>
 			</div>
-		</li>
+        </li>
+        
+        

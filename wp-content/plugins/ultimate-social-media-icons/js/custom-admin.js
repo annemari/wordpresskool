@@ -643,7 +643,7 @@ function sfsi_update_step4() {
         round = 1 == SFSI("input[name='sfsi_round_counts']").prop("disabled") ? "" : SFSI("input[name='sfsi_round_counts']:checked").val()
         whatsapp = 1 == SFSI("input[name='sfsi_whatsapp_countsDisplay']").prop("disabled") ? "" : SFSI("input[name='sfsi_whatsapp_countsDisplay']:checked").val(),
         whatsapp_manual = SFSI("input[name='sfsi_whatsapp_manualCounts']").val(),
-    console.log(resp, original, round);
+    //console.log(resp, original, round);
 
     $ = {
         action: "updateSrcn4",
@@ -705,7 +705,7 @@ function sfsi_update_step4() {
         sfsi_whatsapp_manualCounts: whatsapp_manual,
         nonce: nonce
     };
-    console.log($);
+    //console.log($);
     return SFSI.ajax({
         url: sfsi_icon_ajax_object.ajax_url,
         type: "post",
@@ -880,17 +880,19 @@ function sfsi_update_step6() {
     };
     SFSI('.sfsi_responsive_default_icon_container input[type="checkbox"]').each(function (index, obj) {
         var data_obj = {};
-        data_obj.active = ('checked' == SFSI(obj).attr('checked')) ? 'yes' : 'no';
+        // console.log("responseive checkbox checked ",obj,obj.checked)
+        data_obj.active = obj.checked ? 'yes' : 'no';
         var iconname = SFSI(obj).attr('data-icon');
         var next_section = SFSI(obj).parent().parent();
         data_obj.text = next_section.find('input[name="sfsi_responsive_' + iconname + '_input"]').val();
         data_obj.url = next_section.find('input[name="sfsi_responsive_' + iconname + '_url_input"]').val();
         responsive_icons.default_icons[iconname] = data_obj;
     });
+    // console.log(responsive_icons.default_icons);
     SFSI('.sfsi_responsive_custom_icon_container input[type="checkbox"]').each(function (index, obj) {
         if (SFSI(obj).attr('id') != "sfsi_responsive_custom_new_display") {
             var data_obj = {};
-            data_obj.active = 'checked' == SFSI(obj).attr('checked') ? 'yes' : 'no';
+            data_obj.active = obj.checked ? 'yes' : 'no';
             var icon_index = SFSI(obj).attr('data-custom-index');
             var next_section = SFSI(obj).parent().parent();
             data_obj['added'] = SFSI('input[name="sfsi_responsive_custom_' + index + '_added"]').val();
@@ -2873,7 +2875,7 @@ function checkforinfoslction(ref) {
 
 function checkforinfoslction_checkbox(ref) {
 
-console.log(ref)
+//console.log(ref)
     var pos = jQuery(ref).children(".checkbox").css("background-position");
 
     var elem = jQuery(ref).parent().children('.sfsi_right_info').find('.kckslctn');
@@ -3469,7 +3471,7 @@ function sfsi_resize_icons_container() {
     jQuery('.sfsi_responsive_cloned_list').remove();
     sfsi_inline_style = jQuery('.sfsi_responsive_icon_preview .sfsi_icons_container').attr('style');
     // remove_width 
-    sfsi_inline_style = sfsi_inline_style.replace(/width:auto($|!important|)(;|$)/g, '').replace(/width:\s*(-|)\d*\s*(px|%)\s*($|!important|)(;|$)/g, '');
+    sfsi_inline_style = sfsi_inline_style && sfsi_inline_style.replace(/width:auto($|!important|)(;|$)/g, '').replace(/width:\s*(-|)\d*\s*(px|%)\s*($|!important|)(;|$)/g, '');
     if (!(jQuery('.sfsi_responsive_icon_preview .sfsi_icons_container').hasClass('sfsi_responsive_without_counter_icons') && jQuery('.sfsi_icons_container').hasClass('sfsi_icons_container_box_fixed_container'))) {
         sfsi_inline_style += "width:" + (actual_width - count_width - 1) + 'px!important;'
     } else {

@@ -17,7 +17,7 @@ if (!is_null($analyst_cache) && isset($analyst_cache["plugin_to_install"])) {
 
 		<span id="sfsi_analyst_pop" style="display:none" data-status="<?php echo $sfsi_willshow_analyst_popup ? "yes" : "no"; ?>"></span>
 
-		<p class="clear" style="padding-top: 5px;!important">Please select one or multiple placement options: </p>
+		<p class="clear" style="padding-top: 5px;!important"><?php _e("Please select one or multiple placement options:",'ultimate-social-media-icons') ?> </p>
 
 		<!--**********************  Define the location on the page **************************************-->
 
@@ -56,7 +56,8 @@ if (!is_null($analyst_cache) && isset($analyst_cache["plugin_to_install"])) {
 
 				<span class="checkbox" style="background-position:0px 0px!important;width:31px"></span>
 
-				<input name="" type="checkbox" disable value="" class="hide" style="display:none;" /></div>
+				<input name="" type="checkbox" disable value="" class="hide" style="display:none;" />
+			</div>
 
 
 
@@ -64,12 +65,11 @@ if (!is_null($analyst_cache) && isset($analyst_cache["plugin_to_install"])) {
 
 				<p style="display:block">
 
-					<span class="sfsi_toglepstpgspn" style="display:inline-block;">Show a Pinterest icon over images on mouse-over </span>
-					<span> - <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=pinterest_icon_mouse_over&utm_medium=link" target="_blank" style="font-weight:800;color: #777;">Premium feature</a>
+					<span class="sfsi_toglepstpgspn" style="display:inline-block;"><?php _e("Show a Pinterest icon over images on mouse-over ",'ultimate-social-media-icons') ?></span>
+					<span> - <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=pinterest_icon_mouse_over&utm_medium=link" target="_blank" style="font-weight:800;color: #777;"><?php _e("Premium feature",'ultimate-social-media-icons') ?></a>
 					</span>
 
 				</p>
-
 
 
 			</div>
@@ -87,7 +87,7 @@ if (!is_null($analyst_cache) && isset($analyst_cache["plugin_to_install"])) {
 
 				<div class="sfsi_right_info sfsi_Woocommerce_disable">
 					<p style="display:block">
-						<span class="sfsi_toglepstpgspn" style="display:inline-block;">On your Woocommerce product pages </span> - <span><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=woocomerce_placement&utm_medium=link" target="_blank" style="font-weight:800;color:#777">Premium feature</a></span>
+						<span class="sfsi_toglepstpgspn" style="display:inline-block;"><?php _e("On your Woocommerce product pages ",'ultimate-social-media-icons') ?></span> - <span><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=woocomerce_placement&utm_medium=link" target="_blank" style="font-weight:800;color:#777">Premium feature</a></span>
 					</p>
 				</div>
 
@@ -103,7 +103,7 @@ if (!is_null($analyst_cache) && isset($analyst_cache["plugin_to_install"])) {
 
 	<p class="sfsi_premium_feature_note">
 
-		In the Premium Plugin you can also <b>exclude icons</b> from showing on certain pages. <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/"><b>See all features</b></a>
+		<?php _e("In the Premium Plugin you can also <b>exclude icons</b> from showing on certain pages.",'ultimate-social-media-icons') ?> <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/"><b><?php _e("See all features",'ultimate-social-media-icons') ?></b></a>
 
 	</p>
 
@@ -121,7 +121,7 @@ if (!is_null($analyst_cache) && isset($analyst_cache["plugin_to_install"])) {
 
 		<?php $nonce = wp_create_nonce("update_step9"); ?>
 
-		<a href="javascript:;" id="sfsi_save9" title="Save" data-nonce="<?php echo $nonce ?>" data-nonce2="<?php echo $nonce2 ?>">Save</a>
+		<a href="javascript:;" id="sfsi_save9" title="Save" data-nonce="<?php echo $nonce ?>" data-nonce2="<?php echo $nonce2 ?>"><?php _e("Save",'ultimate-social-media-icons') ?></a>
 
 	</div>
 
@@ -129,7 +129,7 @@ if (!is_null($analyst_cache) && isset($analyst_cache["plugin_to_install"])) {
 
 
 
-	<a class="sfsiColbtn closeSec" href="javascript:;">Collapse area
+	<a class="sfsiColbtn closeSec" href="javascript:;"><?php _e("Collapse area",'ultimate-social-media-icons') ?>
 
 	</a>
 

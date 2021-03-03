@@ -150,13 +150,13 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 <div class="tab2">
     <!-- RSS ICON -->
     <div class="row bdr_top rss_section">
-        <h2 class="sfsicls_rs_s">RSS</h2>
+        <h2 class="sfsicls_rs_s"><?php _e('RSS','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont">
-            <p>When clicked on, users can subscribe via RSS</p>
+            <p><?php _e('When clicked on, users can subscribe via RSS','ultimate-social-media-icons') ?></p>
             <div class="rss_url_row">
-                <h4>RSS URL:</h4>
+                <h4><?php _e('RSS URL:','ultimate-social-media-icons') ?></h4>
                 <input name="sfsi_rss_url" id="sfsi_rss_url" class="add" type="url" value="<?php echo ($option2['sfsi_rss_url'] != '') ?  $option2['sfsi_rss_url'] : ''; ?>" placeholder="E.g http://www.yoursite.com/feed" />
-                <span class="sfrsTxt">For most blogs it’s <strong>http://blogname.com/feed</strong></span>
+                <span class="sfrsTxt"><?php _e('For most blogs it’s','ultimate-social-media-icons') ?> <strong>http://blogname.com/feed</strong></span>
             </div>
         </div>
     </div>
@@ -172,43 +172,43 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
         <div class="inr_cont">
             <p>
-                It allows your visitors to subscribe to your site (on <a href="http://api.follow.it/widgets/emailSubscribeEncFeed/<?php echo $feedId; ?>/<?php echo base64_encode(8); ?>" target="new">this screen</a>) and receive new posts automatically by email.
+                <?php _e('It allows your visitors to subscribe to your site (on','ultimate-social-media-icons') ?> <a href="http://api.follow.it/widgets/emailSubscribeEncFeed/<?php echo $feedId; ?>/<?php echo base64_encode(8); ?>" target="new"><?php _e('this screen','ultimate-social-media-icons') ?></a><?php _e(') and receive new posts automatically by email.','ultimate-social-media-icons') ?>
             </p>
-            <p>Please pick which icon type you want to use:</p>
+            <p><?php _e('Please pick which icon type you want to use:','ultimate-social-media-icons') ?><?php _e('Email icon','ultimate-social-media-icons') ?></p>
             <ul class="tab_2_email_sec">
                 <li>
                     <div class="sfsiicnsdvwrp">
                         <input name="sfsi_rss_icons" <?php echo ($option2['sfsi_rss_icons'] == 'email') ?  'checked="true"' : ''; ?> type="radio" value="email" class="styled" /><span class="email_icn"></span>
                     </div>
-                    <label>Email icon</label>
+                    <label><?php _e('Email icon','ultimate-social-media-icons') ?></label>
                 </li>
                 <li>
                     <div class="sfsiicnsdvwrp">
                         <input name="sfsi_rss_icons" <?php echo ($option2['sfsi_rss_icons'] == 'subscribe') ?  'checked="true"' : ''; ?> type="radio" value="subscribe" class="styled" /><span class="subscribe_icn"></span>
                     </div>
-                    <label>Email + Follow text<span class="sficndesc"> </span></label>
+                    <label><?php _e('Email + Follow text','ultimate-social-media-icons') ?><span class="sficndesc"> </span></label>
                 </li>
                 <li>
                     <div class="sfsiicnsdvwrp">
                         <input name="sfsi_rss_icons" <?php echo ($option2['sfsi_rss_icons'] == 'sfsi') ?  'checked="true"' : ''; ?> type="radio" value="sfsi" class="styled" /><span class="sf_arow"></span>
                     </div>
-                    <label>follow.it icon<span class="sfplsdesc"> (provider of the service)</span></label>
+                    <label><?php _e('follow.it icon','ultimate-social-media-icons') ?><span class="sfplsdesc"><?php _e('(provider of the service)','ultimate-social-media-icons') ?> </span></label>
                 </li>
             </ul>
-            <p>The service offers many (more) advantages: </p>
+            <p><?php _e('The service offers many (more) advantages:','ultimate-social-media-icons') ?> </p>
             <div class='sfsi_service_row'>
                 <div class='sfsi_service_column'>
                     <ul>
-                        <li><span>More people come back</span> to your site</li>
-                        <li>See your<span> subscribers’ emails</span> & <span>interesting statistics</span></li>
-                        <li>Automatically post on<span> Facebook & Twitter</span></li>
+                        <li><span><?php _e('More people come back','ultimate-social-media-icons') ?></span><?php _e('to your site','ultimate-social-media-icons') ?> </li>
+                        <li><?php _e('See your','ultimate-social-media-icons') ?><span><?php _e('subscribers’ emails','ultimate-social-media-icons') ?> </span> & <span><?php _e('interesting statistics','ultimate-social-media-icons') ?></span></li>
+                        <li><?php _e('Automatically post on','ultimate-social-media-icons') ?><span> <?php _e('Facebook & Twitter','ultimate-social-media-icons') ?></span></li>
                     </ul>
                 </div>
                 <div class='sfsi_service_column'>
                     <ul>
-                        <li><span>Get more traffic</span> by being listed in the follow.it directory</li>
-                        <li><span>Get alerts</span> when people subscribe or unsubscribe</li>
-                        <li><span>Tailor the sender name & subject line</span> of the emails </li>
+                        <li><span><?php _e('Get more traffic','ultimate-social-media-icons') ?></span><?php _e('by being listed in the follow.it directory','ultimate-social-media-icons') ?> </li>
+                        <li><span><?php _e('Get alerts','ultimate-social-media-icons') ?></span><?php _e('when people subscribe or unsubscribe','ultimate-social-media-icons') ?> </li>
+                        <li><span><?php _e('Tailor the sender name & subject line','ultimate-social-media-icons') ?></span> <?php _e('of the emails','ultimate-social-media-icons') ?> </li>
                     </ul>
                 </div>
             </div>
@@ -220,20 +220,39 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
                 </div>
                 <div class='sfsi_more_services_link'>
                     <a href="javascript:;" id="sfsi_getMeFullAccess" class="sfsi_getMeFullAccess_class" title="Give me access" data-nonce-fetch-feed-id="<?php echo wp_create_nonce('sfsi_get_feed_id'); ?>">
-                        Click here to benefit from all advantages >
+                        <?php _e('Click here to benefit from all advantages >','ultimate-social-media-icons') ?>
                     </a>
                 </div>
             </form>
 
             <p class='sfsi_email_last_paragraph'>
-                This will create your FREE account on follow.it, using above email. <br>
-                All data will be treated highly confidentially, see the
-                <a href="https://follow.it/info/privacy" target="new">
-                    Privacy Policy.
-                </a>
+                <?php _e('This will create your FREE account on follow.it, using above email.','ultimate-social-media-icons') ?> <br>
+                <?php 
+                    printf(
+                        __( 'All data will be treated highly confidentially, see the %1s Privacy Policy %2s','ultimate-social-media-icons' ),
+                        '<a href="https://follow.it/info/privacy" target="new">',
+                        '</a>'
+                    );
+                ?>   
             </p>
             <div class="sfsi_new_prmium_follw">
-                <p><b>New:</b> In our Premium Plugin you can now give your email icon other functions too, e.g. <b>contact you </b>(email), <b>share by email,</b> and <b>link to a certain page </b>(e.g. your contact form or newsletter sign-up site). <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_functions_email_icon&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a>
+                <?php 
+                    printf(
+                        __( '%1sNew:%2sIn our Premium Plugin you can now give your email icon other functions too, e.g. %3s contact you %4s(email),%5sshare by email, %6s and %7s link to a certain page %8s (e.g. your contact form or newsletter sign-up site). %9s Go premium now %10s  or learn more.%11s','ultimate-social-media-icons' ),
+                        '<p><b>',
+                        '</b>',
+                        '<b>',
+                        '</b>',
+                        '<b>',
+                        '</b>',
+                        '<b>',
+                        '</b>',
+                        '<a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                        '</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_functions_email_icon&utm_medium=banner" class="sfsi_font_inherit" target="_blank">',
+                        '</a>'
+                    );
+                ?>
+                      
             </div>
         </div>
     </div>
@@ -241,18 +260,37 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
     <!-- FACEBOOK ICON -->
     <div class="row facebook_section">
-        <h2 class="sfsicls_facebook">Facebook</h2>
+        <h2 class="sfsicls_facebook"><span><?php _e('Facebook','ultimate-social-media-icons') ?></span></h2>
         <div class="inr_cont">
-            <p>The Facebook icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;" data-id="fbex-s2">(see an example)</a>.</p>
-            <p>The Facebook icon should allow users to...</p>
+            <p>
+                <?php 
+                        printf(
+                            __( 'The Facebook icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do %1s (see an example) %2s ','ultimate-social-media-icons' ),
+                            '<a class="rit_link pop-up" href="javascript:;" data-id="fbex-s2">',
+                            '</a>'
+                        );
+                ?>
+            </p>
+            <p><?php _e('The Facebook icon should allow users to...','ultimate-social-media-icons') ?></p>
 
-            <p class="radio_section fb_url" style="display:flow-root"><input name="sfsi_facebookPage_option" <?php echo ($option2['sfsi_facebookPage_option'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Visit my Facebook page at:</label><input class="add" name="sfsi_facebookPage_url" type="url" value="<?php echo ($option2['sfsi_facebookPage_url'] != '') ?  $option2['sfsi_facebookPage_url'] : ''; ?>" placeholder="E.g https://www.facebook.com/your_page_name" /></p>
+            <p class="radio_section fb_url" style="display:flow-root"><input name="sfsi_facebookPage_option" <?php echo ($option2['sfsi_facebookPage_option'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Visit my Facebook page at:','ultimate-social-media-icons') ?></label><input class="add" name="sfsi_facebookPage_url" type="url" value="<?php echo ($option2['sfsi_facebookPage_url'] != '') ?  $option2['sfsi_facebookPage_url'] : ''; ?>" placeholder="E.g https://www.facebook.com/your_page_name" /></p>
 
-            <p class="radio_section fb_url extra_sp" style="display:flow-root;margin: 16px 0 23px;"><input name="sfsi_facebookLike_option" <?php echo ($option2['sfsi_facebookLike_option'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Like my blog on Facebook (+1)</label></p>
+            <p class="radio_section fb_url extra_sp" style="display:flow-root;margin: 16px 0 23px;"><input name="sfsi_facebookLike_option" <?php echo ($option2['sfsi_facebookLike_option'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Like my blog on Facebook (+1)','ultimate-social-media-icons') ?></label></p>
 
             <p class="radio_section fb_url extra_sp" style="display:flow-root; margin: 16px 0 12px;"><input name="sfsi_facebookShare_option" <?php echo ($option2['sfsi_facebookShare_option'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Share my blog with friends (on Facebook)</label></p>
             <div class="sfsi_new_prmium_follw">
-                <p><b>New:</b> In our Premium Plugin you can also allow users to follow you on Facebook <b>directly from your site</b> (without leaving your page, increasing followers). <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=direct_follow_facebook&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+                <?php 
+                        printf(
+                            __( '%1s New: %2s In our Premium Plugin you can also allow users to follow you on Facebook  %3s directly from your site %4s (without leaving your page, increasing followers).  %5s Go premium now %6s  or learn more. %7s','ultimate-social-media-icons' ),
+                            '<p><b>',
+                            '</b> ',
+                            '<b>',
+                            '</b>',
+                            '<a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                            '</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=direct_follow_facebook&utm_medium=banner" class="sfsi_font_inherit" target="_blank">',
+                            '</a></p>'
+                        );
+                ?> 
             </div>
         </div>
     </div>
@@ -260,20 +298,37 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
     <!-- TWITTER ICON -->
     <div class="row twitter_section">
-        <h2 class="sfsicls_twt">Twitter</h2>
+        <h2 class="sfsicls_twt"><?php _e('Twitter','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont twt_tab_2">
-            <p>The Twitter icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;" data-id="twex-s2">(see an example)</a>.</p>
-            <p>The Twitter icon should allow users to...</p>
+            <p>
+                <?php 
+                        printf(
+                            __( 'The Twitter icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do %1s (see an example) %2s ','ultimate-social-media-icons' ),
+                            '<a class="rit_link pop-up" href="javascript:;" data-id="fbex-s2">',
+                            '</a>'
+                        );
+                ?>
+            </p>
+            <p><?php _e('The Twitter icon should allow users to...','ultimate-social-media-icons') ?></p>
 
-            <p class="radio_section fb_url" style="display:flow-root"><input name="sfsi_twitter_page" <?php echo ($option2['sfsi_twitter_page'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Visit me on Twitter:</label><input name="sfsi_twitter_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_twitter_pageURL'] != '') ?  $option2['sfsi_twitter_pageURL'] : ''; ?>" class="add" /></p>
+            <p class="radio_section fb_url" style="display:flow-root"><input name="sfsi_twitter_page" <?php echo ($option2['sfsi_twitter_page'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Visit me on Twitter:','ultimate-social-media-icons') ?></label><input name="sfsi_twitter_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_twitter_pageURL'] != '') ?  $option2['sfsi_twitter_pageURL'] : ''; ?>" class="add" /></p>
 
-            <div class="radio_section fb_url twt_fld"><input name="sfsi_twitter_followme" <?php echo ($option2['sfsi_twitter_followme'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Follow me on Twitter:</label><input name="sfsi_twitter_followUserName" type="text" value="<?php echo ($option2['sfsi_twitter_followUserName'] != '') ?  $option2['sfsi_twitter_followUserName'] : ''; ?>" placeholder="my_twitter_name" class="add" /></div>
+            <div class="radio_section fb_url twt_fld"><input name="sfsi_twitter_followme" <?php echo ($option2['sfsi_twitter_followme'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Follow me on Twitter:','ultimate-social-media-icons') ?></label><input name="sfsi_twitter_followUserName" type="text" value="<?php echo ($option2['sfsi_twitter_followUserName'] != '') ?  $option2['sfsi_twitter_followUserName'] : ''; ?>" placeholder="my_twitter_name" class="add" /></div>
             <?php
             $twitter_text = isset($option2['sfsi_twitter_aboutPageText']) && !empty($option2['sfsi_twitter_aboutPageText']) ? $option2['sfsi_twitter_aboutPageText'] : '';
             ?>
             <div class="radio_section fb_url twt_fld_2"><input name="sfsi_twitter_aboutPage" <?php echo ($option2['sfsi_twitter_aboutPage'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Tweet about my page:</label><textarea name="sfsi_twitter_aboutPageText" id="sfsi_twitter_aboutPageText" class="add_txt" placeholder="Hey, check out this cool site I found: www.yourname.com #Topic via@my_twitter_name"><?php echo $twitter_text; ?></textarea><?php /*echo ($option2['sfsi_twitter_aboutPageText']!='') ?  stripslashes($option2['sfsi_twitter_aboutPageText']) : '' ;*/ ?></div>
             <div class="sfsi_new_prmium_follw">
-                <p><b>New: </b>Tweeting becomes really fun in the Premium Plugin – you can insert tags to automatically pull the title of the story & link to the story, attach pictures & snippets to the Tweets (‘Twitter cards’) and user Url-shorteners, all leading to more Tweets and traffic for your site! <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=better_tweets&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+                <?php 
+                        printf(
+                            __( '%1s New: %2s Tweeting becomes really fun in the Premium Plugin – you can insert tags to automatically pull the title of the story & link to the story, attach pictures & snippets to the Tweets (‘Twitter cards’) and user Url-shorteners, all leading to more Tweets and traffic for your site! %3s or learn more. %4s','ultimate-social-media-icons' ),
+                            '<p><b>',
+                            '</b>',
+                            '<a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=better_tweets&utm_medium=banner" class="sfsi_font_inherit" target="_blank">',
+                            '</a></p>'
+                        );
+                ?>
+                 
             </div>
         </div>
     </div>
@@ -281,15 +336,23 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
     <!-- YOUTUBE ICON -->
     <div class="row youtube_section">
-        <h2 class="sfsicls_utube">Youtube</h2>
+        <h2 class="sfsicls_utube"><?php _e('Youtube','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont utube_inn">
-            <p>The Youtube icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;" data-id="ytex-s2">(see an example)</a>.</p>
+            <p>
+                <?php 
+                        printf(
+                            __( 'The Youtube icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do %1s (see an example) %2s ','ultimate-social-media-icons' ),
+                            '<a class="rit_link pop-up" href="javascript:;" data-id="fbex-s2">',
+                            '</a>'
+                        );
+                ?>
+            </p>
 
-            <p>The Youtube icon should allow users to... </p>
+            <p><?php _e('The Youtube icon should allow users to... ','ultimate-social-media-icons') ?></p>
 
-            <p class="radio_section fb_url"><input name="sfsi_youtube_page" <?php echo ($option2['sfsi_youtube_page'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Visit my Youtube page at:</label><input name="sfsi_youtube_pageUrl" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_youtube_pageUrl'] != '') ?  $option2['sfsi_youtube_pageUrl'] : ''; ?>" class="add" /></p>
+            <p class="radio_section fb_url"><input name="sfsi_youtube_page" <?php echo ($option2['sfsi_youtube_page'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Visit my Youtube page at:','ultimate-social-media-icons') ?></label><input name="sfsi_youtube_pageUrl" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_youtube_pageUrl'] != '') ?  $option2['sfsi_youtube_pageUrl'] : ''; ?>" class="add" /></p>
 
-            <p class="radio_section fb_url"><input name="sfsi_youtube_follow" <?php echo ($option2['sfsi_youtube_follow'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Subscribe to me on Youtube <span>(allows people to subscribe to you directly, without leaving your blog)</span></label></p>
+            <p class="radio_section fb_url"><input name="sfsi_youtube_follow" <?php echo ($option2['sfsi_youtube_follow'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Subscribe to me on Youtube','ultimate-social-media-icons') ?> <span><?php _e('(allows people to subscribe to you directly, without leaving your blog)','ultimate-social-media-icons') ?></span></label></p>
 
             <!--Adding Code for Channel Id and Channel Name-->
             <div class="cstmutbewpr">
@@ -304,17 +367,17 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
                     <div class="cstmutbchnlnmewpr" <?php if ($sfsi_youtubeusernameorid != 'id') {
                                                         echo 'style="display: block;"';
                                                     } ?>>
-                        <p class="extra_pp"><label>UserName:</label><input name="sfsi_ytube_user" type="url" value="<?php echo (isset($option2['sfsi_ytube_user']) && $option2['sfsi_ytube_user'] != '') ?  $option2['sfsi_ytube_user'] : ''; ?>" placeholder="Youtube username" class="add" /></p>
+                        <p class="extra_pp"><label><?php _e('UserName:','ultimate-social-media-icons') ?></label><input name="sfsi_ytube_user" type="url" value="<?php echo (isset($option2['sfsi_ytube_user']) && $option2['sfsi_ytube_user'] != '') ?  $option2['sfsi_ytube_user'] : ''; ?>" placeholder="Youtube username" class="add" /></p>
                         <div class="utbe_instruction">
-                            To find your User ID/Channel ID, login to your YouTube account, click the user icon at the top right corner and select "Settings", then click "Advanced" under "Name" and you will find both your "Channel ID" and "User ID" under "Account Information".
+                            <?php _e('To find your User ID/Channel ID, login to your YouTube account, click the user icon at the top right corner and select "Settings", then click "Advanced" under "Name" and you will find both your "Channel ID" and "User ID" under "Account Information".:','ultimate-social-media-icons') ?>
                         </div>
                     </div>
                     <div class="cstmutbchnlidwpr" <?php if ($sfsi_youtubeusernameorid == 'id') {
                                                         echo 'style="display: block;"';
                                                     } ?>>
-                        <p class="extra_pp"><label>ChannelId:</label><input name="sfsi_ytube_chnlid" type="url" value="<?php echo (isset($option2['sfsi_ytube_chnlid']) && $option2['sfsi_ytube_chnlid'] != '') ?  $option2['sfsi_ytube_chnlid'] : ''; ?>" placeholder="youtube_channel_id" class="add" /></p>
+                        <p class="extra_pp"><label><?php _e('ChannelId::','ultimate-social-media-icons') ?></label><input name="sfsi_ytube_chnlid" type="url" value="<?php echo (isset($option2['sfsi_ytube_chnlid']) && $option2['sfsi_ytube_chnlid'] != '') ?  $option2['sfsi_ytube_chnlid'] : ''; ?>" placeholder="youtube_channel_id" class="add" /></p>
                         <div class="utbe_instruction">
-                            To find your User ID/Channel ID, login to your YouTube account, click the user icon at the top right corner and select "Settings", then click "Advanced" under "Name" and you will find both your "Channel ID" and "User ID" under "Account Information".
+                            <?php _e('To find your User ID/Channel ID, login to your YouTube account, click the user icon at the top right corner and select "Settings", then click "Advanced" under "Name" and you will find both your "Channel ID" and "User ID" under "Account Information".:','ultimate-social-media-icons') ?>
                         </div>
                     </div>
                 </div>
@@ -326,65 +389,99 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
     <!-- PINTEREST ICON -->
     <div class="row pinterest_section">
-        <h2 class="sfsicls_pinterest">Pinterest</h2>
+        <h2 class="sfsicls_pinterest"><?php _e('Pinterest','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont">
-            <p>The Pinterest icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;" data-id="pinex-s2">(see an example)</a>.</p>
-            <p>The Pinterest icon should allow users to... </p>
-            <p class="radio_section fb_url"><input name="sfsi_pinterest_page" <?php echo ($option2['sfsi_pinterest_page'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Visit my Pinterest page at:</label><input name="sfsi_pinterest_pageUrl" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_pinterest_pageUrl'] != '') ?  $option2['sfsi_pinterest_pageUrl'] : ''; ?>" class="add" /></p>
-            <p class="radio_section fb_url"><input name="sfsi_pinterest_pingBlog" <?php echo ($option2['sfsi_pinterest_pingBlog'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Pin my blog on Pinterest (+1)</label></p>
+            <p>
+                <?php 
+                        printf(
+                            __( ' The Pinterest icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do %1s (see an example) %2s ','ultimate-social-media-icons' ),
+                            '<a class="rit_link pop-up" href="javascript:;" data-id="fbex-s2">',
+                            '</a>'
+                        );
+                ?>
+            </p>
+            <p><?php _e('The Pinterest icon should allow users to...','ultimate-social-media-icons') ?> </p>
+            <p class="radio_section fb_url"><input name="sfsi_pinterest_page" <?php echo ($option2['sfsi_pinterest_page'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Visit my Pinterest page at:','ultimate-social-media-icons') ?></label><input name="sfsi_pinterest_pageUrl" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_pinterest_pageUrl'] != '') ?  $option2['sfsi_pinterest_pageUrl'] : ''; ?>" class="add" /></p>
+            <p class="radio_section fb_url"><input name="sfsi_pinterest_pingBlog" <?php echo ($option2['sfsi_pinterest_pingBlog'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Pin my blog on Pinterest (+1)','ultimate-social-media-icons') ?></label></p>
         </div>
     </div>
     <!-- END PINTEREST ICON -->
 
     <!-- INSTAGRAM ICON -->
     <div class="row instagram_section">
-        <h2 class="sfsicls_instagram">Instagram</h2>
+        <h2 class="sfsicls_instagram"><?php _e('Instagram','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont">
-            <p>When clicked on, users will get directed to your Instagram page.</p>
-            <p class="radio_section fb_url  cus_link instagram_space"><label>URL:</label><input name="sfsi_instagram_pageUrl" type="text" value="<?php echo (isset($option2['sfsi_instagram_pageUrl']) && $option2['sfsi_instagram_pageUrl'] != '') ?  $option2['sfsi_instagram_pageUrl'] : ''; ?>" placeholder="http://" class="add" /></p>
+            <p><?php _e('When clicked on, users will get directed to your Instagram page.','ultimate-social-media-icons') ?></p>
+            <p class="radio_section fb_url  cus_link instagram_space"><label><?php _e('URL:','ultimate-social-media-icons') ?></label><input name="sfsi_instagram_pageUrl" type="text" value="<?php echo (isset($option2['sfsi_instagram_pageUrl']) && $option2['sfsi_instagram_pageUrl'] != '') ?  $option2['sfsi_instagram_pageUrl'] : ''; ?>" placeholder="http://" class="add" /></p>
         </div>
     </div>
     <!-- END INSTAGRAM ICON -->
 
     <!-- LINKEDIN ICON -->
     <div class="row linkedin_section">
-        <h2 class="sfsicls_linkdin">LinkedIn</h2>
+        <h2 class="sfsicls_linkdin"><?php _e('LinkedIn','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont linked_tab_2 link_in">
-            <p>The LinkedIn icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do <a class="rit_link pop-up" href="javascript:;" data-id="linkex-s2">(see an example)</a>.</p>
-            <p>You find your ID in the link of your profile page, e.g. https://www.linkedin.com/profile/view?id=<b>8539887</b>&trk=nav_responsive_tab_profile_pic</p>
-            <p style="margin-bottom:20px;">The LinkedIn icon should allow users to... </p>
-            <div class="radio_section fb_url link_1" style="margin: 18px 0 23px;"><input name="sfsi_linkedin_page" <?php echo ($option2['sfsi_linkedin_page'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Visit my Linkedin page at:</label><input name="sfsi_linkedin_pageURL" type="text" placeholder="http://" value="<?php echo ($option2['sfsi_linkedin_pageURL'] != '') ?  $option2['sfsi_linkedin_pageURL'] : ''; ?>" class="add" /></div>
-            <div class="radio_section fb_url link_2" style="margin: 0px 0 23px;"><input name="sfsi_linkedin_follow" <?php echo ($option2['sfsi_linkedin_follow'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Follow me on Linkedin: </label><input name="sfsi_linkedin_followCompany" type="text" value="<?php echo ($option2['sfsi_linkedin_followCompany'] != '') ?  $option2['sfsi_linkedin_followCompany'] : ''; ?>" class="add" placeholder="Enter company ID, e.g. 123456" /></div>
+            <p>
+                <?php 
+                        printf(
+                            __( ' The LinkedIn icon can perform several actions. Pick below which ones it should perform. If you select several options, then users can select what they want to do %1s (see an example) %2s ','ultimate-social-media-icons' ),
+                            '<a class="rit_link pop-up" href="javascript:;" data-id="fbex-s2">',
+                            '</a>'
+                        );
+                ?>
+            </p>
+            <p>
+                <?php 
+                        printf(
+                            __( ' You find your ID in the link of your profile page, e.g. https://www.linkedin.com/profile/view?id=%1s8539887%2s&trk=nav_responsive_tab_profile_pic','ultimate-social-media-icons' ),
+                            '<b>',
+                            '</b>'
+                        );
+                ?>
+            </p>
+            <p style="margin-bottom:20px;"><?php _e('The LinkedIn icon should allow users to... ','ultimate-social-media-icons') ?></p>
+            <div class="radio_section fb_url link_1" style="margin: 18px 0 23px;"><input name="sfsi_linkedin_page" <?php echo ($option2['sfsi_linkedin_page'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Visit my Linkedin page at:','ultimate-social-media-icons') ?></label><input name="sfsi_linkedin_pageURL" type="text" placeholder="http://" value="<?php echo ($option2['sfsi_linkedin_pageURL'] != '') ?  $option2['sfsi_linkedin_pageURL'] : ''; ?>" class="add" /></div>
+            <div class="radio_section fb_url link_2" style="margin: 0px 0 23px;"><input name="sfsi_linkedin_follow" <?php echo ($option2['sfsi_linkedin_follow'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Follow me on Linkedin:','ultimate-social-media-icons') ?> </label><input name="sfsi_linkedin_followCompany" type="text" value="<?php echo ($option2['sfsi_linkedin_followCompany'] != '') ?  $option2['sfsi_linkedin_followCompany'] : ''; ?>" class="add" placeholder="Enter company ID, e.g. 123456" /></div>
 
-            <div class="radio_section fb_url link_3" style="margin: 0px 0 23px;"><input name="sfsi_linkedin_SharePage" <?php echo ($option2['sfsi_linkedin_SharePage'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label>Share my page on LinkedIn</label></div>
+            <div class="radio_section fb_url link_3" style="margin: 0px 0 23px;"><input name="sfsi_linkedin_SharePage" <?php echo ($option2['sfsi_linkedin_SharePage'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label><?php _e('Share my page on LinkedIn','ultimate-social-media-icons') ?></label></div>
 
-            <div class="radio_section fb_url link_4" style="margin: 10px 0 0px;"><input name="sfsi_linkedin_recommendBusines" <?php echo ($option2['sfsi_linkedin_recommendBusines'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label class="anthr_labl">Recommend my business or product on Linkedin:</label><input name="sfsi_linkedin_recommendProductId" type="text" value="<?php echo ($option2['sfsi_linkedin_recommendProductId'] != '') ?  $option2['sfsi_linkedin_recommendProductId'] : ''; ?>" class="add link_dbl" placeholder="Enter Product ID, e.g. 1441" /> <input name="sfsi_linkedin_recommendCompany" type="text" value="<?php echo ($option2['sfsi_linkedin_recommendCompany'] != '') ?  $option2['sfsi_linkedin_recommendCompany'] : ''; ?>" class="add" placeholder="Enter company name, e.g. Google”" /></div>
+            <div class="radio_section fb_url link_4" style="margin: 10px 0 0px;"><input name="sfsi_linkedin_recommendBusines" <?php echo ($option2['sfsi_linkedin_recommendBusines'] == 'yes') ?  'checked="true"' : ''; ?> type="checkbox" value="yes" class="styled" /><label class="anthr_labl"><?php _e('Recommend my business or product on Linkedin:','ultimate-social-media-icons') ?></label><input name="sfsi_linkedin_recommendProductId" type="text" value="<?php echo ($option2['sfsi_linkedin_recommendProductId'] != '') ?  $option2['sfsi_linkedin_recommendProductId'] : ''; ?>" class="add link_dbl" placeholder="Enter Product ID, e.g. 1441" /> <input name="sfsi_linkedin_recommendCompany" type="text" value="<?php echo ($option2['sfsi_linkedin_recommendCompany'] != '') ?  $option2['sfsi_linkedin_recommendCompany'] : ''; ?>" class="add" placeholder="Enter company name, e.g. Google”" /></div>
 
             <div class="lnkdin_instruction">
-                To find your Product or Company ID, you can use their ID lookup tool at <a target="_blank" href="https://developer.linkedin.com/apply-getting-started#company-lookup">https://developer.linkedin.com/apply-getting-started#company-lookup</a>. You need to be logged in to Linkedin to be able to use it.
+                <?php _e('To find your Product or Company ID, you can use their ID lookup tool at','ultimate-social-media-icons') ?> <a target="_blank" href="https://developer.linkedin.com/apply-getting-started#company-lookup">https://developer.linkedin.com/apply-getting-started#company-lookup</a><?php _e('You need to be logged in to Linkedin to be able to use it.','ultimate-social-media-icons') ?>. 
             </div>
         </div>
     </div>
 
     <!-- TELEGRAM ICON -->
     <div class="row telegram_section">
-        <h2 class="sfsicls_telegram">Telegram</h2>
+        <h2 class="sfsicls_telegram"><?php _e('Telegram','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont telegram_tab_2">
-            <p>Clicking on this icon will allow users to contact you on Telegram.</p>
+            <p><?php _e('Clicking on this icon will allow users to contact you on Telegram.','ultimate-social-media-icons') ?></p>
             <!-- <input name="sfsi_telegram_message"  checked="true" type="checkbox" value="yes" class=""  style="display:none"/> -->
 
             <p class="radio_section fb_url no_check ">
-                <label>Pre-filled message</label>
+                <label><?php _e('Pre-filled message','ultimate-social-media-icons') ?></label>
                 <input name="sfsi_telegram_message" type="text" value="<?php echo ($option2['sfsi_telegram_message'] != '') ?  $option2['sfsi_telegram_message'] : ''; ?>" placeholder="my_telegram_name" class="add" />
             </p>
 
             <p class="radio_section fb_url no_check">
-                <label>My Telegram username</label>
+                <label><?php _e('My Telegram username','ultimate-social-media-icons') ?></label>
                 <input name="sfsi_telegram_username" type="url" placeholder="username" value="<?php echo ($option2['sfsi_telegram_username'] != '') ?  $option2['sfsi_telegram_username'] : ''; ?>" class="add" />
             </p>
 
             <div class="sfsi_new_prmium_follw">
-                <p><b>New: </b>In our Premium Plugin you can now give your Telegram icon sharing functionality too, e.g. <b> share your website/blog with friends. </b><a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=telegram_sharing&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+                <?php 
+                        printf(
+                            __( '%1s New: %2s In our Premium Plugin you can now give your Telegram icon sharing functionality too, e.g. %3s share your website/blog with friends. %4s Go premium now %5s or learn more. %6s','ultimate-social-media-icons' ),
+                            '<p><b>',
+                            '</b>',
+                            '<b>',
+                            '</b><a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                            ' </a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=telegram_sharing&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> ',
+                            ' </a></p>'
+                        );
+                ?>  
             </div>
         </div>
     </div>
@@ -393,12 +490,24 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
     <!-- WECHAT ICON -->
     <div class="row wechat_section">
-        <h2 class="sfsicls_wechat">WeChat</h2>
+        <h2 class="sfsicls_wechat"><?php _e('WeChat','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont wechat_tab_2">
-            <p>When clicked on, your website/blog will be shared on WeChat.</p>
+            <p>.<?php _e('When clicked on, your website/blog will be shared on WeChat','ultimate-social-media-icons') ?></p>
             <input name="sfsi_wechatShare_option" checked="true" type="checkbox" value="yes" class="" style="display:none" />
             <div class="sfsi_new_prmium_follw">
-                <p><b>New: </b>In our Premium Plugin you can also allow users to <b>follow you </b> on WeChat <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=wechat_sharing&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+            <?php 
+                        printf(
+                            __( '%1s New: %2s In our Premium Plugin you can also allow users to %3sfollow you %4s on WeChat  %5s  Go premium now %6s or learn more. %7s','ultimate-social-media-icons' ),
+                            '<p><b>',
+                            '</b>',
+                            '<b>',
+                            ' </b>',
+                            '<a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                            '</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=wechat_sharing&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> ',
+                            '</a></p>'
+                        );
+                ?>
+                
             </div>
         </div>
     </div>
@@ -406,12 +515,22 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
     <!-- WHATSAPP ICON -->
     <div class="row whatsapp_section">
-        <h2 class="sfsicls_whatsapp">WhatsApp</h2>
+        <h2 class="sfsicls_whatsapp"><?php _e('WhatsApp','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont whatsapp_tab_2">
-            <p>When clicked on, your website/blog will be shared on WhatsApp.</p>
+            <p><?php _e('When clicked on, your website/blog will be shared on WhatsApp.','ultimate-social-media-icons') ?></p>
             <input name="sfsi_whatsapp_option" checked="true" type="checkbox" value="yes" class="" style="display:none" />
             <div class="sfsi_new_prmium_follw">
-                <p><b>New: </b>In our Premium Plugin you can define what text will get shared, and also give the icon the feature to send you a WhatsApp message. <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=whatsapp_sharing&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+            <?php 
+                        printf(
+                            __( '%1s New: %2s  In our Premium Plugin you can define what text will get shared, and also give the icon the feature to send you a WhatsApp message. %3s  Go premium now %4s or learn more. %5s','ultimate-social-media-icons' ),
+                            '<p><b>',
+                            '</b>',
+                            '<a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                            '</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=whatsapp_sharing&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> ',
+                            '</a></p>'
+                        );
+                ?>
+               
             </div>
         </div>
     </div>
@@ -419,14 +538,26 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
     <!-- WEIBO ICON -->
     <div class="row weibo_section">
-        <h2 class="sfsicls_weibo">Weibo</h2>
+        <h2 class="sfsicls_weibo"><?php _e('Weibo','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont weibo_tab_2">
-            <p>When clicked on, users will get directed to your Weibo page.</p>
+            <p><?php _e('When clicked on, users will get directed to your Weibo page.','ultimate-social-media-icons') ?></p>
 
-            <p class="radio_section fb_url no_check"><input name="sfsi_weibo_page" checked="true" type="checkbox" value="yes" class="" style="display:none" /><label>Visit me on Weibo:</label><input name="sfsi_weibo_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_weibo_pageURL'] != '') ?  $option2['sfsi_weibo_pageURL'] : ''; ?>" class="add" /></p>
+            <p class="radio_section fb_url no_check"><input name="sfsi_weibo_page" checked="true" type="checkbox" value="yes" class="" style="display:none" /><label><?php _e('Visit me on Weibo:','ultimate-social-media-icons') ?></label><input name="sfsi_weibo_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_weibo_pageURL'] != '') ?  $option2['sfsi_weibo_pageURL'] : ''; ?>" class="add" /></p>
 
             <div class="sfsi_new_prmium_follw">
-                <p><b>New: </b> In our Premium Plugin you can now give Weibo icon other functions too, e.g. <b>your website/blog, share your website/blog</b> on Weibo. <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=weibo_like_and_share&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+            <?php 
+                        printf(
+                            __( '%1s New: %2s In our Premium Plugin you can now give Weibo icon other functions too, e.g. %3s  your website/blog, share your website/blog %4s on Weibo. %5s Go premium now %6s or learn more %7s','ultimate-social-media-icons' ),
+                            '<p><b>',
+                            '</b> ',
+                            '<b>',
+                            '</b> ',
+                            ' <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                            ' </a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=weibo_like_and_share&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> ',
+                            '</a></p>'
+                        );
+                ?>
+            
             </div>
         </div>
     </div>
@@ -434,28 +565,52 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
 
     <!-- VK ICON -->
     <div class="row vk_section">
-        <h2 class="sfsicls_vk">VK</h2>
+        <h2 class="sfsicls_vk"><?php _e('VK','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont vk_tab_2">
-            <p>When clicked on, users will get directed to your VK page.</p>
+            <p><?php _e('When clicked on, users will get directed to your VK page.','ultimate-social-media-icons') ?></p>
 
-            <p class="radio_section fb_url no_check"><input name="sfsi_vk_page" checked="true" type="checkbox" value="yes" class="" style="display:none" /><label>Visit me on VK:</label><input name="sfsi_vk_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_vk_pageURL'] != '') ?  $option2['sfsi_vk_pageURL'] : ''; ?>" class="add" /></p>
+            <p class="radio_section fb_url no_check"><input name="sfsi_vk_page" checked="true" type="checkbox" value="yes" class="" style="display:none" /><label><?php _e('Visit me on VK:','ultimate-social-media-icons') ?></label><input name="sfsi_vk_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_vk_pageURL'] != '') ?  $option2['sfsi_vk_pageURL'] : ''; ?>" class="add" /></p>
 
             <div class="sfsi_new_prmium_follw">
-                <p><b>New: </b>In our Premium Plugin you can now give your VK icon sharing functionality too, e.g. <b>share your website/blog </b> with friends. <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=vk_share&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+            <?php 
+                        printf(
+                            __( '%1sNew: %2s  In our Premium Plugin you can now give your VK icon sharing functionality too, e.g. %3s share your website/blog %4s  with friends. %5s Go premium now %6s or learn more. %7s','ultimate-social-media-icons' ),
+                            '<p><b>',
+                            '</b>',
+                            '<b>',
+                            '</b>',
+                            '<a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                            '</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=vk_share&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> ',
+                            '</a></p>'
+                        );
+                ?>
+                
             </div>
         </div>
     </div>
     <!-- END VK ICON -->
     <!-- OK ICON -->
     <div class="row ok_section">
-        <h2 class="sfsicls_ok">OK</h2>
+        <h2 class="sfsicls_ok"><?php _e('OK','ultimate-social-media-icons') ?></h2>
         <div class="inr_cont ok_tab_2">
-            <p>When clicked on, users will get directed to your OK page.</p>
+            <p><?php _e('When clicked on, users will get directed to your OK page.','ultimate-social-media-icons') ?></p>
 
-            <p class="radio_section fb_url no_check"><input name="sfsi_ok_page" checked="true" type="checkbox" value="yes" class="" style="display:none" /><label>Visit me on OK:</label><input name="sfsi_ok_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_ok_pageURL'] != '') ?  $option2['sfsi_ok_pageURL'] : ''; ?>" class="add" /></p>
+            <p class="radio_section fb_url no_check"><input name="sfsi_ok_page" checked="true" type="checkbox" value="yes" class="" style="display:none" /><label><?php _e('Visit me on OK:','ultimate-social-media-icons') ?></label><input name="sfsi_ok_pageURL" type="url" placeholder="http://" value="<?php echo ($option2['sfsi_ok_pageURL'] != '') ?  $option2['sfsi_ok_pageURL'] : ''; ?>" class="add" /></p>
 
             <div class="sfsi_new_prmium_follw">
-                <p><b>New: </b>In our Premium Plugin you can now give OK icon other functions too, e.g. <b> like your website/blog</b>, subscribe/follow you on OK. <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=ok_like_and_subscribe&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+            <?php 
+                        printf(
+                            __( '%1s New: %2s  In our Premium Plugin you can now give OK icon other functions too, e.g. %3s like your website/blog %4s , subscribe/follow you on OK.  %5s Go premium now %6s or learn more. %7s','ultimate-social-media-icons' ),
+                            '<p><b>',
+                            '</b>',
+                            '<b> ',
+                            '</b>',
+                            ' <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                            '</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=ok_like_and_subscribe&utm_medium=banner" class="sfsi_font_inherit" target="_blank">',
+                            '</a></p>'
+                        );
+                ?>
+                 
             </div>
         </div>
     </div>
@@ -470,6 +625,7 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
         $bannerDisplay =   "display:none;";
         for ($i = $first_key; $i <= $endkey; $i++) :
             ?>
+
             <?php if (!empty($icons[$i])) :
                     $bannerDisplay =   "display:block;";
                     ?>
@@ -478,12 +634,12 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
                         <span class="customstep2-img">
                             <img src="<?php echo (!empty($icons[$i])) ? esc_url($icons[$i]) : SFSI_PLUGURL . 'images/custom.png'; ?>" id="CImg_<?php echo $new_element; ?>" style="border-radius:48%" alt="error" />
                         </span>
-                        <span class="sfsiCtxt">Custom <?php echo $count; ?></span>
+                        <span class="sfsiCtxt"><?php _e('Custom','ultimate-social-media-icons') ?> <?php echo $count; ?></span>
                     </h2>
                     <div class="inr_cont ">
-                        <p>Where do you want this icon to link to?</p>
+                        <p><?php _e('Where do you want this icon to link to?','ultimate-social-media-icons') ?></p>
                         <p class="radio_section fb_url custom_section cus_link ">
-                            <label>Link :</label>
+                            <label><?php _e('Link :','ultimate-social-media-icons') ?></label>
                             <input name="sfsi_CustomIcon_links[]" type="text" value="<?php echo (isset($costom_links[$i]) && $costom_links[$i] != '') ?  esc_url($costom_links[$i]) : ''; ?>" placeholder="http://" class="add" file-id="<?php echo $i; ?>" />
                         </p>
                     </div>
@@ -493,7 +649,18 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
         endfor; ?>
 
         <div class="notice_custom_icons_premium sfsi_new_prmium_follw" style="<?php echo $bannerDisplay; ?>">
-            <p><b>New: </b>In the Premium Plugin you can also give custom icons the feature that when people click on it, they can call you, or send you an SMS. <a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=call_or_sms_feature_custom_icons&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+            <p>
+                <?php 
+                        printf(
+                            __( '%1sNew:%2sIn the Premium Plugin you can also give custom icons the feature that when people click on it, they can call you, or send you an SMS.%3sGo premium now%4sor learn more.%5s','ultimate-social-media-icons' ),
+                            '<b>',
+                            '</b>',
+                            '<a style="cursor:pointer" class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">',
+                            '</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=call_or_sms_feature_custom_icons&utm_medium=banner" class="sfsi_font_inherit" target="_blank">',
+                            '</a>'
+                        );
+                ?>
+            </p>
         </div>
     </div>
     <!-- END Custom icon section here -->
@@ -503,11 +670,11 @@ if (isset($option2['sfsi_youtubeusernameorid']) && "id" == $option2['sfsi_youtub
     <div class="save_button tab_2_sav">
         <img src="<?php echo SFSI_PLUGURL; ?>images/ajax-loader.gif" class="loader-img" alt="error" />
         <?php $nonce = wp_create_nonce("update_step2"); ?>
-        <a href="javascript:;" id="sfsi_save2" title="Save" data-nonce="<?php echo $nonce; ?>">Save</a>
+        <a href="javascript:;" id="sfsi_save2" title="Save" data-nonce="<?php echo $nonce; ?>"><?php _e('Save','ultimate-social-media-icons') ?></a>
     </div>
     <!-- END SAVE BUTTON SECTION   -->
 
-    <a class="sfsiColbtn closeSec" href="javascript:;">Collapse area</a>
+    <a class="sfsiColbtn closeSec" href="javascript:;"><?php _e('Collapse area','ultimate-social-media-icons') ?></a>
     <label class="closeSec"></label>
 
     <!-- ERROR AND SUCCESS MESSAGE AREA-->

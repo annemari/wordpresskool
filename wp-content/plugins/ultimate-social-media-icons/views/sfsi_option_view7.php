@@ -45,220 +45,228 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 <!-- Section 7 "Do you want to display a pop-up, asking people to subscribe?" main div Start -->
 
 <div class="tab7">
-<?php
-    $sfsi_banner_popups = sanitize_text_field(get_option('sfsi_banner_popups', false));
-		if($sfsi_banner_popups == "yes"){
-	?>
-	<div id="sfsi_firsttime_offer" class="sfsi_new_prmium_follw  sfsi_banner_body">
-		<div>
-			<p>Update: if you want many more features for your pop-ups, have a look at <a target="_blank" href="https://sellcodes.com/s/3NmlIE" style="color:#1a1d20 !important;font-weight: bold;border-bottom: 1px solid #1a1d20;">MyPopUps.</a></p>
-		</div>
-		<div style="text-align:right;">
-			<form method="post" class="sfsi_premiumNoticeDismiss" style="padding-bottom:8px;">
-				<input type="hidden" name="sfsi-banner-popups" value="true">
-				<input type="submit" name="dismiss" value="Dismiss" />
+	<?php
+		$sfsi_banner_popups = sanitize_text_field(get_option('sfsi_banner_popups', false));
+			if($sfsi_banner_popups == "yes"){
+		?>
+		<div id="sfsi_firsttime_offer" class="sfsi_new_prmium_follw  sfsi_banner_body">
+			<div>
+				<p>
+					<?php 
+							printf(
+								__( 'Update: if you want many more features for your pop-ups, have a look at %1s MyPopUps. %2s','ultimate-social-media-icons' ),
+								'<a target="_blank" href="https://sellcodes.com/s/3NmlIE" style="color:#1a1d20 !important;font-weight: bold;border-bottom: 1px solid #1a1d20;">',
+								'</a>'       
+							);
+					?>
+				</p>
+			</div>
+			<div style="text-align:right;">
+				<form method="post" class="sfsi_premiumNoticeDismiss" style="padding-bottom:8px;">
+					<input type="hidden" name="sfsi-banner-popups" value="true">
+					<input type="submit" name="dismiss" value="Dismiss" />
 
-			</form>
+				</form>
+			</div>
 		</div>
-	</div>
-<?php
-}
-?>
-	<p>You can increase the chances that people share or follow you by displaying a pop-up asking them to. You can define the design and layout below:</p>
+	<?php
+	}
+	?>
+	<p><?php _e("You can increase the chances that people share or follow you by displaying a pop-up asking them to. You can define the design and layout below:",'ultimate-social-media-icons') ?></p>
 
 	<!-- icons preview section -->
 
 	<div class="like_pop_box">
 
-		<div class="sfsi_Popinner">
+	<div class="sfsi_Popinner">
 
-			<h2>Enjoy this site? Please follow and like us!</h2>
+		<h2><?php _e("Enjoy this site? Please follow and like us!",'ultimate-social-media-icons') ?></h2>
 
-			<ul class="like_icon sfsi_sample_icons">
+		<ul class="like_icon sfsi_sample_icons">
 
-				<li class="rss_section">
+			<li class="rss_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/rss.png" alt="RSS" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/rss.png" alt="RSS" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_rss_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_rss_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="email_section">
+			<li class="email_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/<?php echo $email_image; ?>" alt="Email" class="icon_img" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/<?php echo $email_image; ?>" alt="Email" class="icon_img" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_email_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_email_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="facebook_section">
+			<li class="facebook_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/facebook.png" alt="Facebook" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/facebook.png" alt="Facebook" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_facebook_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_facebook_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="twitter_section">
+			<li class="twitter_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/twitter.png" alt="Twitter" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/twitter.png" alt="Twitter" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_twitter_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_twitter_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="youtube_section">
+			<li class="youtube_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/youtube.png" alt="YouTube" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/youtube.png" alt="YouTube" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_youtube_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_youtube_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="pinterest_section">
+			<li class="pinterest_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/pinterest.png" alt="Pinterest" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/pinterest.png" alt="Pinterest" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_pinterest_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_pinterest_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="linkedin_section">
+			<li class="linkedin_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/linked_in.png" alt="Linked In" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/linked_in.png" alt="Linked In" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_linkedIn_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_linkedIn_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="instagram_section">
+			<li class="instagram_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/instagram.png" alt="Instagram" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/instagram.png" alt="Instagram" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_instagram_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_instagram_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="telegram_section">
+			<li class="telegram_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_telegram.png" height="50px" alt="telegram" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_telegram.png" height="50px" alt="telegram" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_telegram_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_telegram_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="vk_section">
+			<li class="vk_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_vk.png" height="50px" alt="vk" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_vk.png" height="50px" alt="vk" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_vk_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_vk_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="ok_section">
+			<li class="ok_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_ok.png" height="50px" alt="ok" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_ok.png" height="50px" alt="ok" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_ok_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_ok_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="weibo_section">
+			<li class="weibo_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_weibo.png" height="50px" alt="weibo" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_weibo.png" height="50px" alt="weibo" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_weibo_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_weibo_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="wechat_section">
+			<li class="wechat_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_wechat.png" height="50px" alt="wechat" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_wechat.png" height="50px" alt="wechat" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_wechat_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_wechat_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<li class="whatsapp_section">
+			<li class="whatsapp_section">
 
-					<div>
+				<div>
 
-						<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_whatsapp.png" height="50px" alt="whatsapp" />
+					<img src="<?php echo SFSI_PLUGURL ?>images/icons_theme/default/default_whatsapp.png" height="50px" alt="whatsapp" />
 
-						<span class="sfsi_Cdisplay" id="sfsi_whatsapp_countsDisplay">12k</span>
+					<span class="sfsi_Cdisplay" id="sfsi_whatsapp_countsDisplay"><?php _e("12k",'ultimate-social-media-icons') ?></span>
 
-					</div>
+				</div>
 
-				</li>
+			</li>
 
-				<?php
+			<?php
 
-				if (isset($icons) && !empty($icons)) {
+			if (isset($icons) && !empty($icons)) {
 
-					foreach ($icons as $icn => $img) {
+				foreach ($icons as $icn => $img) {
 
-						echo '<li class="custom_section sfsiICON_' . $icn . '"  element-id="' . $icn . '" ><div><img src="' . esc_url($img) . '" alt="Custom Icon" class="sfcm" /><span class="sfsi_Cdisplay">12k</span></div></li>';
-					}
+					echo '<li class="custom_section sfsiICON_' . $icn . '"  element-id="' . $icn . '" ><div><img src="' . esc_url($img) . '" alt="Custom Icon" class="sfcm" /><span class="sfsi_Cdisplay">12k</span></div></li>';
 				}
+			}
 
-				?>
+			?>
 
-			</ul>
+		</ul>
 
-		</div>
+	</div>
 
 	</div><!-- END icons preview section -->
 
@@ -266,15 +274,15 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 	<div class="space">
 
-		<h4>Text &amp; Design</h4>
+		<h4><?php _e("Text ",'ultimate-social-media-icons') ?>&amp; <?php _e(" Design",'ultimate-social-media-icons') ?></h4>
 
 		<div class="text_options">
 
-			<h3>Text Options</h3>
+			<h3><?php _e("Text Options",'ultimate-social-media-icons') ?></h3>
 
 			<div class="row_tab">
 
-				<label>Text:</label>
+				<label><?php _e("Text:",'ultimate-social-media-icons') ?></label>
 
 				<input class="mkPop" name="sfsi_popup_text" type="text" value="<?php echo ($option7['sfsi_popup_text'] != '') ?  $option7['sfsi_popup_text'] : ''; ?>" />
 
@@ -282,37 +290,37 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 			<div class="row_tab">
 
-				<label>Font:</label>
+				<label><?php _e("Font:",'ultimate-social-media-icons') ?></label>
 
 				<div class="field">
 
 					<select name="sfsi_popup_font" id="sfsi_popup_font" class="styled">
 
-						<option value="Arial, Helvetica, sans-serif" <?php echo ($option7['sfsi_popup_font'] == 'Arial, Arial, Helvetica, sans-serif') ?  'selected="true"' : ''; ?>>Arial</option>
+						<option value="Arial, Helvetica, sans-serif" <?php echo ($option7['sfsi_popup_font'] == 'Arial, Arial, Helvetica, sans-serif') ?  'selected="true"' : ''; ?>><?php _e("Arial",'ultimate-social-media-icons') ?></option>
 
-						<option value="Arial Black, Gadget, sans-serif" <?php echo ($option7['sfsi_popup_font'] == 'Arial Black, Gadget, sans-serif') ?  'selected="true"' : ''; ?>>Arial Black</option>
+						<option value="Arial Black, Gadget, sans-serif" <?php echo ($option7['sfsi_popup_font'] == 'Arial Black, Gadget, sans-serif') ?  'selected="true"' : ''; ?>><?php _e("Arial Black",'ultimate-social-media-icons') ?></option>
 
-						<option value="Calibri" <?php echo ($option7['sfsi_popup_font'] == 'Calibri') ?  'selected="true"' : ''; ?>>Calibri</option>
+						<option value="Calibri" <?php echo ($option7['sfsi_popup_font'] == 'Calibri') ?  'selected="true"' : ''; ?>><?php _e("Calibri",'ultimate-social-media-icons') ?></option>
 
-						<option value="Comic Sans MS" <?php echo ($option7['sfsi_popup_font'] == 'Comic Sans MS') ?  'selected="true"' : ''; ?>>Comic Sans MS</option>
+						<option value="Comic Sans MS" <?php echo ($option7['sfsi_popup_font'] == 'Comic Sans MS') ?  'selected="true"' : ''; ?>><?php _e("Comic Sans MS",'ultimate-social-media-icons') ?></option>
 
-						<option value="Courier New" <?php echo ($option7['sfsi_popup_font'] == 'Courier New') ?  'selected="true"' : ''; ?>>Courier New</option>
+						<option value="Courier New" <?php echo ($option7['sfsi_popup_font'] == 'Courier New') ?  'selected="true"' : ''; ?>><?php _e("Courier New",'ultimate-social-media-icons') ?></option>
 
-						<option value="Georgia" <?php echo ($option7['sfsi_popup_font'] == 'Georgia') ?  'selected="true"' : ''; ?>>Georgia</option>
+						<option value="Georgia" <?php echo ($option7['sfsi_popup_font'] == 'Georgia') ?  'selected="true"' : ''; ?>><?php _e("Georgia",'ultimate-social-media-icons') ?></option>
 
-						<option value="Helvetica,Arial,sans-serif" <?php echo ($option7['sfsi_popup_font'] == 'Helvetica,Arial,sans-serif') ?  'selected="true"' : ''; ?>>Helvetica</option>
+						<option value="Helvetica,Arial,sans-serif" <?php echo ($option7['sfsi_popup_font'] == 'Helvetica,Arial,sans-serif') ?  'selected="true"' : ''; ?>><?php _e("Helvetica",'ultimate-social-media-icons') ?></option>
 
-						<option value="Impact" <?php echo ($option7['sfsi_popup_font'] == 'Impact') ?  'selected="true"' : ''; ?>>Impact</option>
+						<option value="Impact" <?php echo ($option7['sfsi_popup_font'] == 'Impact') ?  'selected="true"' : ''; ?>><?php _e("Impact",'ultimate-social-media-icons') ?></option>
 
-						<option value="Lucida Console" <?php echo ($option7['sfsi_popup_font'] == 'Lucida Console') ?  'selected="true"' : ''; ?>>Lucida Console</option>
+						<option value="Lucida Console" <?php echo ($option7['sfsi_popup_font'] == 'Lucida Console') ?  'selected="true"' : ''; ?>><?php _e("Lucida Console",'ultimate-social-media-icons') ?></option>
 
-						<option value="Tahoma,Geneva" <?php echo ($option7['sfsi_popup_font'] == 'Tahoma,Geneva') ?  'selected="true"' : ''; ?>>Tahoma</option>
+						<option value="Tahoma,Geneva" <?php echo ($option7['sfsi_popup_font'] == 'Tahoma,Geneva') ?  'selected="true"' : ''; ?>><?php _e("Tahoma",'ultimate-social-media-icons') ?></option>
 
-						<option value="Times New Roman" <?php echo ($option7['sfsi_popup_font'] == 'Times New Roman') ?  'selected="true"' : ''; ?>>Times New Roman</option>
+						<option value="Times New Roman" <?php echo ($option7['sfsi_popup_font'] == 'Times New Roman') ?  'selected="true"' : ''; ?>><?php _e("Times New Roman",'ultimate-social-media-icons') ?></option>
 
-						<option value="Trebuchet MS" <?php echo ($option7['sfsi_popup_font'] == 'Trebuchet MS') ?  'selected="true"' : ''; ?>>Trebuchet MS</option>
+						<option value="Trebuchet MS" <?php echo ($option7['sfsi_popup_font'] == 'Trebuchet MS') ?  'selected="true"' : ''; ?>><?php _e("Trebuchet MS",'ultimate-social-media-icons') ?></option>
 
-						<option value="Verdana" <?php echo ($option7['sfsi_popup_font'] == 'Verdana') ?  'selected="true"' : ''; ?>>Verdana</option>
+						<option value="Verdana" <?php echo ($option7['sfsi_popup_font'] == 'Verdana') ?  'selected="true"' : ''; ?>><?php _e("Verdana",'ultimate-social-media-icons') ?></option>
 
 					</select>
 
@@ -322,19 +330,19 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 			<div class="row_tab">
 
-				<label>Font style:</label>
+				<label><?php _e("Font style:",'ultimate-social-media-icons') ?></label>
 
 				<div class="field">
 
 					<select name="sfsi_popup_fontStyle" id="sfsi_popup_fontStyle" class="styled">
 
-						<option value="normal" <?php echo ($option7['sfsi_popup_fontStyle'] == 'normal') ?  'selected="true"' : ''; ?>>Normal</option>
+						<option value="normal" <?php echo ($option7['sfsi_popup_fontStyle'] == 'normal') ?  'selected="true"' : ''; ?>><?php _e("Normal",'ultimate-social-media-icons') ?></option>
 
-						<option value="inherit" <?php echo ($option7['sfsi_popup_fontStyle'] == 'inherit') ?  'selected="true"' : ''; ?>>Inherit</option>
+						<option value="inherit" <?php echo ($option7['sfsi_popup_fontStyle'] == 'inherit') ?  'selected="true"' : ''; ?>><?php _e("Inherit",'ultimate-social-media-icons') ?></option>
 
-						<option value="oblique" <?php echo ($option7['sfsi_popup_fontStyle'] == 'oblique') ?  'selected="true"' : ''; ?>>Oblique</option>
+						<option value="oblique" <?php echo ($option7['sfsi_popup_fontStyle'] == 'oblique') ?  'selected="true"' : ''; ?>><?php _e("Oblique",'ultimate-social-media-icons') ?></option>
 
-						<option value="italic" <?php echo ($option7['sfsi_popup_fontStyle'] == 'italic') ?  'selected="true"' : ''; ?>>Italic</option>
+						<option value="italic" <?php echo ($option7['sfsi_popup_fontStyle'] == 'italic') ?  'selected="true"' : ''; ?>><?php _e("Italic",'ultimate-social-media-icons') ?></option>
 
 					</select>
 
@@ -344,7 +352,7 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 			<div class="row_tab">
 
-				<label>Font color:</label>
+				<label><?php _e("Font color:",'ultimate-social-media-icons') ?></label>
 				<div class="" style="padding-top:10px;">
 					<input name="sfsi_popup_fontColor" data-default-color="#b5b5b5" id="sfsi_popup_fontColor" type="text" value="<?php echo ($option7['sfsi_popup_fontColor'] != '') ?  $option7['sfsi_popup_fontColor'] : ''; ?>" />
 				</div>
@@ -352,7 +360,7 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 			<div class="row_tab">
 
-				<label>Font size:</label>
+			<label><?php _e("Font size:",'ultimate-social-media-icons') ?></label>
 
 				<input name="sfsi_popup_fontSize" type="text" value="<?php echo ($option7['sfsi_popup_fontSize'] != '') ?  $option7['sfsi_popup_fontSize'] : ''; ?>" class="small" />
 
@@ -362,11 +370,11 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 		<div class="text_options layout">
 
-			<h3>Icon Box Layout</h3>
+			<h3><?php _e("Icon Box Layout",'ultimate-social-media-icons') ?></h3>
 
 			<div class="row_tab">
 
-				<label>Background<br />Color:</label>
+				<label><?php _e("Background",'ultimate-social-media-icons') ?><br /><?php _e("Color:",'ultimate-social-media-icons') ?></label>
 				<div class="" style="padding-top:5px;">
 					<input name="sfsi_popup_background_color" data-default-color="#b5b5b5" id="sfsi_popup_background_color" type="text" value="<?php echo ($option7['sfsi_popup_background_color'] != '') ?  $option7['sfsi_popup_background_color'] : ''; ?>" />
 				</div>
@@ -375,7 +383,7 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 			<div class="row_tab">
 
-				<label class="border">Border Color:</label>
+				<label class="border"><?php _e("Border Color:",'ultimate-social-media-icons') ?></label>
 				<div class="" style="padding-top:10px;">
 					<input name="sfsi_popup_border_color" data-default-color="#b5b5b5" id="sfsi_popup_border_color" type="text" value="<?php echo ($option7['sfsi_popup_border_color'] != '') ?  $option7['sfsi_popup_border_color'] : ''; ?>" />
 				</div>
@@ -384,7 +392,7 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 			<div class="row_tab">
 
-				<label>Border<br />Thickness:</label>
+				<label><?php _e("Border",'ultimate-social-media-icons') ?><br /><?php _e("Thickness:<",'ultimate-social-media-icons') ?>/label>
 
 				<div class="field" style="margin-top:0px;">
 
@@ -396,13 +404,13 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 			<div class="row_tab">
 
-				<label>Border <br />Shadow:</label>
+				<label><?php _e("Border",'ultimate-social-media-icons') ?> <br /><?php _e("Shadow:",'ultimate-social-media-icons') ?></label>
 
 				<ul class="border_shadow">
 
-					<li><input name="sfsi_popup_border_shadow" <?php echo ($option7['sfsi_popup_border_shadow'] == 'yes') ?  'checked="true"' : ''; ?> type="radio" value="yes" class="styled" /><label> On</label></li>
+					<li><input name="sfsi_popup_border_shadow" <?php echo ($option7['sfsi_popup_border_shadow'] == 'yes') ?  'checked="true"' : ''; ?> type="radio" value="yes" class="styled" /><label> <?php _e("On",'ultimate-social-media-icons') ?></label></li>
 
-					<li><input name="sfsi_popup_border_shadow" <?php echo ($option7['sfsi_popup_border_shadow'] == 'no') ?  'checked="true"' : ''; ?> type="radio" value="no" class="styled" /><label>Off</label></li>
+					<li><input name="sfsi_popup_border_shadow" <?php echo ($option7['sfsi_popup_border_shadow'] == 'no') ?  'checked="true"' : ''; ?> type="radio" value="no" class="styled" /><label><?php _e("Off",'ultimate-social-media-icons') ?></label></li>
 
 				</ul>
 
@@ -411,7 +419,7 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 		</div>
 		<!-- By developer - 28-5-2019  -->
 		<div class="row_tab">
-			<p><b>New:</b> In the Premium Plugin you can choose to display the text on the pop-up in a font already present in your theme</b>. <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_placement_options&utm_medium=banner" target="_blank" style="color:#00a0d2 !important; text-decoration: none !important;">Check it out.</a></p>
+			<p><b><?php _e("New:",'ultimate-social-media-icons') ?></b> <?php _e("In the Premium Plugin you can choose to display the text on the pop-up in a font already present in your theme",'ultimate-social-media-icons') ?></b>. <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_placement_options&utm_medium=banner" target="_blank" style="color:#00a0d2 !important; text-decoration: none !important;"><?php _e("Check it out.",'ultimate-social-media-icons') ?></a></p>
 		</div>
 		<!-- End -->
 
@@ -419,29 +427,29 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 	<div class="row">
 
-		<h4>Where shall the pop-up be shown?</h4>
+		<h4><?php _e("Where shall the pop-up be shown?",'ultimate-social-media-icons') ?></a></h4>
 
 		<div class="pop_up_show">
 
-			<input name="sfsi_Show_popupOn" <?php echo ($option7['sfsi_Show_popupOn'] == 'none') ?  'checked="true"' : ''; ?> type="radio" value="none" class="styled" /><label>Nowhere</label>
+			<input name="sfsi_Show_popupOn" <?php echo ($option7['sfsi_Show_popupOn'] == 'none') ?  'checked="true"' : ''; ?> type="radio" value="none" class="styled" /><label><?php _e("Nowhere",'ultimate-social-media-icons') ?></a></label>
 
 		</div>
 
 		<div class="pop_up_show">
 
-			<input name="sfsi_Show_popupOn" <?php echo ($option7['sfsi_Show_popupOn'] == 'everypage') ?  'checked="true"' : ''; ?> type="radio" value="everypage" class="styled" /><label>On every page</label>
+			<input name="sfsi_Show_popupOn" <?php echo ($option7['sfsi_Show_popupOn'] == 'everypage') ?  'checked="true"' : ''; ?> type="radio" value="everypage" class="styled" /><label><?php _e("On all pages",'ultimate-social-media-icons') ?></a></label>
 
 		</div>
 
 		<div class="pop_up_show">
 
-			<input name="sfsi_Show_popupOn" <?php echo ($option7['sfsi_Show_popupOn'] == 'blogpage') ?  'checked="true"' : ''; ?> type="radio" value="blogpage" class="styled" /><label>On blog posts only</label>
+			<input name="sfsi_Show_popupOn" <?php echo ($option7['sfsi_Show_popupOn'] == 'blogpage') ?  'checked="true"' : ''; ?> type="radio" value="blogpage" class="styled" /><label><?php _e("On some pages",'ultimate-social-media-icons') ?></a></label>
 
 		</div>
 
 		<div class="pop_up_show">
 
-			<input name="sfsi_Show_popupOn" <?php echo ($option7['sfsi_Show_popupOn'] == 'selectedpage') ?  'checked="true"' : ''; ?> type="radio" value="selectedpage" class="styled" /><label>On selected pages only</label>
+			<input name="sfsi_Show_popupOn" <?php echo ($option7['sfsi_Show_popupOn'] == 'selectedpage') ?  'checked="true"' : ''; ?> type="radio" value="selectedpage" class="styled" /><label><?php _e("On selected pages only",'ultimate-social-media-icons') ?></label>
 
 			<div class="field" style="width:50%">
 
@@ -493,7 +501,7 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 					?>
 
-				</select><br />Please hold the CTRL key to select multiple pages.
+				</select><br /><?php _e("Please hold the CTRL key to select multiple pages.",'ultimate-social-media-icons') ?>
 
 			</div>
 
@@ -503,17 +511,17 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 	<div class="row">
 
-		<h4>When shall the pop-up be shown?</h4>
+		<h4><?php _e("When shall the pop-up be shown?",'ultimate-social-media-icons') ?></h4>
 
 		<div class="pop_up_show">
 
-			<input name="sfsi_Shown_pop" <?php echo ($option7['sfsi_Shown_pop'] == 'once') ?  'checked="true"' : ''; ?> type="radio" value="once" class="styled" /><label>Once <input name="sfsi_Shown_popupOnceTime" type="text" value="<?php echo ($option7['sfsi_Shown_popupOnceTime'] != '') ?  $option7['sfsi_Shown_popupOnceTime'] : ''; ?>" class="seconds" /> seconds after the user arrived on the site</label>
+			<input name="sfsi_Shown_pop" <?php echo ($option7['sfsi_Shown_pop'] == 'once') ?  'checked="true"' : ''; ?> type="radio" value="once" class="styled" /><label><?php _e("Once",'ultimate-social-media-icons') ?> <input name="sfsi_Shown_popupOnceTime" type="text" value="<?php echo ($option7['sfsi_Shown_popupOnceTime'] != '') ?  $option7['sfsi_Shown_popupOnceTime'] : ''; ?>" class="seconds" /> <?php _e("seconds after the user arrived on the site",'ultimate-social-media-icons') ?></label>
 
 		</div>
 
 		<div class="pop_up_show">
 
-			<input name="sfsi_Shown_pop" <?php echo ($option7['sfsi_Shown_pop'] == 'ETscroll') ?  'checked="true"' : ''; ?> type="radio" value="ETscroll" class="styled" /><label>Every time user scrolls to the end of the page</label>
+			<input name="sfsi_Shown_pop" <?php echo ($option7['sfsi_Shown_pop'] == 'ETscroll') ?  'checked="true"' : ''; ?> type="radio" value="ETscroll" class="styled" /><label><?php _e("Every time user scrolls to the end of the page",'ultimate-social-media-icons') ?></label>
 
 		</div>
 
@@ -525,7 +533,7 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 		<div class="bannerPopupQue6 sfsi_new_prmium_follw" style="margin-top: 38px;">
 
-			<p><b>New: </b>The Premium Plugin allows you to do much more with the pop-up, e.g. you can: show it when users try to leave your page, limit how often the pop-up is shown to the same user (e.g. only once per day), select to show the subscription form in the pop-up (which you designed in question 9). <a style="cursor:pointer;border-bottom: 1px solid #12a252;color: #12a252 !important;font-weight:bold"  class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_popup_options&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a></p>
+			<p><b><?php _e("New:",'ultimate-social-media-icons') ?> </b><?php _e("The Premium Plugin allows you to do much more with the pop-up, e.g. you can: show it when users try to leave your page, limit how often the pop-up is shown to the same user (e.g. only once per day), select to show the subscription form in the pop-up (which you designed in question 9).",'ultimate-social-media-icons') ?>  <a style="cursor:pointer;border-bottom: 1px solid #12a252;color: #12a252 !important;font-weight:bold"  class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" class="sfisi_font_bold" target="_blank"><?php _e(" Go premium now",'ultimate-social-media-icons') ?></a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_popup_options&utm_medium=banner" class="sfsi_font_inherit" target="_blank"><?php _e(" or learn more.",'ultimate-social-media-icons') ?> </a></p>
 
 		</div>
 
@@ -541,13 +549,12 @@ $option7['sfsi_Shown_popupOnceTime'] 	= (isset($option7['sfsi_Shown_popupOnceTim
 
 		<?php $nonce = wp_create_nonce("update_step7"); ?>
 
-		<a href="javascript:;" id="sfsi_save7" title="Save" data-nonce="<?php echo $nonce; ?>">Save</a>
-
+		<a href="javascript:;" id="sfsi_save7" title="Save" data-nonce="<?php echo $nonce; ?>"><?php _e("Save",'ultimate-social-media-icons') ?></a>
 	</div>
 
 	<!-- END SAVE BUTTON SECTION   -->
 
-	<a class="sfsiColbtn closeSec" href="javascript:;">Collapse area</a>
+	<a class="sfsiColbtn closeSec" href="javascript:;"><?php _e("Collapse area",'ultimate-social-media-icons') ?></a>
 
 	<label class="closeSec"></label>
 

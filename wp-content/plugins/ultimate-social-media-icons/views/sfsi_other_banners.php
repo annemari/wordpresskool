@@ -40,7 +40,7 @@
                         ?>
                    <div class="sfsi_new_prmium_follw sfsi_banner_body">
                        <p style="font-size:18px !important">
-                           <b>You’re on https, that’s great! </b>– However: we noticed that you still have share & like counts (from social media) on your old (http://) urls. If you don’t want to lose them, check out <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_other_plugins_settings_page&utm_campaign=sharedcount_recovery_banner&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;text-decoration: underline;"><span></span> this plugin</a> which has a share count recovery feature. <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=RECOVERSHARECOUNT&utm_source=usmi_other_plugins_settings_page&utm_campaign=sharedcount_recovery_banner&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;">Get it now at 20% discount</span> </a>
+                           <b><?php _e("You’re on https, that’s great!",'ultimate-social-media-icons') ?> </b><?php _e("– However: we noticed that you still have share & like counts (from social media) on your old (http://) urls. If you don’t want to lose them, check out",'ultimate-social-media-icons') ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_other_plugins_settings_page&utm_campaign=sharedcount_recovery_banner&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;text-decoration: underline;"><span></span><?php _e("Check the Theme",'ultimate-social-media-icons') ?> this plugin</a><?php _e("which has a share count recovery feature.",'ultimate-social-media-icons') ?>  <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=RECOVERSHARECOUNT&utm_source=usmi_other_plugins_settings_page&utm_campaign=sharedcount_recovery_banner&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;"><?php _e("Get it now at 20% discount",'ultimate-social-media-icons') ?></span> </a>
                        </p>
 
                        <div style="text-align:right;">
@@ -80,12 +80,12 @@
                         ?>
                    <div class="sfsi_new_prmium_follw sfsi_banner_body">
                        <div>
-                           <p style="margin-bottom: 12px !important;"><b>Get more traffic from your pictures </b>– The Ultimate Social Media Premium Plugin allows to show a Pinterest save-icon after users move over your pictures, increasing sharing activity significantly.
+                           <p style="margin-bottom: 12px !important;"><b><?php _e("Get more traffic from your pictures",'ultimate-social-media-icons') ?> </b><?php _e("– The Ultimate Social Media Premium Plugin allows to show a Pinterest save-icon after users move over your pictures, increasing sharing activity significantly.",'ultimate-social-media-icons') ?>
                            </p>
                            <p style="font-size:18px !important">
-                               It works very well with the <b><?php echo ($plugin["Name"]); ?> plugin</b> which you are using, resulting in more traffic for your site.
+                               <?php _e("It works very well with the ",'ultimate-social-media-icons') ?><b><?php echo ($plugin["Name"]); ?><?php _e("plugin",'ultimate-social-media-icons') ?> </b><?php _e("which you are using, resulting in more traffic for your site.",'ultimate-social-media-icons') ?> 
                                <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=PINTERESTDISCOUNT&utm_source=usmi_other_plugins_settings_page&utm_campaign=pinterest_mouse_over&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span>
-                                   <span style="text-decoration: underline;">Get it now at 20% discount</span>
+                                   <span style="text-decoration: underline;"><?php _e("Get it now at 20% discount",'ultimate-social-media-icons') ?></span>
                                </a>
                            </p>
                        </div>
@@ -122,7 +122,7 @@
                         ?>
                    <div class="sfsi_new_prmium_follw sfsi_banner_body">
                        <p style="font-size:18px !important">
-                           <b>Make your website load faster </b>– the Ultimate Social Media <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_other_plugins_settings_page&utm_campaign=website_load_faster&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;text-decoration: underline;"><span></span> Premium Plugin</a> is the most optimized sharing plugin for speed. It also includes support to help you optimize it for minimizing loading time.<a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=MORESPEEED&utm_source=usmi_other_plugins_settings_page&utm_campaign=website_load_faster&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;">Get it now at 20% discount</span> </a>
+                       <b><?php _e("Make your website load faster",'ultimate-social-media-icons') ?> </b><?php _e("– the Ultimate Social Media",'ultimate-social-media-icons') ?><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_other_plugins_settings_page&utm_campaign=website_load_faster&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;text-decoration: underline;"><span></span><?php _e("Premium Plugin",'ultimate-social-media-icons') ?> </a> <?php _e("is the most optimized sharing plugin for speed. It also includes support to help you optimize it for minimizing loading time.",'ultimate-social-media-icons') ?><a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=MORESPEEED&utm_source=usmi_other_plugins_settings_page&utm_campaign=website_load_faster&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;"><?php _e("Get it now at 20% discount",'ultimate-social-media-icons') ?></span> </a>
                        </p>
                        <div style="text-align:right;">
                            <form method="post" class="sfsi_premiumNoticeDismiss" style="padding-bottom:8px;">
@@ -157,11 +157,11 @@
                         ?>
                    <div class="sfsi_new_prmium_follw sfsi_banner_body">
                        <p style="font-size:18px !important">
-                           <b>Make sure your site is GDPR compliant </b>– As part of the Ultimate Social Media
+                           <b><?php _e("Make sure your site is GDPR compliant ",'ultimate-social-media-icons') ?> </b><?php _e("– As part of the Ultimate Social Media",'ultimate-social-media-icons') ?>
                            <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_other_plugins_settings_page&utm_campaign=website_load_faster&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;text-decoration: underline;"><span></span>
-                               Premium Plugin
+                               <?php _e("Premium Plugin",'ultimate-social-media-icons') ?>
                            </a>
-                           you can request a review (at no extra charge) to check if your sharing icons are GDPR compliant. <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=GDPRCOMPLIANT&utm_source=usmi_other_plugins_settings_page&utm_campaign=gdpr_compliance&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;">Get it now at 20% discount</span> </a>
+                           <?php _e("you can request a review (at no extra charge) to check if your sharing icons are GDPR compliant.",'ultimate-social-media-icons') ?> <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=GDPRCOMPLIANT&utm_source=usmi_other_plugins_settings_page&utm_campaign=gdpr_compliance&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;"><?php _e("Get it now at 20% discount ",'ultimate-social-media-icons') ?></span> </a>
                        </p>
                        <div style="text-align:right;">
 
@@ -196,7 +196,7 @@
                    <div class="sfsi_new_prmium_follw sfsi_banner_body">
                        <div>
                            <p style="font-size:18px !important">
-                               <b>Get 20%+ more traffic </b>– from more likes & shares with the Ultimatelysocial Premium Plugin. Or get a refund within 20 days. <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=MORETRAFFIC&utm_source=usmi_other_plugins_settings_page&utm_campaign=more_traffic&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;">Get it now at 20% discount</span> </a>
+                               <b><?php _e("Get 20%+ more traffic ",'ultimate-social-media-icons') ?></b><?php _e("– from more likes & shares with the Ultimatelysocial Premium Plugin. Or get a refund within 20 days.",'ultimate-social-media-icons') ?> <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=MORETRAFFIC&utm_source=usmi_other_plugins_settings_page&utm_campaign=more_traffic&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;"><?php _e("Get it now at 20% discount",'ultimate-social-media-icons') ?></span> </a>
                            </p>
                        </div>
                        <div style="text-align:right;">
@@ -232,12 +232,12 @@
                    <div class="sfsi_new_prmium_follw sfsi_banner_body" style="margin-top: 90px;">
                        <div>
                            <p style="font-size:18px !important">
-                               <b>Get more sales </b>with the Ultimate Social Media
+                               <b><?php _e("Get more sales ",'ultimate-social-media-icons') ?></b><?php _e("with the Ultimate Social Media",'ultimate-social-media-icons') ?>
                                <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_other_plugins_settings_page&utm_campaign=woocommerce&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;text-decoration: underline;"><span></span>
-                                   Premium Plugin
+                                   <?php _e("Premium Plugin",'ultimate-social-media-icons') ?>
                                </a>
-                               by adding social share icons to your product pages. More shares equals more publicity, and more publicity means more new customers.
-                               <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=WOOCOMMERCE&utm_source=usmi_other_plugins_settings_page&utm_campaign=woocommerce&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;">Get it now at 20% discount</span> </a>
+                               <?php _e("by adding social share icons to your product pages. More shares equals more publicity, and more publicity means more new customers.",'ultimate-social-media-icons') ?>
+                               <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=WOOCOMMERCE&utm_source=usmi_other_plugins_settings_page&utm_campaign=woocommerce&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;"><?php _e("Get it now at 20% discount",'ultimate-social-media-icons') ?></span> </a>
                            </p>
                        </div>
                        <div style="text-align:right;">
@@ -272,10 +272,10 @@
                    <div class="sfsi_new_prmium_follw sfsi_banner_body">
                        <div>
                            <p style="font-size:18px !important">
-                               <b>Get more visibility on Twitter </b>by displaying more information than a standard Tweet. Attach images and automatically pull the titles & links of the posts to make them much more attractive and visual with the Ultimate Social Media
+                               <b><?php _e("Get more visibility on Twitter ",'ultimate-social-media-icons') ?></b><?php _e("by displaying more information than a standard Tweet. Attach images and automatically pull the titles & links of the posts to make them much more attractive and visual with the Ultimate Social Media",'ultimate-social-media-icons') ?>
                                <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_other_plugins_settings_page&utm_campaign=twitter&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;text-decoration: underline;"><span></span>
-                                   Premium Plugin</a>.
-                               <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=TWITTER&utm_source=usmi_other_plugins_settings_page&utm_campaign=twitter&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;">Get it now at 20% discount</span> </a>
+                                   <?php _e("Premium Plugin",'ultimate-social-media-icons') ?></a>.
+                               <a href="https://www.ultimatelysocial.com/usm-premium/?withqp=1&discount=TWITTER&utm_source=usmi_other_plugins_settings_page&utm_campaign=twitter&utm_medium=banner" class="sfsi_font_inherit" target="_blank" style="color:#1a1d20 !important;font-weight: bold;"><span>&#10151;</span> <span style="text-decoration: underline;"></span> <span style="text-decoration: underline;"><?php _e("Get it now at 20% discount",'ultimate-social-media-icons') ?></span> </a>
                            </p>
                        </div>
                        <div style="text-align:right;">

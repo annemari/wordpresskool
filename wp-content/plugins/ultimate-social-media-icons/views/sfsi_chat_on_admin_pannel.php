@@ -6,27 +6,27 @@ $email = $current_user->user_email;
 ?>
 <div id="sfsi_jivo_offline_chat" style="display:none">
 	<a href="" style="float:right;font-size:20px;margin-right:5px;color:#888;text-decoration: none;"  onclick="sfsi_close_offline_chat(event)">X</a>
-	<p style="text-align:center" class="heading-text">No chat agent are available, However <span style="text-decoration: underline">we'll still respond quickly</span>.
+	<p style="text-align:center" class="heading-text"><?php _e("No chat agent are available, However ",'ultimate-social-media-icons') ?><span style="text-decoration: underline"><?php _e("we'll still respond quickly",'ultimate-social-media-icons') ?></span>.
 		<!-- <a target="_blank" href="https://goo.gl/MU6pTN#no-topic-0" >we'll still respond quickly</a> -->
 	</p>
 	<ul class="tab-changer">
-		<li class="tab-link active"><p style="text-align:center"><a href="#sfsi_technical"></a>Technical question<br><span>(for the free plugin)</span></p></li>
-		<li class="tab-link"><p style="text-align:center"><a href="#sfsi_sales"></a>Pre-sales question<br><span>(for the Premium plugin)</span></p></li>
+		<li class="tab-link active"><p style="text-align:center"><a href="#sfsi_technical"></a><?php _e("Technical question",'ultimate-social-media-icons') ?><br><span><?php _e("(for the free plugin)",'ultimate-social-media-icons') ?></span></p></li>
+		<li class="tab-link"><p style="text-align:center"><a href="#sfsi_sales"></a><?php _e("Pre-sales question",'ultimate-social-media-icons') ?><br><span><?php _e("(for the Premium plugin)",'ultimate-social-media-icons') ?></span></p></li>
 	</ul>
 	<div class="clear"></div>
 	<div class="tabs">
 		<div id="sfsi_technical" class="tab-content" style="text-align:center;display:block">
-			<h5>Please ask your question in the...</h5>
+			<h5><?php _e("Please ask your question in the...",'ultimate-social-media-icons') ?></h5>
 			<div class="support-forum-green-div">
 				<!-- <span style="width: 25%">   </span> -->
 				<a target="_blank" href="https://goo.gl/auxJ9C#no-topic-0" class="support-forum-green-bg" >
 	                <img alt="support" src="<?php echo SFSI_PLUGURL ?>images/support.png">
-	                <p class="support-forum">Support Forum</p>
+	                <p class="support-forum"><?php _e("Support Forum",'ultimate-social-media-icons') ?></p>
 	            </a>
-	            <span class="sfsi-button-right-side" ><span class="sfsi-button-right-side-icon"></span>Click here</span>
+	            <span class="sfsi-button-right-side" ><span class="sfsi-button-right-side-icon"></span><?php _e("Click here",'ultimate-social-media-icons') ?></span>
 	        </div>
 	        <!-- <p class="sfsi-button-right-side" ><span class="sfsi-button-right-side-icon"></span>Click here</p> -->
-			<h5>We‘ll respond <span style="text-decoration: underline;"><b>quickly!</b></span></h5>
+			<h5><?php _e("We‘ll respond ",'ultimate-social-media-icons') ?><span style="text-decoration: underline;"><b><?php _e("quickly!",'ultimate-social-media-icons') ?></b></span></h5>
 		</div>
 		<div id="sfsi_sales" class="tab-content" style="display:none">
 			
@@ -37,14 +37,14 @@ $email = $current_user->user_email;
 					<?php wp_nonce_field( 'OfflineChatMessage','nonce' ) ?>
 					<div>
 						<div for="question" class="label">
-							Your question:
+							<?php _e("Your question:",'ultimate-social-media-icons') ?>
 							<!-- <span class="right-message">Please also check the <a href=""><i>FAQ</i></a></span> -->
 						</div>
 						<textarea id="question" name="question" placeholder="Your question..."></textarea>
 					</div>
 					<div>
 						<div>
-							<div for="email" class="label email">Your email: </div>
+							<div for="email" class="label email"> <?php _e("Your email:",'ultimate-social-media-icons') ?></div>
 							<div>
 								<input type="email" name="email" value="<?php echo $email; ?>" placeholder="your@email.com" style="width:60%;float:left">
 								<input type="submit" value="Send message" class="submit" style="width:37%;float:right">
@@ -56,9 +56,9 @@ $email = $current_user->user_email;
 
 			</div>
 			<div style="display:none" class="after_message_sent">
-				<h2>Thank you!</h2>
-				<h3>We‘ll get back to you ASAP.</h3>
-				<button class="chat_btn" onclick="sfsi_close_offline_chat(event)">Close window</button>
+				<h2><?php _e("Thank you!",'ultimate-social-media-icons') ?></h2>
+				<h3><?php _e("We‘ll get back to you ASAP.",'ultimate-social-media-icons') ?></h3>
+				<button class="chat_btn" onclick="sfsi_close_offline_chat(event)"><?php _e("Close window",'ultimate-social-media-icons') ?></button>
 			</div>
 		</div>
 	</div>

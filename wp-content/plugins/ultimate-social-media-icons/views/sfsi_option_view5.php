@@ -127,7 +127,7 @@
 
 <!-- Section 5 "Any other wishes for your main icons?" main div Start -->
 <div class="tab5">
-	<h4>Order of your icons</h4>
+<h4><?php _e("Order of your icons",'ultimate-social-media-icons') ?></h4>
     <!-- icon drag drop  section start here -->	
     <ul class="share_icon_order" >
         <?php 
@@ -199,84 +199,106 @@
      
     </ul> <!-- END icon drag drop section start here -->
     
-        <span class="drag_drp">(Drag &amp; Drop)</span>
+		<span class="drag_drp">
+			<?php 
+					printf(
+						__( '(Drag %1s Drop)','ultimate-social-media-icons' ),
+						'&amp;'       
+					);
+			?>
+		 </span>
      <!-- icon's size and spacing section start here -->	
     <div class="row">
-	<h4>Size &amp; spacing of your icons</h4>
-	<div class="icons_size"><span>Size:</span><input name="sfsi_icons_size" value="<?php echo ($option5['sfsi_icons_size']!='') ?  $option5['sfsi_icons_size'] : '' ;?>" type="text" /><ins>pixels wide &amp; tall</ins> <span class="last">Spacing between icons:</span><input name="sfsi_icons_spacing" type="text" value="<?php echo ($option5['sfsi_icons_spacing']!='') ?  $option5['sfsi_icons_spacing'] : '' ;?>" /><ins>Pixels</ins></div>
+		<h4>
+		<?php 
+                printf(
+                    __( 'Size %1s spacing of your icons','ultimate-social-media-icons' ),
+                     '&amp;'       
+                );
+        ?>
+	  </h4>
+	  <div class="icons_size"><span><?php _e("Size:",'ultimate-social-media-icons') ?></span><input name="sfsi_icons_size" value="<?php echo ($option5['sfsi_icons_size']!='') ?  $option5['sfsi_icons_size'] : '' ;?>" type="text" /><ins><?php _e("pixels wide ",'ultimate-social-media-icons') ?> &amp; <?php _e(" tall",'ultimate-social-media-icons') ?></ins> <span class="last"><?php _e("Spacing between icons:",'ultimate-social-media-icons') ?>Spacing between icons:</span><input name="sfsi_icons_spacing" type="text" value="<?php echo ($option5['sfsi_icons_spacing']!='') ?  $option5['sfsi_icons_spacing'] : '' ;?>" /><ins><?php _e("Pixels",'ultimate-social-media-icons') ?></ins></div>
 
-    <div class="icons_prem_disc">
-        <p class="sfsi_prem_plu_desc"><b>New: </b>The Premium Plugin also allows you to define the vertical distance between the icons (and set this differently for mobile vs. desktop): <a  class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)"  style="cursor:pointer;border-bottom: 1px solid #12a252;color: #12a252 !important;font-weight:bold" class="sfisi_font_bold" target="_blank">Go premium now<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_spacings&utm_medium=banner" class="sfsi_font_inherit" style="color: #12a252 !important" target="_blank"> or learn more.</a>
+	  <div class="icons_prem_disc">
+        <p class="sfsi_prem_plu_desc"><b><?php _e("New:",'ultimate-social-media-icons') ?> </b><?php _e("The Premium Plugin also allows you to define the vertical distance between the icons (and set this differently for mobile vs. desktop):",'ultimate-social-media-icons') ?> <a  class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)"  style="cursor:pointer;border-bottom: 1px solid #12a252;color: #12a252 !important;font-weight:bold" class="sfisi_font_bold" target="_blank"><?php _e("Go premium now",'ultimate-social-media-icons') ?> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_spacings&utm_medium=banner" class="sfsi_font_inherit" style="color: #12a252 !important" target="_blank"> <?php _e("or learn more.",'ultimate-social-media-icons') ?></a>
     </div>
     
     </div>
     
     <div class="row" style="font-size: 17px;">
-	<h4>Alignments</h4>
+	<h4><?php _e("Alignments",'ultimate-social-media-icons') ?></h4>
 	<div class="icons_size" style="width: max-content;display:flow-root">
-		<span style="font-size: 17px;">Icons per row:</span>
+		<span style="font-size: 17px;"><?php _e("Icons per row:",'ultimate-social-media-icons') ?></span>
 		<input name="sfsi_icons_perRow" type="text" value="<?php echo ($option5['sfsi_icons_perRow']!='') ?  $option5['sfsi_icons_perRow'] : '' ;?>" />
-		<ins class="leave_empty" style="margin-bottom: 34px;font-size: 17px;">Leave empty if you don't want to <br /> define this</ins>
+		<ins class="leave_empty" style="margin-bottom: 34px;font-size: 17px;"><?php _e("Leave empty if you don't want to",'ultimate-social-media-icons') ?> <br /><?php _e("define this",'ultimate-social-media-icons') ?> </ins>
 	</div>
 	<div class="icons_size" style="width: max-content;">
 		<div style="width: 232px;float: left;position: relative;">
-			<span style="line-height: 26px;margin-bottom: 22px;font-size: 17px;">Alignment of icons within a widget:</span>
+		<span style="line-height: 26px;margin-bottom: 22px;font-size: 17px;"><?php _e("Alignment of icons within a widget:",'ultimate-social-media-icons') ?></span>
 			
 		</div>
 		<div class="field">
 			<select name="sfsi_icons_Alignment_via_widget" id="sfsi_icons_Alignment_via_widget" class="styled">
-				<option value="center" <?php echo ($option5['sfsi_icons_Alignment_via_widget']=='center') ?  'selected="selected"' : '' ;?>>Centered</option>
-				<option value="right" <?php echo ($option5['sfsi_icons_Alignment_via_widget']=='right') ?  'selected="selected"' : '' ;?>>Right</option>
-				<option value="left" <?php echo ($option5['sfsi_icons_Alignment_via_widget']=='left') ?  'selected="selected"' : '' ;?>>Left</option>
+				<option value="center" <?php echo ($option5['sfsi_icons_Alignment_via_widget']=='center') ?  'selected="selected"' : '' ;?>><?php _e("Centered",'ultimate-social-media-icons') ?></option>
+				<option value="right" <?php echo ($option5['sfsi_icons_Alignment_via_widget']=='right') ?  'selected="selected"' : '' ;?>><?php _e("Right",'ultimate-social-media-icons') ?></option>
+				<option value="left" <?php echo ($option5['sfsi_icons_Alignment_via_widget']=='left') ?  'selected="selected"' : '' ;?>><?php _e("Left",'ultimate-social-media-icons') ?></option>
 			</select>
 		</div>
 	</div>
 	<div class="icons_size" style="width: max-content;">
-		<div style="width: 232px;float: left;position: relative;">
-			<span style="line-height: 26px;margin-bottom: 22px;font-size: 17px;">Alignment of icons if placed via shortcode:</span>
+	<div style="width: 232px;float: left;position: relative;">
+			<span style="line-height: 26px;margin-bottom: 22px;font-size: 17px;"><?php _e("Alignment of icons if placed via shortcode:",'ultimate-social-media-icons') ?></span>
 		</div>
 		<div class="field">
 			<select name="sfsi_icons_Alignment_via_shortcode" id="sfsi_icons_Alignment_via_shortcode" class="styled">
-				<option value="center" <?php echo ($option5['sfsi_icons_Alignment_via_shortcode']=='center') ?  'selected="selected"' : '' ;?>>Centered</option>
-				<option value="right" <?php echo ($option5['sfsi_icons_Alignment_via_shortcode']=='right') ?  'selected="selected"' : '' ;?>>Right</option>
-				<option value="left" <?php echo ($option5['sfsi_icons_Alignment_via_shortcode']=='left') ?  'selected="selected"' : '' ;?>>Left</option>
+				<option value="center" <?php echo ($option5['sfsi_icons_Alignment_via_shortcode']=='center') ?  'selected="selected"' : '' ;?>><?php _e("Centered",'ultimate-social-media-icons') ?></option>
+				<option value="right" <?php echo ($option5['sfsi_icons_Alignment_via_shortcode']=='right') ?  'selected="selected"' : '' ;?>><?php _e("Right",'ultimate-social-media-icons') ?></option>
+				<option value="left" <?php echo ($option5['sfsi_icons_Alignment_via_shortcode']=='left') ?  'selected="selected"' : '' ;?>><?php _e("Left",'ultimate-social-media-icons') ?></option>
 			</select>
 		</div>
 	</div>
 	<div class="icons_size" style="width: max-content;">
-		<div style="width: 232px;float: left;position: relative;">
-			<span style="line-height: 26px;margin-bottom: 10px;font-size: 17px;">Alignment of icons In the second row:</span>
+	<div style="width: 232px;float: left;position: relative;">
+			<span style="line-height: 26px;margin-bottom: 10px;font-size: 17px;"><?php _e("Alignment of icons In the second row:",'ultimate-social-media-icons') ?></span>
 			<ins class="sfsi_icons_other_allign" style="bottom: -22px;left: 0;width: 200px;color: rgb(128,136,145);">
-				(with respect to icons in the first row; only relevant if your icons show in two or more rows)
+				<?php _e("(with respect to icons in the first row; only relevant if your icons show in two or more rows)",'ultimate-social-media-icons') ?>
 			</ins>
 		</div>
 		<div class="field">
 			<select name="sfsi_icons_Alignment" id="sfsi_icons_Alignment" class="styled">
-				<option value="center" <?php echo ($option5['sfsi_icons_Alignment']=='center') ?  'selected="selected"' : '' ;?>>Centered</option>
-				<option value="right" <?php echo ($option5['sfsi_icons_Alignment']=='right') ?  'selected="selected"' : '' ;?>>Right</option>
-				<option value="left" <?php echo ($option5['sfsi_icons_Alignment']=='left') ?  'selected="selected"' : '' ;?>>Left</option>
+				<option value="center" <?php echo ($option5['sfsi_icons_Alignment']=='center') ?  'selected="selected"' : '' ;?>><?php _e("Centered",'ultimate-social-media-icons') ?></option>
+				<option value="right" <?php echo ($option5['sfsi_icons_Alignment']=='right') ?  'selected="selected"' : '' ;?>><?php _e("Right",'ultimate-social-media-icons') ?></option>
+				<option value="left" <?php echo ($option5['sfsi_icons_Alignment']=='left') ?  'selected="selected"' : '' ;?>><?php _e("Left",'ultimate-social-media-icons') ?></option>
 			</select>
 		</div>
 	</div>
 
     <div class= "sfsi_new_prmium_follw" style="margin-top: 38px;">
-		<p><b>New: </b>In the Premium Plugin you can show the icons vertically and give them different alignment options for icons placed on mobile <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_alignment_options&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> See all features.</a></p>
+		<?php 
+                printf(
+                    __( '%1s New: %2s In the Premium Plugin you can show the icons vertically and give them different alignment options for icons placed on mobile %3s  See all features. %4s','ultimate-social-media-icons' ),
+					'<p><b>' ,
+					'</b>',
+					'<a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_alignment_options&utm_medium=banner" class="sfsi_font_inherit" target="_blank">',
+					'</a></p>'       
+                );
+        ?>	
 	</div>
 
     </div>
     
     <div class="row new_wind">
-		<h4>New window</h4>
-		<div class="row_onl"><p>If a user clicks on your icons, do you want to open the page in a new window?
+		<h4><?php _e("New window",'ultimate-social-media-icons') ?></h4>
+		<div class="row_onl"><p><?php _e("If a user clicks on your icons, do you want to open the page in a new window?",'ultimate-social-media-icons') ?>
 		</p>
 			<ul class="enough_waffling">
 		    	<li>
 		    		<input name="sfsi_icons_ClickPageOpen" <?php echo ($option5['sfsi_icons_ClickPageOpen']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
-		    		<label>Yes</label>
+		    		<label><?php _e("Yes",'ultimate-social-media-icons') ?></label>
 		    	</li>
 				<li>
 					<input name="sfsi_icons_ClickPageOpen" <?php echo ($option5['sfsi_icons_ClickPageOpen']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
-					<label>No</label>
+					<label><?php _e("No",'ultimate-social-media-icons') ?></label>
 				</li>
 	      	</ul>
       	</div>
@@ -286,39 +308,59 @@
      <!-- icon's floating and stick section start here -->	
     <div class="row sticking">
 	
-	<h4>Sticky icons</h4>
+		<h4><?php _e("Sticky icons",'ultimate-social-media-icons') ?></h4>
+		
+		<div class="clear float_options" <?php if($option5['sfsi_icons_stick']=='yes') :?> style="display:none" <?php endif;?>>
+
 	
-    <div class="clear float_options" <?php if($option5['sfsi_icons_stick']=='yes') :?> style="display:none" <?php endif;?>>
+		</div> 
+	
+	<div class="space">
+		
+		<p class="list"><?php _e("Make icons stick?",'ultimate-social-media-icons') ?></p>
 
-  
-  	</div> 
-  
-  <div class="space">
-    
-    <p class="list">Make icons stick?</p>
+		<ul class="enough_waffling">
+			
+			<li>
+				<input name="sfsi_icons_stick" <?php echo ($option5['sfsi_icons_stick']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
+				<label><?php _e("Yes",'ultimate-social-media-icons') ?></label>
+			</li>
 
-    <ul class="enough_waffling">
-  		
-  		<li>
-  			<input name="sfsi_icons_stick" <?php echo ($option5['sfsi_icons_stick']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
-  			<label>Yes</label>
-  		</li>
+			<li>
+				<input name="sfsi_icons_stick" <?php echo ($option5['sfsi_icons_stick']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
+				<label><?php _e("No",'ultimate-social-media-icons') ?></label>
+			</li>
 
-		<li>
-			<input name="sfsi_icons_stick" <?php echo ($option5['sfsi_icons_stick']=='no') ?  'checked="true"' : '' ;?>  type="radio" value="no" class="styled" />
-			<label>No</label>
-		</li>
+		</ul>
 
-  	</ul>
+		
+		<p>
+			
+			<?php 
+					printf(
+						__( 'If you select «Yes» here, then the icons which you placed via %1s widget %2s or %3 shortcode %4s will still be visible on the screen as user scrolls down your page, i.e. they will stick at the top. %5s','ultimate-social-media-icons' ),
+						'<span style="text-decoration: underline;"><b>',
+						'</b></span> ',
+						'<span style="text-decoration: underline;"><b>',
+						'</b></span> ',
+						'</p> '
+					);
+			?>
+		<p>
+		
 
-	<p>
-		If you select «Yes» here, then the icons which you placed via <span style="text-decoration: underline;"><b>widget</b></span> or <span style="text-decoration: underline;"><b>shortcode</b></span> will still be visible on the screen as user scrolls down your page, i.e. they will stick at the top.</p> 
+		<p>
+			<?php 
+					printf(
+						__( 'This is not to be confused with making the icons permanently placed in the same position, which is possible in the %1s Premium Plugin.%2s','ultimate-social-media-icons' ),
+						'<a target="_blank" href="https://www.ultimatelysocial.com/usm-premium"><b>',
+						'</b></a>'  
+					);
+			?>
+			
+		</p> 
 
-	<p>
-		This is not to be confused with making the icons permanently placed in the same position, which is possible in the <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium"><b>Premium Plugin</b></a>.
-	</p> 
-
-  </div>
+  	</div>
   
 
 </div><!-- END icon's floating and stick section -->
@@ -327,8 +369,8 @@
 
 <div class="row sfsi_custom_social_data_setting" id="custom_social_data_setting">
 
-		<h4>Sharing texts & pictures?</h4>
-		<p>On the pages where you edit your posts/pages, you’ll see a (new) section where you can define which pictures & text should be shared. This extra section is displayed on the following:</p>		
+		<h4><?php _e("Sharing texts & pictures?",'ultimate-social-media-icons') ?></h4>
+		<p><?php _e("On the pages where you edit your posts/pages, you’ll see a (new) section where you can define which pictures & text should be shared. This extra section is displayed on the following:",'ultimate-social-media-icons') ?></p>		
 
 			<?php 
 				$checkedS   = (isset($option5['sfsi_custom_social_hide']) && $option5['sfsi_custom_social_hide']=="yes") ? 'checked="checked"': '';	
@@ -336,17 +378,17 @@
 				$checkedVal = (isset($option5['sfsi_custom_social_hide'])) ? $option5['sfsi_custom_social_hide']: 'no';				
 			?>
 		<div class="social_data_post_types">
-                <ul class="socialPostTypesUl">
+				<ul class="socialPostTypesUl">
                 	<li>
 						<div class="radio_section tb_4_ck">
 							<input type="checkbox" <?php echo $checked; ?> value="page" class="styled"  />
-							<label class="cstmdsplsub">Page</label>
+							<label class="cstmdsplsub"><?php _e("Page",'ultimate-social-media-icons') ?></label>
 						</div>
 					</li>
                 	<li>
 						<div class="radio_section tb_4_ck">
 							<input type="checkbox" <?php echo $checked; ?> value="post" class="styled"  />
-							<label class="cstmdsplsub">Post</label>
+							<label class="cstmdsplsub"><?php _e("Post",'ultimate-social-media-icons') ?></label>
 						</div>
 					</li>						
                 </ul>
@@ -355,15 +397,25 @@
                		<li>
 						<div class="radio_section tb_4_ck">
 							<input name="sfsi_custom_social_hide" type="checkbox" <?php echo $checkedS; ?> value="<?php echo $checkedVal; ?>" class="styled"  />
-							<label class="cstmdsplsub">Hide section for all</label>
+							<label class="cstmdsplsub"><?php _e("Hide section for all",'ultimate-social-media-icons') ?></label>
 						</div>
 					</li>
                 </ul>
  		</div>
 
 		<div class="sfsi_new_prmium_follw sfsi_social_sharing" style="margin-bottom: 15px;">
-			<p>Note: This feature is currently only available in the Premium Plugin. <a class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" style="cursor:pointer;border-bottom: 1px solid #12a252;color: #12a252 !important;font-weight:bold" class="sfisi_font_bold" target="_blank">Go premium now</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=define_pic_and_text&utm_medium=banner" class="sfsi_font_inherit" target="_blank"> or learn more.</a>
-			</p>
+				
+		
+			<?php 
+					printf(
+						__( '%1s Note: This feature is currently only available in the Premium Plugin.%2s Go premium now %3s or learn more. %4s','ultimate-social-media-icons' ),
+						 '<p>',
+						 '<a class="pop-up" data-id="sfsi_quickpay-overlay" onclick="sfsi_open_quick_checkout(event)" style="cursor:pointer;border-bottom: 1px solid #12a252;color: #12a252 !important;font-weight:bold" class="sfisi_font_bold" target="_blank">',
+						 '</a><a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=define_pic_and_text&utm_medium=banner" class="sfsi_font_inherit" target="_blank">',
+						 '</a></p>'
+					);
+			?>
+	 
 		</div> 		
 </div>
 
@@ -371,80 +423,79 @@
 
  <!-- mouse over text section start here -->
  <div class="row mouse_txt">
-    <h4>Mouseover text</h4>
+ 	<h4><?php _e("Mouseover text",'ultimate-social-media-icons') ?></h4>
 	<p>
-    	If you’ve given your icon only one function (i.e. no pop-up where user can perform different actions) then you can define 
-here what text will be displayed if a user moves his mouse over the icon:
+	<?php _e("If you’ve given your icon only one function (i.e. no pop-up where user can perform different actions) then you can define here what text will be displayed if a user moves his mouse over the icon:",'ultimate-social-media-icons') ?>
 	</p>
 	<div class="space">
 		<div class="clear"></div>
 		<div class="mouseover_field rss_section">
-			<label>RSS:</label><input name="sfsi_rss_MouseOverText" value="<?php echo ($option5['sfsi_rss_MouseOverText']!='') ?  $option5['sfsi_rss_MouseOverText'] : '' ;?>" type="text" />
+			<label><?php _e("RSS:",'ultimate-social-media-icons') ?></label><input name="sfsi_rss_MouseOverText" value="<?php echo ($option5['sfsi_rss_MouseOverText']!='') ?  $option5['sfsi_rss_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		<div class="mouseover_field email_section">
-			<label>Email:</label><input name="sfsi_email_MouseOverText" value="<?php echo ($option5['sfsi_email_MouseOverText']!='') ?  $option5['sfsi_email_MouseOverText'] : '' ;?>" type="text" />
+			<label><?php _e("Email:",'ultimate-social-media-icons') ?></label><input name="sfsi_email_MouseOverText" value="<?php echo ($option5['sfsi_email_MouseOverText']!='') ?  $option5['sfsi_email_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		
 		<div class="clear">
 		<div class="mouseover_field twitter_section">
-			<label>Twitter:</label>
+			<label><?php _e("Twitter:",'ultimate-social-media-icons') ?></label>
 			<input name="sfsi_twitter_MouseOverText" value="<?php echo ($option5['sfsi_twitter_MouseOverText']!='') ?  $option5['sfsi_twitter_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		<div class="mouseover_field facebook_section">
-			<label>Facebook:</label>
+			<label><?php _e("Facebook:",'ultimate-social-media-icons') ?></label>
 			<input name="sfsi_facebook_MouseOverText" value="<?php echo ($option5['sfsi_facebook_MouseOverText']!='') ?  $option5['sfsi_facebook_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		</div>
 		<div class="clear">
 		<div class="mouseover_field linkedin_section">
-			<label>LinkedIn:</label>
+			<label><?php _e("LinkedIn:",'ultimate-social-media-icons') ?></label>
 			<input name="sfsi_linkedIn_MouseOverText" value="<?php echo ($option5['sfsi_linkedIn_MouseOverText']!='') ?  $option5['sfsi_linkedIn_MouseOverText'] : '' ;?>"  type="text" />
 		</div>
 		<div class="mouseover_field wechat_section">
-				<label>WeChat:</label>
+				<label><?php _e("WeChat:",'ultimate-social-media-icons') ?></label>
 				<input name="sfsi_wechat_MouseOverText" value="<?php echo ($option5['sfsi_wechat_MouseOverText']!='') ?  $option5['sfsi_wechat_MouseOverText'] : '' ;?>" type="text" />
 		    </div>
 		</div>
 		<div class="clear">
 			<div class="mouseover_field whatsapp_section">
-				<label>WhatsApp:</label>
+				<label><?php _e("WhatsApp:<",'ultimate-social-media-icons') ?>/label>
 				<input name="sfsi_whatsapp_MouseOverText" value="<?php echo ($option5['sfsi_whatsapp_MouseOverText']!='') ?  $option5['sfsi_whatsapp_MouseOverText'] : '' ;?>" type="text" />
 	    	</div>
 		</div>
 
 		<div class="clear">
 		<div class="mouseover_field pinterest_section">
-			<label>Pinterest:</label>
+			<label><?php _e("Pinterest:",'ultimate-social-media-icons') ?></label>
 			<input name="sfsi_pinterest_MouseOverText" value="<?php echo ($option5['sfsi_pinterest_MouseOverText']!='') ?  $option5['sfsi_pinterest_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		<div class="mouseover_field youtube_section">
-			<label>Youtube:</label>
+			<label><?php _e("Youtube:",'ultimate-social-media-icons') ?></label>
 			<input name="sfsi_youtube_MouseOverText" value="<?php echo ($option5['sfsi_youtube_MouseOverText']!='') ?  $option5['sfsi_youtube_MouseOverText'] : '' ;?>" type="text" />
 		</div>
 		</div>
 		<div class="clear">
 		    <div class="mouseover_field instagram_section">
-				<label>Instagram:</label>
+				<label><?php _e("Instagram:",'ultimate-social-media-icons') ?></label>
 				<input name="sfsi_instagram_MouseOverText" value="<?php echo ($option5['sfsi_instagram_MouseOverText']!='') ?  $option5['sfsi_instagram_MouseOverText'] : '' ;?>" type="text" />
 			</div>
 			<div class="mouseover_field telegram_section">
-				<label>Telegram:</label>
+				<label><?php _e("Telegram:",'ultimate-social-media-icons') ?></label>
 				<input name="sfsi_telegram_MouseOverText" value="<?php echo ($option5['sfsi_telegram_MouseOverText']!='') ?  $option5['sfsi_telegram_MouseOverText'] : '' ;?>" type="text" />
 		    </div>
 		</div>
 		<div class="clear">
 		    <div class="mouseover_field vk_section">
-				<label>VK:</label>
+				<label><?php _e("VK:",'ultimate-social-media-icons') ?></label>
 				<input name="sfsi_vk_MouseOverText" value="<?php echo ($option5['sfsi_vk_MouseOverText']!='') ?  $option5['sfsi_vk_MouseOverText'] : '' ;?>" type="text" />
 			</div>
 			<div class="mouseover_field ok_section">
-				<label>Ok:</label>
+				<label><?php _e("Ok:",'ultimate-social-media-icons') ?></label>
 				<input name="sfsi_ok_MouseOverText" value="<?php echo ($option5['sfsi_ok_MouseOverText']!='') ?  $option5['sfsi_ok_MouseOverText'] : '' ;?>" type="text" />
 		    </div>
 		</div>
 		<div class="clear">
 		    <div class="mouseover_field weibo_section">
-				<label>Weibo:</label>
+				<label><?php _e("Weibo:",'ultimate-social-media-icons') ?></label>
 				<input name="sfsi_weibo_MouseOverText" value="<?php echo ($option5['sfsi_weibo_MouseOverText']!='') ?  $option5['sfsi_weibo_MouseOverText'] : '' ;?>" type="text" />
 			</div>
 			
@@ -457,7 +508,7 @@ here what text will be displayed if a user moves his mouse over the icon:
             ?><?php if(!empty( $icons[$i])) : ?>
                 
                 <div class="mouseover_field custom_section sfsiICON_<?php echo $i; ?>">
-                    <label>Custom <?php echo $count; ?>:</label>
+                    <label><?php _e("Custom",'ultimate-social-media-icons') ?> <?php echo $count; ?>:</label>
                     <input name="sfsi_custom_MouseOverTexts[]" value="<?php echo (isset($sfsiMouseOverTexts[$i]) && $sfsiMouseOverTexts[$i]!='') ?sanitize_text_field($sfsiMouseOverTexts[$i]) : '' ;?>" type="text" file-id="<?php echo $i; ?>" />
                 </div>
                   
@@ -473,32 +524,32 @@ here what text will be displayed if a user moves his mouse over the icon:
 	<!-- END mouse over text section -->
 
     <div class="row new_wind">
-		<h4>Error reporting</h4>
-		<div class="row_onl"><p>Suppress error messages?</p>
+		<h4><?php _e("Error reporting",'ultimate-social-media-icons') ?></h4>
+		<div class="row_onl"><p><?php _e("Suppress error messages?",'ultimate-social-media-icons') ?></p>
 			<ul class="enough_waffling">
 		    	<li>
 		    		<input name="sfsi_icons_suppress_errors" <?php echo ($sfsi_icons_suppress_errors=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
-		    		<label>Yes</label>
+		    		<label><?php _e("Yes",'ultimate-social-media-icons') ?></label>
 		    	</li>
 				<li>
 					<input name="sfsi_icons_suppress_errors" <?php echo ($sfsi_icons_suppress_errors=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
-					<label>No</label>
+					<label><?php _e("No",'ultimate-social-media-icons') ?></label>
 				</li>
 	      	</ul>
       	</div>
 	</div>
 
 	<div class="row new_wind">
-		<h4>Tips</h4>
-		<div class="row_onl"><p>Show more useful tips for more sharing & traffic?</p>
+		<h4><?php _e("Tips",'ultimate-social-media-icons') ?></h4>
+		<div class="row_onl"><p><?php _e("Show more useful tips for more sharing & traffic?",'ultimate-social-media-icons') ?></p>
 			<ul class="enough_waffling">
 		    	<li>
 		    		<input name="sfsi_icons_sharing_and_traffic_tips" <?php echo ($sfsi_icons_sharing_and_traffic_tips=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
-		    		<label>Yes</label>
+		    		<label><?php _e("Yes",'ultimate-social-media-icons') ?></label>
 		    	</li>
 				<li>
 					<input name="sfsi_icons_sharing_and_traffic_tips" <?php echo ($sfsi_icons_sharing_and_traffic_tips=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled" />
-					<label>No</label>
+					<label><?php _e("No",'ultimate-social-media-icons') ?></label>
 				</li>
 	      	</ul>
       	</div>
@@ -525,11 +576,11 @@ here what text will be displayed if a user moves his mouse over the icon:
     <div class="save_button">
          <img src="<?php echo SFSI_PLUGURL ?>images/ajax-loader.gif" alt="error" class="loader-img" />
          <?php  $nonce = wp_create_nonce("update_step5"); ?>
-         <a href="javascript:;" id="sfsi_save5" title="Save" data-nonce="<?php echo $nonce;?>">Save</a>
+         <a href="javascript:;" id="sfsi_save5" title="Save" data-nonce="<?php echo $nonce;?>"><?php _e("Save",'ultimate-social-media-icons') ?></a>
     </div>
     <!-- END SAVE BUTTON SECTION   -->
     
-    <a class="sfsiColbtn closeSec" href="javascript:;" >Collapse area</a>
+    <a class="sfsiColbtn closeSec" href="javascript:;" ><?php _e("Collapse area",'ultimate-social-media-icons') ?></a>
     <label class="closeSec"></label>
         
     <!-- ERROR AND SUCCESS MESSAGE AREA-->

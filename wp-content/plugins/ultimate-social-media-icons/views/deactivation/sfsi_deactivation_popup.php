@@ -8,7 +8,7 @@
     <div class="sfsi-deactivation-popup-content">
 
         <div class="sfsi-popup-header sfsi-top-header">
-            <h2>Oh! You don\'t like our plugin?</h2>
+            <h2><?php _e("Oh! You don\'t like our plugin?",'ultimate-social-media-icons') ?></h2>
             <div class="sfsi-sad-image">
                 <img src="<?php echo SFSI_PLUGURL; ?>images/sad_image.png" alt="error">
             </div>
@@ -16,19 +16,19 @@
 
         <div class="sfsi-popup-content">
             <div class="sfsi-text">
-                <p class="sfsi-please">PLEASE</p>
-                <p class="sfsi-please-other-text">let us know in the Support Forum what was the issue, <br>so that we can fix it. We‘ll respond quickly!</p>
+                <p class="sfsi-please"><?php _e("PLEASE",'ultimate-social-media-icons') ?></p>
+                <p class="sfsi-please-other-text"><?php _e("let us know in the Support Forum what was the issue,",'ultimate-social-media-icons') ?> <br><?php _e("so that we can fix it. We‘ll respond quickly!",'ultimate-social-media-icons') ?></p>
             </div>
             <div class="sfsi-go-to-support">
-                <a target="_blank" href="<?php echo SFSI_SUPPORT_FORM; ?>" class="go-to-support-forum">Go to Support Forum></a>
+                <a target="_blank" href="<?php echo SFSI_SUPPORT_FORM; ?>" class="go-to-support-forum"><?php _e("Go to Support Forum>",'ultimate-social-media-icons') ?></a>
             </div>
             <div class="sfsi-info-text">
-                <p>If you're not a Wordpress user yet, please sign up – it's quick! Once logged in you‘ll see a section at the bottom where you can ask your question.</p>
+                <p><?php _e("If you're not a Wordpress user yet, please sign up – it's quick! Once logged in you‘ll see a section at the bottom where you can ask your question.",'ultimate-social-media-icons') ?></p>
             </div>
         </div>
         <div class="sfsi-popup-footer">
             <div class="sfsi-deactivation-reason-link">
-                <a href="javascript:void(0)">No, don't worry, there was a different reason, I want to de-activate it</a>
+                <a href="javascript:void(0)"><?php _e("No, don't worry, there was a different reason, I want to de-activate it",'ultimate-social-media-icons') ?></a>
             </div>
         </div>
         
@@ -50,19 +50,19 @@
                 <div class="sfsi-reason-container">
 
                     <input type="radio" class="sfsi-deactivate-radio" name="reason" value="0">
-                    <p class="sfsi-deactivate-radio-text">The plugin <span class="sfsi-bold-text">doesn't work for me</span></p>
+                    <p class="sfsi-deactivate-radio-text"><?php _e("The plugin ",'ultimate-social-media-icons') ?><span class="sfsi-bold-text"><?php _e("doesn't work for me",'ultimate-social-media-icons') ?></span></p>
                 
                     <div class="sfsi-reason-section hide">
                         <div class="sfsi-popup-content">
                             <div class="sfsi-text">
-                                <p class="sfsi-please">PLEASE</p>
-                                <p class="sfsi-please-other-text">let us know in the Support Forum what didn't work, <br>so that we can fix it. We‘ll respond quickly! <img src="<?php echo SFSI_PLUGURL; ?>images/smile.png" alt="error"></p>
+                                <p class="sfsi-please"><?php _e("PLEASE",'ultimate-social-media-icons') ?></p>
+                                <p class="sfsi-please-other-text"><?php _e("let us know in the Support Forum what didn't work, ",'ultimate-social-media-icons') ?><br><?php _e("so that we can fix it. We‘ll respond quickly! ",'ultimate-social-media-icons') ?><img src="<?php echo SFSI_PLUGURL; ?>images/smile.png" alt="error"></p>
                             </div>
                             <div class="sfsi-go-to-support">
-                                <a target="_blank" href="<?php echo SFSI_SUPPORT_FORM; ?>" class="go-to-support-forum">Go to Support Forum ></a>
+                                <a target="_blank" href="<?php echo SFSI_SUPPORT_FORM; ?>" class="go-to-support-forum"><?php _e("Go to Support Forum >",'ultimate-social-media-icons') ?></a>
                             </div>
                             <div class="sfsi-info-text">
-                                <p>If you‘re not a Wordpress user yet, please sign up – it‘s quick! Once logged in you‘ll see a section at the bottom where you can ask your question. </p>
+                                <p><?php _e("If you‘re not a Wordpress user yet, please sign up – it‘s quick! Once logged in you‘ll see a section at the bottom where you can ask your question.",'ultimate-social-media-icons') ?> </p>
                             </div>
                         </div>
                     </div>
@@ -72,15 +72,15 @@
                 <div class="sfsi-reason-container">
 
                     <input type="radio" class="sfsi-deactivate-radio" name="reason" value="1">
-                    <p class="sfsi-deactivate-radio-text">I got the <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium" class="sfsi-premium-version-text">premium version</a>!</p>
+                    <p class="sfsi-deactivate-radio-text"><?php _e("I got the ",'ultimate-social-media-icons') ?><a target="_blank" href="https://www.ultimatelysocial.com/usm-premium" class="sfsi-premium-version-text"><?php _e("premium version",'ultimate-social-media-icons') ?></a>!</p>
                 
                     <div class="sfsi-reason-section hide">
                         <div class="sfsi-popup-content">
                             <div class="sfsi-text">
-                                <p class="sfsi-please-other-text">Thumbs up to that one! <img src="<?php echo SFSI_PLUGURL; ?>images/smile.png" alt="error"></p>
+                                <p class="sfsi-please-other-text"><?php _e("Thumbs up to that one!",'ultimate-social-media-icons') ?> <img src="<?php echo SFSI_PLUGURL; ?>images/smile.png" alt="error"></p>
                             </div>
                             <div class="sfsi-go-to-support">
-                                <a href="javascript:void(0)" class="sfsi-deactive-plugin go-to-support-forum">De-activate plugin now</a>
+                                <a href="javascript:void(0)" class="sfsi-deactive-plugin go-to-support-forum"><?php _e("De-activate plugin now",'ultimate-social-media-icons') ?></a>
                             </div>
                         </div>
                     </div>
@@ -94,10 +94,10 @@
                         <div class="sfsi-reason-section hide">
                             <div class="sfsi-popup-content marginbottom">
                                 <div class="sfsi-text">
-                                    <p class="sfsi-please-other-text">Cool - if it was a reason we colud learn from, please let us know in the Support Forum.</p>
+                                    <p class="sfsi-please-other-text"><?php _e("Cool - if it was a reason we colud learn from, please let us know in the Support Forum.",'ultimate-social-media-icons') ?></p>
                                 </div>
                                 <div class="sfsi-go-to-support">
-                                    <a target="_blank" href="<?php echo SFSI_SUPPORT_FORM; ?>" class="go-to-support-forum">Go to Support Forum ></a>
+                                    <a target="_blank" href="<?php echo SFSI_SUPPORT_FORM; ?>" class="go-to-support-forum"><?php _e("Go to Support Forum >",'ultimate-social-media-icons') ?></a>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,7 @@
                 <div class="sfsi-reason-container">
 
                     <div class="sfsi-just-deactivate-it">
-                        <a href="javascript:void(0)" class="sfsi-deactive-plugin">Just de-activate it</a>
+                        <a href="javascript:void(0)" class="sfsi-deactive-plugin"><?php _e("Just de-activate it",'ultimate-social-media-icons') ?></a>
                     </div>
 
                 </div>

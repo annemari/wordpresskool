@@ -77,19 +77,20 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
     <p>
      
-        In addition to the email- and follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site.
+        <?php _e("In addition to the email- and follow-icon you can also show a subscription form which maximizes chances that people subscribe to your site.",'ultimate-social-media-icons') ?>
 
     </p>
 
     <p class='sfsi_subscribe_popbox_link'>
 
-        To get access to the emails who subscribe, interesting statistics about your subscribers, alerts when people subscribe or unsubscribe and to tailor the sender name & the subject line of the emails, please
-
-        <a class="pop-up" href="javascript:" data-id="sfsi_feedClaimingOverlay">
-
-            click here.
-
-        </a>
+            <?php 
+					printf(
+						__( 'To get access to the emails who subscribe, interesting statistics about your subscribers, alerts when people subscribe or unsubscribe and to tailor the sender name & the subject line of the emails, please %1s click here.%2s','ultimate-social-media-icons' ),
+                        '<a class="pop-up" href="javascript:" data-id="sfsi_feedClaimingOverlay">',
+                        '</a>'       
+					);
+			?>
+        
 
     </p>
 
@@ -101,7 +102,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
             <!-- <h3 class="sfsi_section_title">Preview:</h3> -->
 
-            <h4 class="sfsi_section_title">Preview:</h4>
+            <h4 class="sfsi_section_title"><?php _e("Preview:",'ultimate-social-media-icons') ?></h4>
 
             <div class="like_pop_box">
 
@@ -117,19 +118,19 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
             <!-- <h3 class="sfsi_section_title">Place it on your site</h3> -->
 
-            <h4 class="sfsi_section_title">Place it on your site</h4>
+            <h4 class="sfsi_section_title"><?php _e("Place it on your site",'ultimate-social-media-icons') ?></h4>
 
-            <label class="sfsi_label_text">You can place the form by different methods:</label>
+            <label class="sfsi_label_text"><?php _e("You can place the form by different methods:",'ultimate-social-media-icons') ?></label>
 
             <ul class="sfsi_form_info">
 
-                <li><b>1. Widget:</b> Go to the <a target="_blank" href="<?php echo site_url() ?>/wp-admin/widgets.php">widget settings</a> and drag & drop it to the sidebar.
+                <li><b><?php _e("1. Widget:",'ultimate-social-media-icons') ?></b><?php _e("P Go to the ",'ultimate-social-media-icons') ?><a target="_blank" href="<?php echo site_url() ?>/wp-admin/widgets.php"><?php _e("widget settings<",'ultimate-social-media-icons') ?>/a><?php _e(" and drag & drop it to the sidebar.",'ultimate-social-media-icons') ?>
 
                 </li>
 
-                <li><b>2. Shortcode:</b> Use the shortcode <b>[USM_form]</b> to place it into your codes</li>
+                <li><b><?php _e("2. Shortcode:",'ultimate-social-media-icons') ?></b> <?php _e("Use the shortcode",'ultimate-social-media-icons') ?> <b><?php _e("[USM_form]",'ultimate-social-media-icons') ?></b><?php _e(" to place it into your codes",'ultimate-social-media-icons') ?></li>
 
-                <li><b>3. Copy & paste HTML code:</b></li>
+                <li><b><?php _e("3. Copy & paste HTML code:",'ultimate-social-media-icons') ?></b></li>
 
             </ul>
 
@@ -149,7 +150,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <form method="post" onsubmit="return sfsi_processfurther(this);" target="popupwindow" action="<?php echo $url ?>" style="margin: 0px 20px;">
 
-                        <h5 style="margin: 0 0 10px; padding: 0;">Get new posts by email:</h5>
+                    <h5 style="margin: 0 0 10px; padding: 0;"><?php _e("Get new posts by email:",'ultimate-social-media-icons') ?></h5>
 
                         <div style="margin: 5px 0; width: 100%;">
 
@@ -188,9 +189,9 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
             <!-- <h3 class="sfsi_section_title">Define text & design (optional)</h3> -->
 
-            <h4 class="sfsi_section_title">Define text & design (optional)</h4>
+            <h4 class="sfsi_section_title"><?php _e("Define text & design (optional)",'ultimate-social-media-icons') ?></h4>
 
-            <h5 class="sfsi_section_subtitle">Overall size & border</h5>
+            <h5 class="sfsi_section_subtitle"><?php _e("Overall size & border",'ultimate-social-media-icons') ?></h5>
 
             <!--Left Section-->
 
@@ -206,7 +207,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                 <div class="row_tab">
 
-                    <label class="sfsi_heding">Adjust size to space on the website?</label>
+                    <label class="sfsi_heding"><?php _e("Adjust size to space on the website?",'ultimate-social-media-icons') ?></label>
 
                     <ul class="border_shadow">
 
@@ -214,7 +215,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                             <input type="radio" class="styled" value="yes" name="sfsi_form_adjustment" <?php echo isChecked($option8['sfsi_form_adjustment'], 'yes'); ?>>
 
-                            <label>Yes</label>
+                            <label><?php _e("Yes",'ultimate-social-media-icons') ?></label>
 
                         </li>
 
@@ -222,7 +223,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                             <input type="radio" class="styled" value="no" name="sfsi_form_adjustment" <?php echo isChecked($option8['sfsi_form_adjustment'], 'no'); ?>>
 
-                            <label>No</label>
+                            <label><?php _e("No",'ultimate-social-media-icons') ?></label>
 
                         </li>
 
@@ -236,7 +237,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Height</label>
+                        <label><?php _e("Height",'ultimate-social-media-icons') ?></label>
 
                         <input name="sfsi_form_height" type="text" value="<?php echo ($option8['sfsi_form_height'] != '') ?  $option8['sfsi_form_height'] : ''; ?>" class="small rec-inp" /><span class="pix">pixels</span>
 
@@ -244,7 +245,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Width</label>
+                        <label><?php _e("Width",'ultimate-social-media-icons') ?></label>
 
                         <input name="sfsi_form_width" type="text" value="<?php echo ($option8['sfsi_form_width'] != '') ?  $option8['sfsi_form_width'] : ''; ?>" class="small rec-inp" /><span class="pix">pixels</span>
 
@@ -256,7 +257,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                 <div class="row_tab">
 
-                    <label class="sfsi_heding">Border?</label>
+                    <label class="sfsi_heding"><?php _e("Border?",'ultimate-social-media-icons') ?></label>
 
                     <ul class="border_shadow">
 
@@ -264,7 +265,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                             <input type="radio" class="styled" value="yes" name="sfsi_form_border" <?php echo isChecked($option8['sfsi_form_border'], 'yes'); ?>>
 
-                            <label>Yes</label>
+                            <label><?php _e("Yes",'ultimate-social-media-icons') ?></label>
 
                         </li>
 
@@ -272,7 +273,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                             <input type="radio" class="styled" value="no" name="sfsi_form_border" <?php echo isChecked($option8['sfsi_form_border'], 'no'); ?>>
 
-                            <label>No</label>
+                            <label><?php _e("No",'ultimate-social-media-icons') ?></label>
 
                         </li>
 
@@ -286,19 +287,19 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Thickness</label>
+                        <label><?php _e("Thickness",'ultimate-social-media-icons') ?></label>
 
                         <input name="sfsi_form_border_thickness" type="text" value="<?php echo ($option8['sfsi_form_border_thickness'] != '')
 
                                                                                         ? $option8['sfsi_form_border_thickness'] : '';
 
-                                                                                    ?>" class="small rec-inp" /><span class="pix">pixels</span>
+                                                                                    ?>" class="small rec-inp" /><span class="pix"><?php _e("pixels",'ultimate-social-media-icons') ?></span>
 
                     </div>
 
                     <div class="sfsi_field">
 
-                        <label>Color</label>
+                        <label><?php _e("Color",'ultimate-social-media-icons') ?></label>
 
                         <input id="sfsi_form_border_color" data-default-color="#b5b5b5" type="text" name="sfsi_form_border_color" value="<?php echo ($option8['sfsi_form_border_color'] != '')
 
@@ -323,7 +324,8 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                 <div class="row_tab">
 
-                    <label class="sfsi_heding autowidth">Background color:</label>
+                    <label class="sfsi_heding autowidth"><?php _e("Background color:",'ultimate-social-media-icons') ?></label>
+
 
                     <div class="sfsi_field">
 
@@ -356,7 +358,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
         <div class="sfsi_tab8_subcontainer sfsi_seprater">
 
-            <h5 class="sfsi_section_subtitle">Text above the entry field</h5>
+            <h5 class="sfsi_section_subtitle"><?php _e("Text above the entry field",'ultimate-social-media-icons') ?></h5>
 
             <!--Left Section-->
 
@@ -372,7 +374,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                 <div class="row_tab">
 
-                    <label class="sfsi_heding fixwidth sfsi_same_width">Text:</label>
+                    <label class="sfsi_heding fixwidth sfsi_same_width"><?php _e("Text:",'ultimate-social-media-icons') ?></label>
 
                     <div class="sfsi_field">
 
@@ -392,7 +394,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Font:</label>
+                        <label class="sfsi_same_width"><?php _e("Font:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_font("sfsi_form_heading_font", $option8['sfsi_form_heading_font']); ?>
 
@@ -400,7 +402,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Font style:</label>
+                        <label><?php _e("Font style:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_fontstyle("sfsi_form_heading_fontstyle", $option8['sfsi_form_heading_fontstyle']); ?>
 
@@ -414,7 +416,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Font color:</label>
+                        <label class="sfsi_same_width"><?php _e("Font color:",'ultimate-social-media-icons') ?></label>
 
                         <div class="sfsi_field" style="padding-top:0px;">
 
@@ -440,13 +442,13 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Font size:</label>
+                        <label><?php _e("Font size:",'ultimate-social-media-icons') ?></label>
 
                         <input type="text" class="small rec-inp" name="sfsi_form_heading_fontsize" value="<?php echo ($option8['sfsi_form_heading_fontsize'] != '')
 
                                                                                                                 ? $option8['sfsi_form_heading_fontsize'] : ''; ?>" />
 
-                        <span class="pix">pixels</span>
+                        <span class="pix"><?php _e("pixels",'ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -458,7 +460,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Alignment:</label>
+                        <label class="sfsi_same_width"><?php _e("Alignment:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_alignment("sfsi_form_heading_fontalign", $option8['sfsi_form_heading_fontalign']); ?>
 
@@ -476,7 +478,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
         <div class="sfsi_tab8_subcontainer sfsi_seprater">
 
-            <h5 class="sfsi_section_subtitle">Entry field</h5>
+            <h5 class="sfsi_section_subtitle"><?php _e("Entry field",'ultimate-social-media-icons') ?></h5>
 
             <!--Left Section-->
 
@@ -492,7 +494,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                 <div class="row_tab">
 
-                    <label class="sfsi_heding fixwidth sfsi_same_width">Text:</label>
+                    <label class="sfsi_heding fixwidth sfsi_same_width"><?php _e("Text:",'ultimate-social-media-icons') ?></label>
 
                     <div class="sfsi_field">
 
@@ -512,7 +514,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Font:</label>
+                        <label class="sfsi_same_width"><?php _e("Font:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_font("sfsi_form_field_font", $option8['sfsi_form_field_font']); ?>
 
@@ -520,7 +522,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Font style:</label>
+                        <label><?php _e("Font style:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_fontstyle("sfsi_form_field_fontstyle", $option8['sfsi_form_field_fontstyle']); ?>
 
@@ -558,7 +560,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Alignment:</label>
+                        <label class="sfsi_same_width"><?php _e("Alignment:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_alignment("sfsi_form_field_fontalign", $option8['sfsi_form_field_fontalign']); ?>
 
@@ -566,13 +568,13 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Font size:</label>
+                        <label><?php _e("Font size:",'ultimate-social-media-icons') ?></label>
 
                         <input type="text" class="small rec-inp" name="sfsi_form_field_fontsize" value="<?php echo ($option8['sfsi_form_field_fontsize'] != '')
 
                                                                                                             ? $option8['sfsi_form_field_fontsize'] : ''; ?>" />
 
-                        <span class="pix">pixels</span>
+                        <span class="pix"><?php _e("pixels",'ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -588,7 +590,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
         <div class="sfsi_tab8_subcontainer">
 
-            <h5 class="sfsi_section_subtitle">Subscribe button</h5>
+            <h5 class="sfsi_section_subtitle"><?php _e("Subscribe button",'ultimate-social-media-icons') ?></h5>
 
             <!--Left Section-->
 
@@ -604,7 +606,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                 <div class="row_tab">
 
-                    <label class="sfsi_heding fixwidth sfsi_same_width">Text:</label>
+                    <label class="sfsi_heding fixwidth sfsi_same_width"><?php _e("Text:",'ultimate-social-media-icons') ?></label>
 
                     <div class="sfsi_field">
 
@@ -624,7 +626,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Font:</label>
+                        <label class="sfsi_same_width"><?php _e("Font:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_font("sfsi_form_button_font", $option8['sfsi_form_button_font']); ?>
 
@@ -632,7 +634,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Font style:</label>
+                        <label><?php _e("Font style:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_fontstyle("sfsi_form_button_fontstyle", $option8['sfsi_form_button_fontstyle']); ?>
 
@@ -646,7 +648,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Font color:</label>
+                     <label class="sfsi_same_width"><?php _e("Font color:",'ultimate-social-media-icons') ?></label>
 
                         <div class="sfsi_field" style="padding-top:0px;">
 
@@ -672,13 +674,13 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label>Font size:</label>
+                        <label><?php _e("Font size",'ultimate-social-media-icons') ?>:</label>
 
                         <input type="text" class="small rec-inp" name="sfsi_form_button_fontsize" value="<?php echo ($option8['sfsi_form_button_fontsize'] != '')
 
                                                                                                                 ? $option8['sfsi_form_button_fontsize'] : ''; ?>" />
 
-                        <span class="pix">pixels</span>
+                        <span class="pix"><?php _e("pixels",'ultimate-social-media-icons') ?></span>
 
                     </div>
 
@@ -690,7 +692,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Alignment:</label>
+                        <label class="sfsi_same_width"><?php _e("Alignment:",'ultimate-social-media-icons') ?></label>
 
                         <?php sfsi_get_alignment("sfsi_form_button_fontalign", $option8['sfsi_form_button_fontalign']); ?>
 
@@ -704,7 +706,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
                     <div class="sfsi_field">
 
-                        <label class="sfsi_same_width">Button color:</label>
+                        <label class="sfsi_same_width"><?php _e("Button color:",'ultimate-social-media-icons') ?></label>
 
                         <div class="sfsi_field">
 
@@ -740,7 +742,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
         <div class="row_tab">
 
-            <p><b>New:</b> In the Premium Plugin you can choose to display the text on subscribe form in a font already present in your theme.</b> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=subscribe_form_note&utm_medium=link" target="_blank" style="color:#00a0d2 !important; text-decoration: none !important;">Check it out.</a></p>
+            <p><b><?php _e("New:",'ultimate-social-media-icons') ?></b><?php _e("In the Premium Plugin you can choose to display the text on subscribe form in a font already present in your theme.",'ultimate-social-media-icons') ?> </b> <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=subscribe_form_note&utm_medium=link" target="_blank" style="color:#00a0d2 !important; text-decoration: none !important;"><?php _e("Check it out.",'ultimate-social-media-icons') ?></a></p>
 
         </div>
 
@@ -766,7 +768,7 @@ $option8['sfsi_form_button_background'] = (isset($option8['sfsi_form_button_back
 
     <!-- END SAVE BUTTON SECTION   -->
 
-    <a class="sfsiColbtn closeSec" href="javascript:;">Collapse area</a>
+    <a class="sfsiColbtn closeSec" href="javascript:;"><?php _e("Collapse area",'ultimate-social-media-icons') ?></a>
 
     <label class="closeSec"></label>
 
@@ -820,41 +822,41 @@ function sfsi_get_font($name, $value)
 
         <option value="Arial, Helvetica, sans-serif" <?php echo isSeletcted("Arial, Helvetica, sans-serif", $value) ?>>
 
-            Arial
+            <?php _e("Arial",'ultimate-social-media-icons') ?>
 
         </option>
 
         <option value="Arial Black, Gadget, sans-serif" <?php echo isSeletcted("Arial Black, Gadget, sans-serif", $value) ?>>
 
-            Arial Black
+            <?php _e("Arial Black",'ultimate-social-media-icons') ?>
 
         </option>
 
-        <option value="Calibri" <?php echo isSeletcted("Calibri", $value) ?>>Calibri</option>
+        <option value="Calibri" <?php echo isSeletcted("Calibri", $value) ?>><?php _e("Calibri",'ultimate-social-media-icons') ?></option>
 
-        <option value="Comic Sans MS" <?php echo isSeletcted("Comic Sans MS", $value) ?>>Comic Sans MS</option>
+        <option value="Comic Sans MS" <?php echo isSeletcted("Comic Sans MS", $value) ?>><?php _e("Comic Sans MS",'ultimate-social-media-icons') ?></option>
 
-        <option value="Courier New" <?php echo isSeletcted("Courier New", $value) ?>>Courier New</option>
+        <option value="Courier New" <?php echo isSeletcted("Courier New", $value) ?>><?php _e("Courier New",'ultimate-social-media-icons') ?></option>
 
-        <option value="Georgia" <?php echo isSeletcted("Georgia", $value) ?>>Georgia</option>
+        <option value="Georgia" <?php echo isSeletcted("Georgia", $value) ?>><?php _e("Georgia",'ultimate-social-media-icons') ?></option>
 
         <option value="Helvetica,Arial,sans-serif" <?php echo isSeletcted("Helvetica,Arial,sans-serif", $value) ?>>
 
-            Helvetica
+            <?php _e("Helvetica",'ultimate-social-media-icons') ?>
 
         </option>
 
-        <option value="Impact" <?php echo isSeletcted("Impact", $value) ?>>Impact</option>
+        <option value="Impact" <?php echo isSeletcted("Impact", $value) ?>><?php _e("Impact",'ultimate-social-media-icons') ?></option>
 
-        <option value="Lucida Console" <?php echo isSeletcted("Lucida Console", $value) ?>>Lucida Console</option>
+        <option value="Lucida Console" <?php echo isSeletcted("Lucida Console", $value) ?>><?php _e("Lucida Console",'ultimate-social-media-icons') ?></option>
 
-        <option value="Tahoma,Geneva" <?php echo isSeletcted("Tahoma,Geneva", $value) ?>>Tahoma</option>
+        <option value="Tahoma,Geneva" <?php echo isSeletcted("Tahoma,Geneva", $value) ?>><?php _e("Tahoma",'ultimate-social-media-icons') ?></option>
 
-        <option value="Times New Roman" <?php echo isSeletcted("Times New Roman", $value) ?>>Times New Roman</option>
+        <option value="Times New Roman" <?php echo isSeletcted("Times New Roman", $value) ?>><?php _e("Times New Roman",'ultimate-social-media-icons') ?></option>
 
-        <option value="Trebuchet MS" <?php echo isSeletcted("Trebuchet MS", $value) ?>>Trebuchet MS</option>
+        <option value="Trebuchet MS" <?php echo isSeletcted("Trebuchet MS", $value) ?>><?php _e("Trebuchet MS",'ultimate-social-media-icons') ?></option>
 
-        <option value="Verdana" <?php echo isSeletcted("Verdana", $value) ?>>Verdana</option>
+        <option value="Verdana" <?php echo isSeletcted("Verdana", $value) ?>><?php _e("Verdana",'ultimate-social-media-icons') ?></option>
 
     </select>
 
@@ -870,15 +872,15 @@ function sfsi_get_fontstyle($name, $value)
 
     <select name="<?php echo $name; ?>" id="<?php echo $name; ?>" class="select-same">
 
-        <option value="normal" <?php echo isSeletcted("normal", $value) ?>>Normal</option>
+        <option value="normal" <?php echo isSeletcted("normal", $value) ?>><?php _e("Normal",'ultimate-social-media-icons') ?></option>
 
-        <option value="inherit" <?php echo isSeletcted("inherit", $value) ?>>Inherit</option>
+        <option value="inherit" <?php echo isSeletcted("inherit", $value) ?>><?php _e("Inherit",'ultimate-social-media-icons') ?></option>
 
-        <option value="oblique" <?php echo isSeletcted("oblique", $value) ?>>Oblique</option>
+        <option value="oblique" <?php echo isSeletcted("oblique", $value) ?>><?php _e("Oblique",'ultimate-social-media-icons') ?></option>
 
-        <option value="italic" <?php echo isSeletcted("italic", $value) ?>>Italic</option>
+        <option value="italic" <?php echo isSeletcted("italic", $value) ?>><?php _e("Italic",'ultimate-social-media-icons') ?></option>
 
-        <option value="bold" <?php echo isSeletcted("bold", $value) ?>>Bold</option>
+        <option value="bold" <?php echo isSeletcted("bold", $value) ?>><?php _e("Bold",'ultimate-social-media-icons') ?></option>
 
     </select>
 
@@ -894,11 +896,11 @@ function sfsi_get_alignment($name, $value)
 
     <select name="<?php echo $name; ?>" id="<?php echo $name; ?>" class="select-same">
 
-        <option value="left" <?php echo isSeletcted("left", $value) ?>>Left Align</option>
+        <option value="left" <?php echo isSeletcted("left", $value) ?>><?php _e("Left Align",'ultimate-social-media-icons') ?></option>
 
-        <option value="center" <?php echo isSeletcted("center", $value) ?>>Centered</option>
+        <option value="center" <?php echo isSeletcted("center", $value) ?>><?php _e("Centered",'ultimate-social-media-icons') ?></option>
 
-        <option value="right" <?php echo isSeletcted("right", $value) ?>>Right Align</option>
+        <option value="right" <?php echo isSeletcted("right", $value) ?>><?php _e("Right Align",'ultimate-social-media-icons') ?></option>
 
     </select>
 
@@ -920,7 +922,7 @@ function get_sfsiSubscriptionForm($hglht = null)
 
             <h5 <?php if ($hglht == "h5") {
                     echo 'class="sfsi_highlight"';
-                } ?>>Get new posts by email:</h5>
+                } ?>><?php _e("Get new posts by email:",'ultimate-social-media-icons') ?></h5>
 
             <div class="sfsi_subscription_form_field">
 

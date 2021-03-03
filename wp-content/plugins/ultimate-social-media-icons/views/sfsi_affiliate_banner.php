@@ -4,7 +4,7 @@
 .tab11 img{min-height: 150px;min-width: 150px;margin-left: auto;margin-right: auto;text-align: center;display: table-cell;vertical-align: middle;}	
 </style>
 <div id="accordion2">
-    <h3><span>$</span>Share the premium plugin and earn 40% of the purchase price!</h3>
+    <h3><span>$</span><?php _e("Share the premium plugin and earn 40% of the purchase price!",'ultimate-social-media-icons') ?></h3>
     <!-- Affiliate banner html start here -->
 
     <div class="tab11">	

@@ -24,11 +24,11 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                 <input name="sfsi_icons_float" <?php echo ($option9['sfsi_icons_float']=='yes') ?  'checked="true"' : '' ;?>  type="checkbox" value="yes" class="styled" />
 
-                <p><span class="sfsi_toglepstpgspn">Floating over your website's pages</span></p>
+                <p><span class="sfsi_toglepstpgspn"><?php _e("Floating over your website's pages",'ultimate-social-media-icons') ?></span></p>
             </div>
 
 			<div class="sfsi_right_info" <?php echo 'style="'.$style.'"';?>>
-                <p><span style="margin-left: 31px;">Define the location:</span></p>
+            <p><span style="margin-left: 31px;"><?php _e("Define the location:",'ultimate-social-media-icons') ?></span></p>
 
                 <div class="sfsi_tab_3_icns">
 
@@ -44,7 +44,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                                 <input name="sfsi_icons_floatPosition" <?php echo ( $option9['sfsi_icons_floatPosition']=='top-left') ?  'checked="true"' : '' ;?> type="radio" value="top-left" class="styled"  />
 
-                                <span class="sfsi_flicnsoptn3 sfsioptntl">Top left</span>
+                                <span class="sfsi_flicnsoptn3 sfsioptntl"><?php _e("Top left",'ultimate-social-media-icons') ?></span>
 
                                 <label><img src="<?php echo SFSI_PLUGURL;?>images/top_left.png" alt='error'/></label>
 
@@ -58,7 +58,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                                 
 
-                                <span class="sfsi_flicnsoptn3 sfsioptncl">Center top</span>
+                                <<span class="sfsi_flicnsoptn3 sfsioptncl"><?php _e("Center top",'ultimate-social-media-icons') ?></span>
 
                                 <label class="sfsi_float_position_icon_label"><img src="<?php echo SFSI_PLUGURL;?>images/float_position_icon.png" alt='error'/></label>
 
@@ -70,7 +70,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                                 <input name="sfsi_icons_floatPosition" <?php echo ( $option9['sfsi_icons_floatPosition']=='top-right') ?  'checked="true"' : '' ;?> type="radio" value="top-right" class="styled"  />
 
-                                <span class="sfsi_flicnsoptn3 sfsioptntr">Top right</span>
+                                <span class="sfsi_flicnsoptn3 sfsioptntr"><?php _e("Top right",'ultimate-social-media-icons') ?></span>
 
                                 <label><img src="<?php echo SFSI_PLUGURL;?>images/top_right.png" alt='error' /></label>
 
@@ -86,7 +86,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                                 
 
-                                <span class="sfsi_flicnsoptn3 sfsioptncl">Center left</span>
+                                <span class="sfsi_flicnsoptn3 sfsioptncl"><?php _e("Center left",'ultimate-social-media-icons') ?></span>
 
                                 <label><img src="<?php echo SFSI_PLUGURL;?>images/center_left.png" alt='error'/></label>
 
@@ -100,9 +100,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                                 <input name="sfsi_icons_floatPosition" <?php echo ( $option9['sfsi_icons_floatPosition']=='center-right') ?  'checked="true"' : '' ;?> type="radio" value="center-right" class="styled"  />
 
-                                
-
-                                <span class="sfsi_flicnsoptn3 sfsioptncr">Center right</span>
+                                <span class="sfsi_flicnsoptn3 sfsioptncr"><?php _e("Center right",'ultimate-social-media-icons') ?></span>
 
                                 <label><img src="<?php echo SFSI_PLUGURL;?>images/center_right.png" alt='error'/></label>
 
@@ -118,7 +116,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                                 <input name="sfsi_icons_floatPosition" <?php echo ( $option9['sfsi_icons_floatPosition']=='bottom-left') ?  'checked="true"' : '' ;?> type="radio" value="bottom-left" class="styled"  />
 
-                                <span class="sfsi_flicnsoptn3 sfsioptnbl">Bottom left</span>
+                                <span class="sfsi_flicnsoptn3 sfsioptnbl"><?php _e("Bottom left",'ultimate-social-media-icons') ?></span>
 
                                 <label><img src="<?php echo SFSI_PLUGURL;?>images/bottom_left.png" alt='error'alt='error'/></label>
 
@@ -132,7 +130,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                             
 
-                            <span class="sfsi_flicnsoptn3 sfsioptncr">Center bottom</span>
+                            <span class="sfsi_flicnsoptn3 sfsioptncr"><?php _e("Center bottom",'ultimate-social-media-icons') ?></span>
 
                             <label class="sfsi_float_position_icon_label sfsi_center_botttom"><img class="sfsi_img_center_bottom" src="<?php echo SFSI_PLUGURL;?>images/float_position_icon.png" alt='error'/></label>
 
@@ -144,7 +142,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                             
 
-                            <span class="sfsi_flicnsoptn3 sfsioptnbr">Bottom right</span>
+                            <span class="sfsi_flicnsoptn3 sfsioptnbr"><?php _e("Bottom right",'ultimate-social-media-icons') ?></span>
 
                             <label><img src="<?php echo SFSI_PLUGURL;?>images/bottom_right.png" alt='error'/></label>
 
@@ -160,59 +158,58 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                     	
 
-                        <h4 style="color: #5a6570 !important;font-family: 'helveticaneue-light';">Margin From: </h4>
+                    <h4 style="color: #5a6570 !important;font-family: 'helveticaneue-light';"><?php _e("Margin From:",'ultimate-social-media-icons') ?> </h4>
 
-                        <ul class="sfsi_floaticon_margin_sec">
+                    <ul class="sfsi_floaticon_margin_sec">
 
-                            
+                                                
+                        <li>
 
-                            <li>
+                            <label><?php _e("Top:",'ultimate-social-media-icons') ?></label>                                
 
-                                <label>Top:</label>                                
+                            <input name="sfsi_icons_floatMargin_top" type="text" value="<?php echo ($option9['sfsi_icons_floatMargin_top']!='') ?  $option9['sfsi_icons_floatMargin_top'] : '' ;?>" />
 
-                                <input name="sfsi_icons_floatMargin_top" type="text" value="<?php echo ($option9['sfsi_icons_floatMargin_top']!='') ?  $option9['sfsi_icons_floatMargin_top'] : '' ;?>" />
+                            <ins><?php _e("Pixels",'ultimate-social-media-icons') ?></ins>
 
-                                <ins>Pixels</ins>
+                        </li>
 
-                            </li>
 
-                            
 
-                            <li>
+                        <li>
 
-                                <label>Bottom:</label>
+                            <label><?php _e("Bottom:",'ultimate-social-media-icons') ?></label>
 
-                                <input name="sfsi_icons_floatMargin_bottom" type="text" value="<?php echo ($option9['sfsi_icons_floatMargin_bottom'] != '') ?  $option9['sfsi_icons_floatMargin_bottom'] : '' ;?>" />
+                            <input name="sfsi_icons_floatMargin_bottom" type="text" value="<?php echo ($option9['sfsi_icons_floatMargin_bottom'] != '') ?  $option9['sfsi_icons_floatMargin_bottom'] : '' ;?>" />
 
-                                <ins>Pixels</ins>
+                            <ins><?php _e("Pixels",'ultimate-social-media-icons') ?></ins>
 
-                            </li>
+                        </li>
 
-                       
 
-                            <li>
 
-                                <label>Left:</label>
+                        <li>
 
-                                <input name="sfsi_icons_floatMargin_left" type="text" value="<?php echo ($option9['sfsi_icons_floatMargin_left']!='') ?  $option9['sfsi_icons_floatMargin_left'] : '' ;?>" />
+                            <label><?php _e("Left:",'ultimate-social-media-icons') ?></label>
 
-                               <ins>Pixels</ins>
+                            <input name="sfsi_icons_floatMargin_left" type="text" value="<?php echo ($option9['sfsi_icons_floatMargin_left']!='') ?  $option9['sfsi_icons_floatMargin_left'] : '' ;?>" />
 
-                            </li>
+                        <ins><?php _e("Pixels",'ultimate-social-media-icons') ?></ins>
 
-                            
+                        </li>
 
-                            <li>
 
-                                <label>Right:</label>
 
-                                <input name="sfsi_icons_floatMargin_right" type="text" value="<?php echo ($option9['sfsi_icons_floatMargin_right']!='') ?  $option9['sfsi_icons_floatMargin_right'] : '' ;?>" />
+                        <li>
 
-                                <ins>Pixels</ins>
+                            <label><?php _e("Right:",'ultimate-social-media-icons') ?></label>
 
-                            </li>
+                            <input name="sfsi_icons_floatMargin_right" type="text" value="<?php echo ($option9['sfsi_icons_floatMargin_right']!='') ?  $option9['sfsi_icons_floatMargin_right'] : '' ;?>" />
 
-                        </ul>
+                            <ins><?php _e("Pixels",'ultimate-social-media-icons') ?></ins>
+
+                        </li>
+
+                    </ul>
 
                     </div>
 
@@ -222,8 +219,19 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                         <p style="line-height: 34px;">
 
-                            The icons will be floating on your page. If you want them <b>"sticky"</b>, please check out the <a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/"><b>Premium Plugin</b></a>. Also in the Premium Plugin you can show the icons <b>vertically</b>, and give them <b>different settings for mobile.</b> 
-
+                            <?php 
+                                    printf(
+                                        __( 'The icons will be floating on your page. If you want them  %1s "sticky" %2s , please check out the %3s Premium Plugin %4s . Also in the Premium Plugin you can show the icons %5s vertically %6s , and give them  %7s different settings for mobile. %8s','ultimate-social-media-icons' ),
+                                    '<b>',   
+                                    '</b>',
+                                        '<a target="_blank" href="https://www.ultimatelysocial.com/usm-premium/"><b>',
+                                        '</b></a>',
+                                        '<b>',
+                                        '</b>',
+                                        '<b>',
+                                        ' </b>'
+                                    );
+                            ?>
                         </p>
 
                     </div>
@@ -232,7 +240,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                         
 
-                        <h4>Want to disable the floating icons on mobile?</h4>
+                        <h4><?php _e("Want to disable the floating icons on mobile?",'ultimate-social-media-icons') ?></h4>
 
                         <ul class="sfsi_make_icons sfsi_plus_mobile_float">
 
@@ -240,7 +248,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                                 <input name="sfsi_disable_floaticons" <?php echo ( $option9['sfsi_disable_floaticons']=='yes') ?  'checked="true"' : '' ;?> type="radio" value="yes" class="styled"  />
 
-                                <span class="sfsi_flicnsoptn3">Yes</span>
+                                <span class="sfsi_flicnsoptn3"><?php _e("Yes",'ultimate-social-media-icons') ?></span>
 
                             </li>
 
@@ -248,7 +256,7 @@ $style                                    =  ($option9['sfsi_icons_float'] == "y
 
                                 <input name="sfsi_disable_floaticons" <?php echo ( $option9['sfsi_disable_floaticons']=='no') ?  'checked="true"' : '' ;?> type="radio" value="no" class="styled"/>
 
-                                <span class="sfsi_flicnsoptn3">No</span>
+                                <span class="sfsi_flicnsoptn3"><?php _e("No",'ultimate-social-media-icons') ?></span>
 
                             </li>
 

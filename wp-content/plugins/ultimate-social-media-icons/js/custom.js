@@ -270,6 +270,8 @@ SFSI(document).ready(function (s) {
                     SFSI(this).parent().parent().parent().parent().siblings("li").find("div.sfsi_wicons").find(".inerCnt").find("div.sfsi_tool_tip_2").hide()),
                 SFSI(this).parent().parent().parent().css("z-index", "1000000"), SFSI(this).parent().parent().css({
                     "z-index": "999"
+                }), SFSI(this).parent().css({
+                    "opacity": "1"
                 }), SFSI(this).attr("data-effect") && "fade_in" == SFSI(this).attr("data-effect") && (SFSI(this).parentsUntil("div").siblings("div.sfsi_tool_tip_2").css({
                     opacity: 1,
                     "z-index": 10
@@ -297,7 +299,8 @@ SFSI(document).ready(function (s) {
             SFSI(this).children("div.inerCnt").children("a.sficn").attr("data-effect") && "fade_in" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("data-effect") && SFSI(this).children("div.inerCnt").find("a.sficn").css("opacity", "0.6"),
                 SFSI(this).children("div.inerCnt").children("a.sficn").attr("data-effect") && "scale" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("data-effect") && SFSI(this).children("div.inerCnt").find("a.sficn").removeClass("scale"),
                 SFSI(this).children("div.inerCnt").children("a.sficn").attr("data-ffect") && "combo" == SFSI(this).children("div.inerCnt").children("a.sficn").attr("data-effect") /*  && SFSI(this).children("div.inerCnt").find("a.sficn").css("opacity", "0.6"), */
-            SFSI(this).parent("div").find("div.sfsi_tool_tip_2").css("display", "none");
+            SFSI(this).parent("div").find("div.sfsi_tool_tip_2").css("display", "none"),
+            SFSI(this).parent("div").find("div.sfsi_tool_tip_2").css("opacity", "0");
         }), SFSI("body").on("click", function () {
             SFSI(".inerCnt").find("div.sfsi_tool_tip_2").hide();
         }), SFSI(".adminTooltip >a").on("hover", function () {

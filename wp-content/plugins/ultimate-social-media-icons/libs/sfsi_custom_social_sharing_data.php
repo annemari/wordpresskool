@@ -126,7 +126,7 @@ function sfsi_social_media_metabox( $post ) { ?>
 
         <div class="sfsi_custom_social_data_container">
 
-            <div class="imgTopTxt"><?php _e('<strong>Picture </strong>(For social media sharing)',SFSI_DOMAIN); ?>
+            <div class="imgTopTxt"><?php _e('<strong>Picture </strong>(For social media sharing)','ultimate-social-media-icons'); ?>
             </div>
 
             <div class="imgContainer imgpicker">
@@ -149,7 +149,7 @@ function sfsi_social_media_metabox( $post ) { ?>
                 <div class="sfsi_custom_social_data_title">
 
                     <div class="imgTopTxt">
-                        <?php _e('<strong>Title </strong>(leave blank to use the post title)',SFSI_DOMAIN); ?></div>
+                        <?php _e('<strong>Title </strong>(leave blank to use the post title)','ultimate-social-media-icons'); ?></div>
 
                     <div class="social_title"><textarea readonly class="sfsi_textarea"
                             maxlength="95"></textarea>
@@ -157,12 +157,12 @@ function sfsi_social_media_metabox( $post ) { ?>
 
                     <div class="social_description">
                         <div style="padding-right: 15px;">
-                        <?php _e('This title will be used when shared on Facebook, Linkedin and WhatsApp. Leave it blank to use the post title. [Developers: this is used by the open graph meta tag «og:title»]',SFSI_DOMAIN); ?>
+                        <?php _e('This title will be used when shared on Facebook, Linkedin and WhatsApp. Leave it blank to use the post title. [Developers: this is used by the open graph meta tag «og:title»]','ultimate-social-media-icons'); ?>
                         </div>
                     </div>
 
                     <div class="remaining_char_box" class="sfsi-remaining_char_title">
-                        <?php _e('<span id="sfsi_title_remaining_char">95</span> Characters Remaining',SFSI_DOMAIN);?>
+                        <?php _e('<span id="sfsi_title_remaining_char">95</span> Characters Remaining','ultimate-social-media-icons');?>
                     </div>
                 </div>
 
@@ -173,7 +173,7 @@ function sfsi_social_media_metabox( $post ) { ?>
                 <div class="sfsi_custom_social_data_description">
 
                     <div class="imgTopTxt">
-                        <?php _e('<strong>Description </strong>(leave blank to use the post exerpt)',SFSI_DOMAIN); ?>
+                        <?php _e('<strong>Description </strong>(leave blank to use the post exerpt)','ultimate-social-media-icons'); ?>
                     </div>
 
                     <div class="social_description_container"><textarea  readonly 
@@ -182,11 +182,11 @@ function sfsi_social_media_metabox( $post ) { ?>
                     </div>
                     <div style="display: flex;justify-content: space-between;">
                         <div class="social_description_hint">
-                            <?php _e('This description will be used when shared on Facebook, Linkedin, Twitter and WhatsApp (if you use ‘Twitter cards’). Leave it blank to use the post excerpt. [Developers: this is used by the open graph meta tag «og:description»]',SFSI_DOMAIN); ?>
+                            <?php _e('This description will be used when shared on Facebook, Linkedin, Twitter and WhatsApp (if you use ‘Twitter cards’). Leave it blank to use the post excerpt. [Developers: this is used by the open graph meta tag «og:description»]','ultimate-social-media-icons'); ?>
                         </div>
 
                         <div class="remaining_char_box">
-                            <?php _e('<span id="sfsi_desc_remaining_char">297</span> Characters Remaining',SFSI_DOMAIN);?>
+                            <?php _e('<span id="sfsi_desc_remaining_char">297</span> Characters Remaining','ultimate-social-media-icons');?>
                         </div>
                     </div>
                     <?php //sfsi_social_image_issues_support_link(); ?>
@@ -204,7 +204,7 @@ function sfsi_social_media_metabox( $post ) { ?>
 
         <div class="sfsi_custom_social_data_container">
 
-            <div class="imgTopTxt"><?php _e('<strong>Picture </strong>(For social media sharing)',SFSI_DOMAIN); ?></div>
+            <div class="imgTopTxt"><?php _e('<strong>Picture </strong>(For social media sharing)','ultimate-social-media-icons'); ?></div>
 
             <div class="imgContainer imgpicker">
 
@@ -218,7 +218,7 @@ function sfsi_social_media_metabox( $post ) { ?>
             </div>
 
             <div class="imgUploadBtn"><input  readonly disable type="button" disable class="button sfsi-post-meta-btn"
-                    value="<?php _e($uploadBtnTitle,SFSI_DOMAIN); ?>" /></div>
+                    value="<?php _e($uploadBtnTitle,'ultimate-social-media-icons'); ?>" /></div>
         </div>
 
         <!--********************************** Image for PINTEREST CLOSES ***********************************************-->
@@ -230,7 +230,7 @@ function sfsi_social_media_metabox( $post ) { ?>
                 <!--********************************** DESCRIPTION for PINTEREST STARTS ***********************************************-->
                 <div class="sfsi_custom_social_data_title">
                     <div class="imgTopTxt">
-                        <?php _e('<strong>Pinterest description </strong>(leave blank to use the post title)',SFSI_DOMAIN); ?>
+                        <?php _e('<strong>Pinterest description </strong>(leave blank to use the post title)','ultimate-social-media-icons'); ?>
                     </div>
 
                     <div class="social_title"><textarea readonly class="sfsi_textarea"
@@ -238,7 +238,7 @@ function sfsi_social_media_metabox( $post ) { ?>
 
                     <div class="social_description">
                         <div style="padding-right: 15px;">
-                            <?php _e('This description will be used when this post is shared on Pinterest. Leave it blank to use the post title.',SFSI_DOMAIN); ?>
+                            <?php _e('This description will be used when this post is shared on Pinterest. Leave it blank to use the post title.','ultimate-social-media-icons'); ?>
                         </div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@ function sfsi_social_media_metabox( $post ) { ?>
 
                 <div class="sfsi_custom_social_data_description">
 
-                    <div class="imgTopTxt"><?php _e('<strong>Tweet </strong>',SFSI_DOMAIN); ?></div>
+                    <div class="imgTopTxt"><?php _e('<strong>Tweet </strong>','ultimate-social-media-icons'); ?></div>
 
                     <div class="social_description_container"><textarea  readonly
                             class="sfsi_textarea"name
@@ -257,11 +257,11 @@ function sfsi_social_media_metabox( $post ) { ?>
 
                     <div style="display: flex;justify-content: space-between;">
                         <div class="social_description_hint">
-                            <?php _e('This will be used as tweet-text (the link which get shared will be automatically the added at the end). If you don’t enter anything here the tweet text will be used which you defined globally under question 6 on the plugin’s settings page. ',SFSI_DOMAIN); ?>
+                            <?php _e('This will be used as tweet-text (the link which get shared will be automatically the added at the end). If you don’t enter anything here the tweet text will be used which you defined globally under question 6 on the plugin’s settings page. ','ultimate-social-media-icons'); ?>
                         </div>
 
                         <div class="remaining_char_box" id="remaining_twiter_char_description">
-                            <?php _e('<span id="sfsi_twitter_desc_remaining_char">106</span> Characters Remaining',SFSI_DOMAIN);?>
+                            <?php _e('<span id="sfsi_twitter_desc_remaining_char">106</span> Characters Remaining','ultimate-social-media-icons');?>
                         </div>
                     </div>
                     <?php //sfsi_social_image_issues_support_link(); ?>

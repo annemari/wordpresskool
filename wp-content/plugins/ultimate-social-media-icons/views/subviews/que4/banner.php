@@ -72,7 +72,7 @@
 <div class="sf_si_our_prmium_plugin-add">
 
     <div class="sf_si_prmium_head">
-        <h2>New: <span>In our Premium Plugin we added:</span></h2>
+        <h2><?php _e("New:",'ultimate-social-media-icons') ?> <span><?php _e("In our Premium Plugin we added:",'ultimate-social-media-icons') ?></span></h2>
     </div>
 
     <?php
@@ -125,7 +125,7 @@
     <?php endforeach; ?>
 
     <div class="row">
-        <a class="banner_view_more" target="_blank" href="<?php echo $hrefViewMore; ?>">View more</a>
+        <a class="banner_view_more" target="_blank" href="<?php echo $hrefViewMore; ?>"><?php _e("View more",'ultimate-social-media-icons') ?> </a>
     </div>
 
     <?php } ?>
@@ -141,6 +141,6 @@
     </div>
 
     <div class="row sf_si_all_features_premium">
-        <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_icons_designs&utm_medium=banner" target="_blank">See all features Premium Plugin</a>
+        <a href="https://www.ultimatelysocial.com/usm-premium/?utm_source=usmi_settings_page&utm_campaign=more_icons_designs&utm_medium=banner" target="_blank"><?php _e("See all features Premium Plugin",'ultimate-social-media-icons') ?> </a>
     </div>
 </div>
