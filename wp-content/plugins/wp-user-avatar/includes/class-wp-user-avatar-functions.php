@@ -440,6 +440,8 @@ class WP_User_Avatar_Functions {
        $alt = apply_filters('wpua_default_alt_tag',__("Avatar",'wp-user-avatar'));
     }
 
+    $alt = esc_attr($alt);
+    $size = esc_attr($size);
 
      $avatar = str_replace('gravatar_default','',$avatar);
     if(is_object($id_or_email)) {
@@ -625,6 +627,11 @@ class WP_User_Avatar_Functions {
         $alt = $user->display_name;
       }
     }
+
+
+    $alt = esc_attr($alt);
+    $size = esc_attr($size);
+
     // Checks if user has WPUA
     $wpua_meta = get_the_author_meta($wpdb->get_blog_prefix($blog_id).'user_avatar', $email);
     // Add alignment class
