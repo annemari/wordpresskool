@@ -1,4 +1,4 @@
-/*! elementor - v3.1.0 - 24-01-2021 */
+/*! elementor - v3.1.2 - 02-03-2021 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["video"],{
 
 /***/ "../assets/dev/js/frontend/handlers/video.js":
@@ -82,10 +82,15 @@ var Video = /*#__PURE__*/function (_elementorModules$fro) {
   }, {
     key: "handleVideo",
     value: function handleVideo() {
-      if (!this.getElementSettings('lightbox')) {
-        this.elements.$imageOverlay.remove();
-        this.playVideo();
-      }
+      var _this = this;
+
+      this.apiProvider.onApiReady(function (apiObject) {
+        if (!_this.getElementSettings('lightbox')) {
+          _this.elements.$imageOverlay.remove();
+
+          _this.prepareYTVideo(apiObject, true);
+        }
+      });
     }
   }, {
     key: "playVideo",
@@ -131,7 +136,7 @@ var Video = /*#__PURE__*/function (_elementorModules$fro) {
   }, {
     key: "prepareYTVideo",
     value: function prepareYTVideo(YT, onOverlayClick) {
-      var _this = this;
+      var _this2 = this;
 
       var elementSettings = this.getElementSettings(),
           playerOptions = {
@@ -139,16 +144,16 @@ var Video = /*#__PURE__*/function (_elementorModules$fro) {
         events: {
           onReady: function onReady() {
             if (elementSettings.mute) {
-              _this.youtubePlayer.mute();
+              _this2.youtubePlayer.mute();
             }
 
             if (elementSettings.autoplay || onOverlayClick) {
-              _this.youtubePlayer.playVideo();
+              _this2.youtubePlayer.playVideo();
             }
           },
           onStateChange: function onStateChange(event) {
             if (event.data === YT.PlayerState.ENDED && elementSettings.loop) {
-              _this.youtubePlayer.seekTo(elementSettings.start || 0);
+              _this2.youtubePlayer.seekTo(elementSettings.start || 0);
             }
           }
         },
@@ -161,11 +166,11 @@ var Video = /*#__PURE__*/function (_elementorModules$fro) {
           start: elementSettings.start,
           end: elementSettings.end
         }
-      };
+      }; // To handle CORS issues, when the default host is changed, the origin parameter has to be set.
 
       if (elementSettings.yt_privacy) {
         playerOptions.host = 'https://www.youtube-nocookie.com';
-        playerOptions.playerVars.origin = window.location.hostname;
+        playerOptions.origin = window.location.hostname;
       }
 
       this.youtubePlayer = new YT.Player(this.elements.$video[0], playerOptions);
@@ -178,7 +183,7 @@ var Video = /*#__PURE__*/function (_elementorModules$fro) {
   }, {
     key: "onInit",
     value: function onInit() {
-      var _this2 = this;
+      var _this3 = this;
 
       (0, _get2.default)((0, _getPrototypeOf2.default)(Video.prototype), "onInit", this).call(this);
       var elementSettings = this.getElementSettings();
@@ -193,11 +198,45 @@ var Video = /*#__PURE__*/function (_elementorModules$fro) {
 
       if (!this.videoID) {
         return;
+      } // If the user is using an image overlay, loading the API happens on overlay click instead of on init.
+
+
+      if (elementSettings.show_image_overlay && elementSettings.image_overlay.url) {
+        return;
       }
 
-      this.apiProvider.onApiReady(function (apiObject) {
-        return _this2.prepareYTVideo(apiObject);
-      });
+      if (elementSettings.lazy_load) {
+        this.intersectionObserver = elementorModules.utils.Scroll.scrollObserver({
+          callback: function callback(event) {
+            if (event.isInViewport) {
+              _this3.intersectionObserver.unobserve(_this3.elements.$video.parent()[0]);
+
+              _this3.apiProvider.onApiReady(function (apiObject) {
+                return _this3.prepareYTVideo(apiObject);
+              });
+            }
+          }
+        }); // We observe the parent, since the video container has a height of 0.
+
+        this.intersectionObserver.observe(this.elements.$video.parent()[0]);
+        return;
+      } // When Optimized asset loading is set to off, the video type is set to 'Youtube', and 'Privacy Mode' is set
+      // to 'On', there might be a conflict with other videos that are loaded WITHOUT privacy mode, such as a
+      // video bBackground in a section. In these cases, to avoid the conflict, a timeout is added to postpone the
+      // initialization of the Youtube API object.
+
+
+      if (!elementorFrontend.config.experimentalFeatures['e_optimized_assets_loading']) {
+        setTimeout(function () {
+          _this3.apiProvider.onApiReady(function (apiObject) {
+            return _this3.prepareYTVideo(apiObject);
+          });
+        }, 0);
+      } else {
+        this.apiProvider.onApiReady(function (apiObject) {
+          return _this3.prepareYTVideo(apiObject);
+        });
+      }
     }
   }, {
     key: "onElementChange",
@@ -358,4 +397,4 @@ __webpack_require__(/*! ./_fix-re-wks */ "../node_modules/core-js/modules/_fix-r
 /***/ })
 
 }]);
-//# sourceMappingURL=video.dce2e6c0483ecadec74b.bundle.js.map
+//# sourceMappingURL=video.4867cd778fc28aa3d2f9.bundle.js.map

@@ -1838,13 +1838,15 @@ body.elementor-page .elementor-widget-menu-anchor {
     justify-content: var(--justify-content, center);
     justify-items: var(--justify-content, center); }
 
-.elementor-social-icon {
-  display: inline-flex;
-  background-color: #818a91;
+.elementor-icon.elementor-social-icon {
   font-size: var(--icon-size, 25px);
   line-height: var(--icon-size, 25px);
   width: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, 0.5em)));
-  height: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, 0.5em)));
+  height: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, 0.5em))); }
+
+.elementor-social-icon {
+  display: inline-flex;
+  background-color: #818a91;
   align-items: center;
   justify-content: center;
   text-align: center;

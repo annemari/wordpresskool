@@ -1,4 +1,4 @@
-/*! elementor - v3.1.0 - 24-01-2021 */
+/*! elementor - v3.1.2 - 02-03-2021 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -19331,7 +19331,7 @@ exports.default = _default;
   \********************************************************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 174:0-14 */
+/*! CommonJS bailout: module.exports is used directly at 184:0-14 */
 /***/ ((module) => {
 
 "use strict";
@@ -19380,7 +19380,6 @@ SortableBehavior = Marionette.Behavior.extend({
 
     var $childViewContainer = this.getChildViewContainer(),
         defaultSortableOptions = {
-      connectWith: $childViewContainer.selector,
       placeholder: 'elementor-sortable-placeholder elementor-' + this.getOption('elChildType') + '-placeholder',
       cursorAt: {
         top: 20,
@@ -19402,6 +19401,9 @@ SortableBehavior = Marionette.Behavior.extend({
   getChildViewContainer: function getChildViewContainer() {
     return this.view.getChildViewContainer(this.view);
   },
+  // This method is used to fix widgets index detection when dragging or sorting using the preview interface,
+  // The natural widget index in the column is wrong, since there is a `.elementor-background-overlay` element
+  // at the beginning of the column
   getSortedElementNewIndex: function getSortedElementNewIndex($element) {
     var draggedModel = elementor.channels.data.request('dragging:model'),
         draggedElType = draggedModel.get('elType');
@@ -19426,17 +19428,21 @@ SortableBehavior = Marionette.Behavior.extend({
     elementor.channels.data.reply('dragging:model', container.model).reply('dragging:view', container.view).reply('dragging:parent:view', this.view).trigger('drag:start', container.model).trigger(container.model.get('elType') + ':drag:start');
   },
   // On sorting element
-  updateSort: function updateSort(ui) {
+  updateSort: function updateSort(ui, newIndex) {
+    if (undefined === newIndex) {
+      newIndex = ui.item.index();
+    }
+
     $e.run('document/elements/move', {
       container: elementor.channels.data.request('dragging:view').getContainer(),
       target: this.view.getContainer(),
       options: {
-        at: this.getSortedElementNewIndex(ui.item)
+        at: newIndex
       }
     });
   },
   // On receiving element from another container
-  receiveSort: function receiveSort(event, ui) {
+  receiveSort: function receiveSort(event, ui, newIndex) {
     event.stopPropagation();
 
     if (this.view.isCollectionFilled()) {
@@ -19454,11 +19460,15 @@ SortableBehavior = Marionette.Behavior.extend({
       return;
     }
 
+    if (undefined === newIndex) {
+      newIndex = ui.item.index();
+    }
+
     $e.run('document/elements/move', {
       container: elementor.channels.data.request('dragging:view').getContainer(),
       target: this.view.getContainer(),
       options: {
-        at: this.getSortedElementNewIndex(ui.item)
+        at: newIndex
       }
     });
   },
@@ -19493,7 +19503,7 @@ SortableBehavior = Marionette.Behavior.extend({
     this.$el.removeClass('elementor-dragging-on-child');
   },
   onSortReceive: function onSortReceive(event, ui) {
-    this.receiveSort(event, ui);
+    this.receiveSort(event, ui, this.getSortedElementNewIndex(ui.item));
   },
   onSortUpdate: function onSortUpdate(event, ui) {
     event.stopPropagation();
@@ -19502,7 +19512,7 @@ SortableBehavior = Marionette.Behavior.extend({
       return;
     }
 
-    this.updateSort(ui);
+    this.updateSort(ui, this.getSortedElementNewIndex(ui.item));
   },
   onAddChild: function onAddChild(view) {
     view.$el.attr('data-model-cid', view.model.cid);
@@ -21815,6 +21825,7 @@ var _default = /*#__PURE__*/function (_BaseRegion) {
       manager: (0, _assertThisInitialized2.default)(_this)
     }));
     _this.isDocked = false;
+    _this.storage.size.width = _this.storage.size.width || _this.$el.css('width');
     _this.indicators = {
       customPosition: {
         title: __('Custom Positioning', 'elementor'),
@@ -26376,7 +26387,7 @@ module.exports = {
     }
 
     if (!$document.find(selector).length) {
-      $document.find('link:last').after(link);
+      $document.find('link').last().after(link);
     }
   },
   enqueuePreviewStylesheet: function enqueuePreviewStylesheet(url) {
@@ -27206,7 +27217,7 @@ var _stringify = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
     };
 
     var onDragEnd = function onDragEnd(event) {
-      if ($.isFunction(settings.onDragEnd)) {
+      if ('function' === typeof settings.onDragEnd) {
         settings.onDragEnd.call(elementsCache.$element, event, self);
       }
     };
@@ -27221,7 +27232,7 @@ var _stringify = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
         event.originalEvent.dataTransfer.setData((0, _stringify.default)(dataContainer), true);
       }
 
-      if ($.isFunction(settings.onDragStart)) {
+      if ('function' === typeof settings.onDragStart) {
         settings.onDragStart.call(elementsCache.$element, event, self);
       }
     };
@@ -27379,7 +27390,7 @@ var _stringify = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
         }
       }
 
-      if ($.isFunction(settings.isDroppingAllowed)) {
+      if ('function' === typeof settings.isDroppingAllowed) {
         droppingAllowed = settings.isDroppingAllowed.call(currentElement, currentSide, event, self);
 
         if (!droppingAllowed) {
@@ -27417,7 +27428,7 @@ var _stringify = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
       elementsCache.$element.addClass(settings.hasDraggingOnChildClass);
       $(currentElement).addClass(settings.currentElementClass);
 
-      if ($.isFunction(settings.onDragEnter)) {
+      if ('function' === typeof settings.onDragEnter) {
         settings.onDragEnter.call(currentElement, currentSide, event, self);
       }
     };
@@ -27442,7 +27453,7 @@ var _stringify = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
         insertPlaceholder();
       }
 
-      if ($.isFunction(settings.onDragging)) {
+      if ('function' === typeof settings.onDragging) {
         settings.onDragging.call(this, currentSide, event, self);
       }
     };
@@ -27467,7 +27478,7 @@ var _stringify = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
 
       event.preventDefault();
 
-      if ($.isFunction(settings.onDropping)) {
+      if ('function' === typeof settings.onDropping) {
         settings.onDropping.call(this, currentSide, event, self);
       }
     };
@@ -27489,7 +27500,7 @@ var _stringify = _interopRequireDefault(__webpack_require__(/*! @babel/runtime-c
 
       elementsCache.$element.removeClass(settings.hasDraggingOnChildClass);
 
-      if ($.isFunction(settings.onDragLeave)) {
+      if ('function' === typeof settings.onDragLeave) {
         settings.onDragLeave.call(currentElement, event, self);
       }
 

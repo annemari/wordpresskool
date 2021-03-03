@@ -1,4 +1,4 @@
-/*! elementor - v3.1.0 - 24-01-2021 */
+/*! elementor - v3.1.2 - 02-03-2021 */
 .dialog-widget-content {
   background-color: #fff;
   position: absolute;
@@ -2210,15 +2210,17 @@ body.elementor-page .elementor-widget-menu-anchor {
             justify-content: var(--justify-content, center);
     justify-items: var(--justify-content, center); }
 
+.elementor-icon.elementor-social-icon {
+  font-size: var(--icon-size, 25px);
+  line-height: var(--icon-size, 25px);
+  width: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, 0.5em)));
+  height: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, 0.5em))); }
+
 .elementor-social-icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   background-color: #818a91;
-  font-size: var(--icon-size, 25px);
-  line-height: var(--icon-size, 25px);
-  width: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, 0.5em)));
-  height: calc(var(--icon-size, 25px) + (2 * var(--icon-padding, 0.5em)));
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

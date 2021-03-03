@@ -1,4 +1,4 @@
-/*! elementor - v3.1.0 - 24-01-2021 */
+/*! elementor - v3.1.2 - 02-03-2021 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["node_modules_babel_runtime-corejs2_helpers_objectSpread2_js-assets_dev_js_frontend_handlers_b-376ec2"],{
 
 /***/ "../node_modules/@babel/runtime-corejs2/core-js/object/define-properties.js":
@@ -482,7 +482,7 @@ var baseTabs = /*#__PURE__*/function (_elementorModules$fro) {
       this.elements.$tabTitles.on({
         keydown: function keydown(event) {
           // Support for old markup that includes an `<a>` tag in the tab
-          if ($(event.target).is('a') && "Enter" === event.key) {
+          if (jQuery(event.target).is('a') && "Enter" === event.key) {
             event.preventDefault();
           } // We listen to keydowon event for these keys in order to prevent undesired page scrolling
 
@@ -562,4 +562,4 @@ exports.default = baseTabs;
 /***/ })
 
 }]);
-//# sourceMappingURL=3d9686bea0cd5be6e707.bundle.js.map
+//# sourceMappingURL=b652ef4fbfb3884eba25.bundle.js.map
