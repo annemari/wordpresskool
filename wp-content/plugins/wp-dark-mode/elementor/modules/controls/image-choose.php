@@ -12,7 +12,6 @@ class WP_Dark_Mode_Control_Image_Choose extends \Elementor\Base_Data_Control {
 	 * @return string Control type.
 	 * @since  1.0.0
 	 * @access public
-	 *
 	 */
 	public function get_type() {
 		return 'image_choose';
@@ -26,14 +25,18 @@ class WP_Dark_Mode_Control_Image_Choose extends \Elementor\Base_Data_Control {
 	 */
 	public function enqueue() {
 		// styles
-		wp_register_style( 'wp-dark-mode-css-image-choose-control',
-			wp_dark_mode()->plugin_url( 'elementor/modules/controls/assets/css/image-choose.css' ), [], '1.0.0' );
+		wp_register_style(
+            'wp-dark-mode-css-image-choose-control',
+            WP_DARK_MODE_URL . 'elementor/modules/controls/assets/css/image-choose.css', [], '1.0.0'
+        );
 
 		wp_enqueue_style( 'wp-dark-mode-css-image-choose-control' );
 
 		// script
-		wp_register_script( 'wp-dark-mode-js-image-choose-control',
-			wp_dark_mode()->plugin_url( 'elementor/modules/controls/assets/js/image-choose.js' ) );
+		wp_register_script(
+            'wp-dark-mode-js-image-choose-control',
+            WP_DARK_MODE_URL . 'elementor/modules/controls/assets/js/image-choose.js'
+        );
 
 		wp_enqueue_script( 'wp-dark-mode-js-image-choose-control' );
 	}
@@ -86,7 +89,6 @@ class WP_Dark_Mode_Control_Image_Choose extends \Elementor\Base_Data_Control {
 	 * @return array Control default settings.
 	 * @since  1.0.0
 	 * @access protected
-	 *
 	 */
 	protected function get_default_settings() {
 		return [

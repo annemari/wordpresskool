@@ -2,10 +2,16 @@
     <?php _e( 'Switch Widget', 'wp-dark-mode' ) ?>
 
     <?php if(!wp_dark_mode()->is_pro_active() && !wp_dark_mode()->is_ultimate_active()){ ?>
-    <a href="https://wppool.dev/wp-dark-mode" target="_blank" class="get_pro_btn">GET PRO</a>
+    <a href="https://wppool.dev/wp-dark-mode" target="_blank" class="get_pro_btn">
+        <img src="<?php echo WP_DARK_MODE_ASSETS . '/images/gift-box.svg'; ?>" class="promo-img">
+        50% OFF! &nbsp; GET PRO NOW!
+    </a>
     <?php } ?>
 
 </h3>
+
+<hr>
+<br>
 
 <div class="wp-dark-mode-switch-widget-doc">
     <h2>Display Switch Button Using The WP Dark Mode widget.</h2>
@@ -25,6 +31,9 @@
         <br>
     </p>
 
-    <p><img src="<?php echo wp_dark_mode()->plugin_url( 'assets/images/switch-widget.png' ) ?>" alt=""></p>
+    <p><img src="<?php echo WP_DARK_MODE_ASSETS . '/images/switch-widget.png'; ?>" alt=""></p>
 
 </div>
+
+<a href="https://wppool.dev/docs/" class="doc_button button-primary" target="_blank">Explore More</a>
+

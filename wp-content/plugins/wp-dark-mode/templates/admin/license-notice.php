@@ -1,6 +1,6 @@
 <div class="license-activation-notice">
     <div class="wp-dark-mode-notice-icon">
-        <img src="<?php echo wp_dark_mode()->plugin_url( 'assets/images/wp-dark-mode-icon.png' ); ?>" alt="WP Dark Mode Icon">
+        <img src="<?php echo WP_DARK_MODE_ASSETS.'/images/wp-dark-mode-icon.png'; ?>" alt="WP Dark Mode Icon">
     </div>
 
     <div class="wp-dark-mode-notice-text">
@@ -11,7 +11,7 @@
     </div>
 
     <div class="wp-dark-mode-notice-actions">
-        <a href="<?php echo admin_url( 'options-general.php?page=wp-dark-mode-settings#wp_dark_mode_license' ); ?>" class="button button-primary activate-license"><?php _e( 'Activate License',
+        <a href="<?php echo admin_url( 'admin.php?page=wp-dark-mode-license' ); ?>" class="button button-primary activate-license"><?php _e( 'Activate License',
 				'wp-dark-mode' ); ?></a>
         <button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
     </div>

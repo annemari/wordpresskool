@@ -20,17 +20,16 @@ class WP_Dark_Mode_Controls_Init {
 		// Includes necessary files
 		$this->include_files();
 
-
 		// Initilizating control hooks
 		add_action( 'elementor/controls/controls_registered', array( $this, 'image_choose' ), 11 );
 	}
 
 	private function include_files() {
 		// Controls_Manager
-		include wp_dark_mode()->plugin_path( 'elementor/modules/controls/control-manager.php' );
+		include WP_DARK_MODE_PATH . '/elementor/modules/controls/control-manager.php';
 
 		// image choose
-		include wp_dark_mode()->plugin_path( 'elementor/modules/controls/image-choose.php' );
+		include WP_DARK_MODE_PATH . '/elementor/modules/controls/image-choose.php';
 	}
 
 

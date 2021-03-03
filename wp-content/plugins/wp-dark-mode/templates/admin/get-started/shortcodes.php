@@ -1,9 +1,15 @@
 <h3 class="tab-content-title">
     <?php _e( 'Shortcodes', 'wp-dark-mode' ) ?>
 	<?php if ( ! wp_dark_mode()->is_pro_active() && ! wp_dark_mode()->is_ultimate_active() ) { ?>
-        <a href="https://wppool.dev/wp-dark-mode" target="_blank" class="get_pro_btn">GET PRO</a>
+        <a href="https://wppool.dev/wp-dark-mode" target="_blank" class="get_pro_btn">
+            <img src="<?php echo WP_DARK_MODE_ASSETS . '/images/gift-box.svg'; ?>" class="promo-img">
+            50% OFF! GET PRO NOW!
+        </a>
 	<?php } ?>
 </h3>
+
+<hr>
+<br>
 
 <div class="wp-dark-mode-shortcode-doc">
 	<p><b>✅</b>
@@ -20,3 +26,6 @@
 		<code>[wp_dark_mode_switch style="3"]</code> - Display specific switch style from 7 switch styles.
 	</p>
 </div>
+<a href="https://wppool.dev/docs/" class="doc_button button-primary" target="_blank">Explore More</a>
+
+

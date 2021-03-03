@@ -2,9 +2,9 @@
 Contributors: wppool, azizultex, princeahmed
 Tags: dark, dark mode, night mode, gutenberg blocks, dark theme
 Requires at least: 5.0
-Tested up to: 5.6
+Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: trunk
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,9 +16,9 @@ Use WP Dark Mode plugin to create a stunning dark version for your WordPress web
 
 Just activate the plugin and your users will experience a dark mode version of your website as per their preferred operating system preference.
 
-[youtube https://www.youtube.com/watch?v=p_b-GLOyjxw]
+[youtube https://www.youtube.com/watch?v=L6EmXREa6OA]
 
-> 👁️ [View Demo](https://wpdark.wppool.dev/) | 🚀  [Get The PRO Version](https://wppool.dev/wp-dark-mode/) | 👩🏼‍💻 [Get Support](https://wppool.dev/wp-dark-mode/)
+ 👁️ [View Demo](https://wpdark.wppool.dev/) | 🚀  [Get The PRO Version](https://wppool.dev/wp-dark-mode/) | 👩🏼‍💻 [Get Support](https://wppool.dev/wp-dark-mode/)
 
 Works across all operating systems including Android, iOS, macOS. No settings are needed. The plugin intelligently detects device preferences and dynamically delivers a handcrafted, expert-designed dark mode experience for your readers.
 
@@ -43,6 +43,7 @@ WP Dark Mode supports all major operating systems including iOS, Android, macOS,
 1. **Themes Compatible** – The plugin is compatible with most of the themes without any issues.
 1. **Revolution Slider Compatible** - This plugin compatible with revolution slider.
 1. **Low Image Brightness** - Decrease the brightness and contrast of images in the dark mode.
+1. **Keyboard Accessibility** - Toggle darkmode by keyboard shortcut `(Ctrl + Alt + D)`.
 
 
 === 💰 WP Dark Mode Pro Features ===
@@ -65,7 +66,7 @@ WP Dark Mode supports all major operating systems including iOS, Android, macOS,
 === 💰 WP Dark Mode Ultimate Features ===
 1. **All Pro Features**
 1. **Custom Colors** – You can customize the dark mode background. text and links color as you want/
-1. **Presets Color Schema** – 13 exclusive presets color schema available to quickly change the dark mode color from the predefined presets.
+1. **Presets Color Schema** – 11 exclusive presets color schema available to quickly change the dark mode color from the predefined presets.
 1. **Dark Mode Based Image Supports** – You can replace light mode images with the different images you want in the dark mode.
 1. **Custom CSS** – You can use custom CSS only for dark mode.
 1. **Custom Switch Icon** – You can customize the dark mode switch icon in the light/ dark mode.
@@ -94,6 +95,8 @@ Appsero SDK **does not gather any data by default.** The SDK only starts gatheri
 Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
 
 Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
+
+Additionally read the WPPOOL [privacy policy](https://wppool.dev/privacy-policy/).
 
 == Frequently Asked Questions ==
 
@@ -133,35 +136,50 @@ Yes, We have tested this plugin in all modern browsers (Safari, Chrome, Firefox,
 = Do I need to know any programming language for using this plugin? =
 No. WP Dark Mode is a very user-friendly and simple plugin. Just download and use it accordingly.
 
+= Can I toggle the darkmode/ lightmode by using keyboard? =
+Yes, You can toggle the dark mode/ light mode  by keyboard shortcut `(Ctrl + Alt + D)`.
+
 == Screenshots ==
-1. Default Dark Mode Color Scheme
+1. Default Dark Mode Color
 2. General Settings
 3. Advanced Settings
-4. Display Settings
-5. Image Settings
-6. Ready made color presets & customizing options
-7. Custom CSS only for darkmode
-8. Dark mode switch widget
-9. Dark mode switch gutenberg block
-10. Dark mode switch elementor widget
+4. Includes/ Excludes Settings
+5. Switch Settings
+6. Color Filter Settings
+7. Color Schema
+8. Image Settings
+9. Ready made color presets & customizing options
+10. Custom CSS only for darkmode
+11. Dark mode switch widget
+12. Dark mode switch gutenberg block
+13. Dark mode switch elementor widget
 
 == Changelog ==
 
-= 1.3.5 =
-* New: Added Facebook & Twitter color scheme
-* Fix: Hide Darkmode Switch in Printing
+= 2.0.3 =
+* Fix: Fixed the colors backwards compatibility
+* Fix: Fixed PHP error
 
-= 1.3.4 =
-* Fix: Fixed Show/ Hide Floating Switch
-* Update: Add minimal christmas offer banner
+= 2.0.2 =
+* Fix: Fixed the backwards compatibility
+* Improvement: Reduce Switch Mode Changing delay times
 
-= 1.3.3 =
-* Update: Change Low Image Brightness to OFF By default
-* Fix: Fixed PHP8 Compatibility Issue
-* Fix: WP Darkmode Switch Widget Style Choose
-* Fix: Fixed Admin Dashboard Dark Mode Color
-* Fix: Exclude Darkmode from elementor editor
-* Fix: Fixed Excludes Images From Dark Mode
+= 2.0.1 =
+* Fix: Fixed the backwards compatibility
+
+= 2.0.0 =
+* New: Added Brightness Control Settings.
+* New: Added Contrast Control Settings.
+* New: Added Sepia Control Settings.
+* New: Added Recommended Plugins Page.
+* New: Added Keyboard Accessibility. Toggle darkmode by keyboard shortcut `(Ctrl + Alt + D)`.
+* Update: Settings Page Moved to Top Level WP Dark Mode Page.
+* Update: Settings Page Tabs Refactored.
+* Update: Improved Dark Mode Overall Colors.
+* Update: Improved Background Image Overlay Issue.
+* Update: Improved Image Settings Functionality.
+* Update: Improved Custom CSS Functionality.
+
 
 = 1.3.2 =
 * New: Add Low Image Brightness Settings

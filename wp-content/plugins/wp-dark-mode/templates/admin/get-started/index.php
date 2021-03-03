@@ -1,45 +1,52 @@
-<div class="getting-started-wrap">
-<div class="tab-wrap">
+<div class="wrap">
 
-	<div class="tab-links">
+    <div class="getting-started-wrap">
+        <div class="tab-wrap">
 
-		<a href="gutenberg-block" class="tab-link active">
-			<i class="dashicons dashicons-screenoptions" ></i>
-			<?php _e( 'Gutenberg Block', 'wp-dark-mode' ); ?>
-		</a>
+            <div class="tab-links">
 
-		<a href="elementor-widget" class="tab-link">
-			<i class="dashicons dashicons-align-none" ></i>
-			<?php _e( 'Elementor Widget', 'wp-dark-mode' ); ?>
-		</a>
+                <a href="gutenberg" class="tab-link active">
+                    <?php _e( 'Gutenberg', 'wp-dark-mode' ); ?>
+                </a>
 
-		<a href="switch-widget" class="tab-link">
-			<i class="dashicons dashicons-align-full-width" ></i>
-			<?php _e( 'Switch Widget', 'wp-dark-mode' ); ?>
-		</a>
+                <a href="elementor" class="tab-link">
+                    <?php _e( 'Elementor', 'wp-dark-mode' ); ?>
+                </a>
 
-		<a href="shortcodes" class="tab-link">
-			<i class="dashicons dashicons-shortcode" ></i>
-			<?php _e( 'Shortcodes', 'wp-dark-mode' ); ?>
-		</a>
+                <a href="widget" class="tab-link">
+                    <?php _e( 'Widget', 'wp-dark-mode' ); ?>
+                </a>
 
-	</div>
+                <a href="shortcodes" class="tab-link">
+                    <?php _e( 'Shortcodes', 'wp-dark-mode' ); ?>
+                </a>
 
-	<div id="gutenberg-block" class="tab-content active">
-		<?php wp_dark_mode()->get_template( '/admin/get-started/gutenberg-block'); ?>
-	</div>
+                <a href="support" class="tab-link">
+                    <?php _e( 'Support', 'wp-dark-mode' ); ?>
+                </a>
 
-	<div id="elementor-widget" class="tab-content">
-		<?php wp_dark_mode()->get_template( '/admin/get-started/elementor-widget'); ?>
-	</div>
+            </div>
 
-	<div id="switch-widget" class="tab-content">
-		<?php wp_dark_mode()->get_template( '/admin/get-started/switch-widget'); ?>
-	</div>
+            <div id="gutenberg" class="tab-content active">
+                <?php wp_dark_mode()->get_template( '/admin/get-started/gutenberg-block'); ?>
+            </div>
 
-	<div id="shortcodes" class="tab-content">
-		<?php wp_dark_mode()->get_template( '/admin/get-started/shortcodes'); ?>
-	</div>
+            <div id="elementor" class="tab-content">
+                <?php wp_dark_mode()->get_template( '/admin/get-started/elementor-widget'); ?>
+            </div>
 
-</div>
+            <div id="widget" class="tab-content">
+                <?php wp_dark_mode()->get_template( '/admin/get-started/switch-widget'); ?>
+            </div>
+
+            <div id="shortcodes" class="tab-content">
+                <?php wp_dark_mode()->get_template( '/admin/get-started/shortcodes'); ?>
+            </div>
+
+            <div id="support" class="tab-content">
+                <?php wp_dark_mode()->get_template( '/admin/get-started/support'); ?>
+            </div>
+
+        </div>
+    </div>
 </div>
